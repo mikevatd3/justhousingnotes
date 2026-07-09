@@ -1,0 +1,9 @@
+project:
+  type: website
+website:
+  page-navigation: true
+format:
+  html:
+    css: static/notebook.css
+    toc: true
+    include-before-body: static/to_index.html

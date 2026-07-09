@@ -1,0 +1,32 @@
+---
+body-classes: is-index
+---
+
+# LLM Interpretability Notes
+
+These notes explores how large language models work internally and how those
+internals can be used to detect and understand bias related to protected classes.
+
+## Contents
+
+- [Neural Network Basics](introduction.qmd)
+- [How Transformers Work](transformers.qmd) 
+- [Overview of Interpretability Techniques](interpretability_tools.qmd)
+- *Notes on papers*
+    - Model descriptions
+        - [Attention is all you need](attention.qmd)
+        - [GPT2 Paper](gpt2_paper.qmd)
+    - Interpretability research
+        - [Logit Output](logits.qmd)
+        - [Linear Probes](linear_probes.qmd)
+        - [Indirect Object Identification](ioi.qmd)
+        - [Sparse Auto-encoders](saes.qmd)
+        - [Crosscoders](crosscoders.qmd)
+        - [Circuit tracing](circuit_tracing.qmd)
+        - [Natural Language Autoencoders](nlas.qmd)
+- *Notes on tools*
+    - [PyTorch](pytorch_basics.qmd)
+    - [TransformerLens](transformer_lens_basics.qmd)
+    - [SAELens](sae_lens_basics.qmd)
+- *Cases*
+    - [Finfluencers](finfluencers.qmd)

@@ -1,0 +1,87 @@
+# Transformers
+
+*Transformers* are a particular combination of the basic components discussed so
+far. They're models meant to deal with *sequences* of things. In language models
+the sequences are *tokens*, short chunks of characters, usually words but the
+architecture is more flexible than that. The problem that transformers are
+trying to solve is that, often in sequences, the 'meaning' (EDIT: VAGUE) of an
+item is dependent its context within the sequence. It depends on which other
+items are present and their order. The key part of the transformer is
+*attention,* which attempts to solve this problem, and will be discussed in
+detail below.
+
+## Preparing the input sequence
+
+How natural language is broken into tokens isn't essential for this discussion,
+but basically an input string is broken into common combinations of letters,
+often words.
+
+For the input sequence to be processed by the model, it first must be turned
+into a sequence of vectors. In LLMs each token is mapped to an integer and that
+integer corresponds to the column of a large 'vocabulary' matrix. The model then
+can turn a sequence of tokens into a sequence of integers, and then (EDIT: CONFUSING) 
+into a sequence of vectors. These vectors are called embeddings.
+
+```{python}
+import torch
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from transformer_lens import HookedTransformer
+```
+
+Finally, for LLMs in particular, the input sequence needs to encode the order of
+the vectors somehow. This is typically called *positional encoding*. Modern
+models have different ways to do this, but in out current exploratory model
+GPT2, the positional encoding is a sequence of vectors that gets added to the
+embedding vector sequence. This positional encoding sequence is trained along
+with everything else.
+
+## Residual Stream
+
+Transformer models are 'ResNets,' a type of model where output from later layers
+gets added to the input at every step. The layers then have more of a function
+of editing or augmenting the output than generating new at each layer. The
+residual stream is an important architectural component for interpretability,
+which we'll discuss more below.
+
+## Transformer Layer
+
+A transformer model is made up of a series of transformer layers. These layers
+have two components, the 'attention mechanism' which is made up of a series of
+'attention heads' and MLP layers. The MLP layers are typical linear transform +
+activation function neural network layers, as described above. The attention
+layer is more complicated.
+
+### Attention heads
+
+- Attention head
+    - WQ, WK, WO all take the input vectors and map them to a smaller dimension:
+      64 = 768 / 12, model dimension / number of heads
+    - WQ - *query* linear transform taking the input vector at each position to 
+      'what to search for'
+    - WK - *key* linear transformation taking the input at each position to
+      'how to be found in the search'
+    - WO - *output* linear transformation taking the input at each position to
+      'what this token offers
+    - WQ(WK)T * WO
+    - WV - *value?* takes the linear combination at that position back out to
+      the model dimension (64 -> 768)
+
+### QK OV
+
+## Output
+
+The output of the model is a sequence of the same length as the input sequence.
+You can think of each vector as the models 'prediction' for the next token at
+each point in the sequence. The most importantant token is the last in the
+prediction sequence where the model predicts what it has not yet seen.
+
+## Why attention is important
+
+- Why attention is important
+- Where new 'semantic content' gets added (EDIT: WORD CHOICE - SEMANTIC)
+    - OV
+    - MLP layers
+
+- Interpretability
+

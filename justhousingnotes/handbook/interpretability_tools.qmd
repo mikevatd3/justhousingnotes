@@ -1,0 +1,30 @@
+# Interpretability techniques
+
+- **Inspecting Logits**: Given particular prompts, analyze which tokens the model
+  assigns the most weight.
+- **Attention inspection**: Look at which part of a prompt sequence attends to
+  which by looking at the activations within the attention heads.
+    - IOI paper: Uses the prompt "When Mary and John went to the store, John
+      gave a drink to" then looks at each layers attention heads to identify how
+      the model copies the 'John' and 'Mary' tokens, then *inhibits* the
+      subject, 'John' to leave 'Mary' as the prediction. 
+- **Linear Probes**: These gather outputs from various junctures in the model when
+  ran on prompts that are labeled by the researcher. The model outputs at
+  that point can linearly separate the prompts on the labels
+    - [Less Wrong article](https://www.lesswrong.com/posts/4uXCAJNuPKtKBsi28/negative-results-for-saes-on-downstream-tasks)
+      from 2025 talking speculating about 'over investment' in Sparse Auto
+      Encoders and that linear probes are easy to train and useful for safety
+      research.
+- **Direct logit attribution**: Starts in a similar way to *inspecting logits*
+  but then looks at each layer's contribution to the final residual stream
+  state. Can be calculated directly, but misses out on the *causal* aspects of
+  model behavior and often attributes more to later layers than earlier layers.
+- **LogitLens**: *Need to research further*
+- **Sparse Autoencoders**: 
+    - Anthropic Article 1
+- **Crosscoders**
+    - Anthropic Article 2
+- **Circuit Tracing**
+    - Anthropic Article 3
+- **Natural Language Autoencoders**
+    - Anthropic Article 4

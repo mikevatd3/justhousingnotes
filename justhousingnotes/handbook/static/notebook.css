@@ -1,0 +1,27 @@
+body {
+  font-family: "Domine", serif;
+  background-color: #faf6f0;
+  color: #2b2d2c;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+code, pre {
+  font-family: 'JuliaMono', monospace;
+  background-color: #f5ede1;
+  padding: 0.5rem;
+  line-height: 1.2;
+}
+
+div.sourceCode {
+  background-color: #f5ede1;
+}
+
+.back-link {padding-bottom: 2rem;}
+.is-index .back-link {display: none;}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1rem; }
+h4 { font-size: 1rem; font-weight: medium; }
+h5 { font-size: 1rem; font-style: italic; }

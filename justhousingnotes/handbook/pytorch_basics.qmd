@@ -1,0 +1,33 @@
+# PyTorch Notes
+
+PyTorch has a similar interface to numpy with a bunch of neural network training 
+conveniences added `torch.nn`, including integrated automatic differentiation.
+It also makes using a GPU really easy. The `torch.tensor` is like a souped up
+numpy array.
+
+## API notes
+
+`.unsqueeze()` and `.squeeze()` add or remove a dimension to ensure the shape of
+the tensor matches what is needed by the model.
+
+```{python}
+import torch
+
+tensor = torch.arange(10)
+
+print("Before unsqueeze")
+print(tensor.shape)
+print()
+
+tensor = tensor.unsqueeze(1) # Position to add the dimension (col in this case)
+
+print("After unsqueeze")
+print(tensor.shape)
+print()
+
+tensor = tensor.squeeze(1)
+
+print("Squeezed again")
+print(tensor.shape)
+
+```

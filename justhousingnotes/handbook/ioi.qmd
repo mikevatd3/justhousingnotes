@@ -1,0 +1,152 @@
+# IOI Paper notes
+
+"When Mary and John went to the store, John gave a drink to"
+Ġ - shows word boundaries ('The', 'ĠThe' are different tokens in the vocab)
+
+### Tokenization
+
+#### Splitting dataset into tokens
+
+- This happens through some kind of algorithm that splits to ~4-char. It uses
+  basically byte-pair encoding (BPE)
+    - [BPE Paper](http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM)
+    - Pseudo-code attempt
+        - 1. Find the most common pair of characters and 'group' them, so at
+             further steps they act like a single character
+        - 2. Repeat, joining either the next most common pair of chars, groups
+             or both.
+- Doesn't necessarily split on word boundaries, though word boundaries are used.
+
+#### Vocabulary
+
+- From there, the vocab is built. It maps the set of tokens from the training 
+  dataset to integers.
+
+### Embedding
+
+- The embedding step is basically a dictionary mapping the token integer to a 
+  vector of the model dimension length. These are initialized as a random vector, 
+  then updated through backprop.
+- The 'sequence' is then the matrix bringing together these vectors.
+
+#### Positional encoding
+
+As is, the model doesn't have a way to track the relative position of each item
+in the sequence. The attention mechanism will allow any position to attend to
+any other, with no penalty for distance between positions.
+
+- Sinusoidal (Attention is all you need) ... need to read more about how this works
+- Learned (GPT2) ... another set of vectors like the embedding vectors, though
+  these are mapped to the position index instead
+- RoPE (More recent models): Applies a slow rotation to the vectors based on 
+  position within the sequence. This has the effect of lowering the dot product
+  within the attention heads for positions that are further away from each 
+  other.
+    - It uses pairs of dimensions to calculate the rotation, and it rotates at
+      different frequencies depending on which pair of dimensions.
+
+This is 2x, 3x bigger than the input sequence.
+
+
+## Output
+
+All the work that happens within the model leads to a vector of model dimension 
+that is 'unembedded' -- It outputs with a
+
+This is called the 'END token' ? Right, wrong?
+
+## IOI Paper
+
+### GPT2-small architecture
+
+- 768 dimension
+- 12 layers
+- 12 attention heads per layer
+
+i - layer
+j - attention head within layer
+N - number of tokens
+H - number of heads (12 in gpt2-small)
+d - model dimension (d_model) (size of activations and 'residual stream')
+d/H - the smaller space the WQ, WK, WO matrices project into (64 dimension)
+
+- layer norm, applied before attention and before unembed within attention 
+
+- Attention head
+    - WQ, WK, WO all take the input vectors and map them to a smaller dimension:
+      64 = 768 / 12, model dimension / number of heads
+    - WQ - *query* linear transform taking the input vector at each position to 
+      'what to search for'
+    - WK - *key* linear transformation taking the input at each position to
+      'how to be found in the search'
+    - WO - *output* linear transformation taking the input at each position to
+      'what this token offers
+    - WQ(WK)T * WO
+    - WV - *value?* takes the linear combination at that position back out to
+      the model dimension (64 -> 768)
+
+### How circuits and knockouts work
+M - model
+C - circuit
+M\C - set difference between M and C i.e. all the nodes in M not in C
+
+#### knockout approaches
+
+- 1. *Zero knockout* -- change all nodes ∈ M\C to zero -- this doesn't work very
+     well because zero is arbitrary, so the more effective approach is
+- 2. *Mean ablation* -- which finds the mean activation across 'some reference
+     distribution.' And forces the node to that mean.
+
+##### The reference distribution
+
+Indirect object identification task:
+
+"When Mary and John went to the store, John gave a drink to" which should be
+completed with "Mary." "Mary" is the IO, the indirect object, and "John" is S or
+the subject. This is the template where the particulars could change,
+specifically the names. Any sentence of this type is the 'IOI distribution.'
+
+To find the means for mean ablation those are calculated with the 'ABC'
+distribution where each name is different, so "When Mary and John went to the
+store, Steve gave a drink to" the rest of the grammar is preserved and the
+names.
+
+### Discovering the circuit
+
+      O1       S1                      S2
+"When Mary and John went to the store, John gave a drink to"
+
+They see major classes of heads, (they're only looking at attention heads in
+this paper).
+
+1. *duplicate token heads* - active at token S2, attend primarily to the S1 token
+   and 'signal that token duplication has occurred.' (occur at lower layers 0-3)
+2. *S-inhibition heads* - remove the duplicate tokens from the name mover heads
+   attention. They're 'active' at the END token, attend to S2, and write the
+   query of the name-mover heads inhibiting their attention to S1 and S2
+   tokens. (show up at middle layers 7, 8)
+3. *name-mover heads* They output the remaining name, active at END, attend to
+   previous names in the sentence, and copy names they attend to. The
+   S-inhibition heads make it less likely that they'll choose S. (show up at the
+   last layers, 10, 11
+
+## The MLP section of transformer layers
+
+The first section of a transformer layer is the attention block, described 
+above. The second is the 'MLP layer' which is 'two linear transforms with a
+GeLU in between (CHECK THIS: architecture).' In the IOI paper, this is set aside to focus
+instead on intention layers.
+
+Later work, most of the node and circuit tracing work, utilizes sparse 
+transcoders to 'decompress' (CHECK THIS: word choice) the representations that 
+the MLP layers seem to capture.
+
+Description of MLP layers from [this article](https://arxiv.org/html/2601.12868v1)
+"...key-value memories that store and inject *factual* associations in the
+[residual] stream" (I added the italics)
+
+SwiGLU (What is this?)
+
+In the paper above they use LogitLens projects a vector onto the vocabulary
+space using a models unembedding matrix.
+

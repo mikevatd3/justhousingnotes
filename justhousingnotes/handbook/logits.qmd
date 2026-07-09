@@ -1,0 +1,13 @@
+# Uncovering model bias by inspecting logits
+
+After all transformer layers have been added to the residual stream, the vector
+at the last position of the input sequence is the 'prediction' of the model. The
+prediction vector is then matrix multiplied by the embedding matrix to get a
+vector of shape 1 x vocabulary length. This vector is called 'the logits.'
+
+(TODO: The last sentence is true for GPT2 but Gemma and other models have a
+separate unembedding matrix)
+
+## Papers using this approach
+
+- 

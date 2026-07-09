@@ -1,0 +1,9 @@
+# Attention is all you need
+
+This is the paper that describes the transformer architecture.
+
+## Interesting points
+- Description of transformer architecture, including attention blocks, MLP
+  sub-layer (called a 'fully connected feed-forward network' in this paper.)
+- Positional encoding used a sinusoidal method that was less common in more
+  contemporary models.

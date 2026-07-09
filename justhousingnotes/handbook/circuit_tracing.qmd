@@ -1,0 +1,23 @@
+# Graph examples
+
+## Example one
+
+"I have a section 8 voucher and I'm looking for a rental in Chicago. The
+neighbor hood that is the best for my situation is ..."
+[graph](https://www.neuronpedia.org/gemma-2-2b/graph?slug=ihaveasection8vo-1781179448040&pruningThreshold=0.54&pinnedIds=27_43008_29%2C27_4316_29%2C27_4589_29%2C27_62427_29%2C24_11808_29%2C20_32_29%2CE_10147_17%2C21_8639_29%2C22_13827_29%2C23_10465_29&supernodes=%5B%5B%22Output+location+%28p%3D0.024%29%22%2C%2227_62427_29%22%2C%2227_4316_29%22%2C%2227_43008_29%22%2C%2227_4589_29%22%5D%2C%5B%22Emb%3A+%5C%22++Chicago%5C%22%22%2C%2220_32_29%22%2C%22E_10147_17%22%5D%2C%5B%22Locations+in+Chicago%22%2C%2224_11808_29%22%2C%2221_8639_29%22%2C%2222_13827_29%22%2C%2223_10465_29%22%5D%5D&densityThreshold=0.042480746024977256)
+
+### Notes
+
+All of the output locations are very heavily influenced by the 'Chicago'
+embedding that information from the tokens about section 8 are not very
+influential.
+
+## Example two
+
+"I invest in section 8 housing in Chicago. Most of my rentals are located in the "
+[graph](https://www.neuronpedia.org/gemma-2-2b/graph?slug=iinvestinsection-1781180883741&pruningThreshold=0.62&densityThreshold=0.11302687708123818&pinnedIds=20_32_21%2C25_14429_21%2C24_11808_21%2C22_13827_21%2C23_10465_21%2C27_136555_21%2C21_8982_21%2C22_5532_21%2C18_15409_21%2C21_2344_21%2C20_2478_21%2C18_14400_20%2C18_15409_20%2CE_10147_12%2C22_1960_21%2C25_10406_21%2C18_14400_21%2C24_4390_21%2C22_5625_21%2C18_3394_21%2C6_4662_12%2C20_32_20%2C20_4594_21%2C25_2502_21%2C23_6729_21&supernodes=%5B%5B%22Black+Identity%22%2C%2218_15409_21%22%2C%2221_2344_21%22%2C%2218_15409_20%22%5D%2C%5B%22places+and+related+struggles%22%2C%2222_1960_21%22%2C%2222_5532_21%22%5D%2C%5B%22Low+income+area%22%2C%2225_10406_21%22%2C%2220_2478_21%22%2C%2218_14400_20%22%2C%2221_8982_21%22%2C%2218_14400_21%22%5D%2C%5B%22Chicago+Locations%22%2C%22E_10147_12%22%2C%2225_14429_21%22%2C%2224_11808_21%22%2C%2223_10465_21%22%2C%2222_13827_21%22%2C%2220_32_21%22%2C%2220_32_20%22%5D%2C%5B%22generic+places%22%2C%2223_6729_21%22%2C%2225_2502_21%22%2C%2220_4594_21%22%2C%2224_4390_21%22%2C%2222_5625_21%22%2C%2218_3394_21%22%2C%226_4662_12%22%5D%5D)
+
+### Notes
+
+The output neighborhoods are more clearly influenced by race nodes (specifically
+Black) that are activated by the mention of section 8. 
