@@ -1,0 +1,261 @@
+[
+  {
+    "objectID": "attention.html",
+    "href": "attention.html",
+    "title": "Attention is all you need",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "attention.html#interesting-points",
+    "href": "attention.html#interesting-points",
+    "title": "Attention is all you need",
+    "section": "Interesting points",
+    "text": "Interesting points\n\nDescription of transformer architecture, including attention blocks, MLP sub-layer (called a ‘fully connected feed-forward network’ in this paper.)\nPositional encoding used a sinusoidal method that was less common in more contemporary models."
+  },
+  {
+    "objectID": "gpt2_paper.html",
+    "href": "gpt2_paper.html",
+    "title": "Language Modes are Unsupervised Multitask Learners",
+    "section": "",
+    "text": "Interpretability notes\n\n\n\n\n\nLanguage Modes are Unsupervised Multitask Learners\nThis is the paper describing GPT-2, along with some of the results from the model. It was published in 2019."
+  },
+  {
+    "objectID": "saes.html",
+    "href": "saes.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "crosscoders.html",
+    "href": "crosscoders.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "pytorch_basics.html",
+    "href": "pytorch_basics.html",
+    "title": "PyTorch Notes",
+    "section": "",
+    "text": "Interpretability notes\nPyTorch has a similar interface to numpy with a bunch of neural network training conveniences added torch.nn, including integrated automatic differentiation. It also makes using a GPU really easy. The torch.tensor is like a souped up numpy array."
+  },
+  {
+    "objectID": "pytorch_basics.html#api-notes",
+    "href": "pytorch_basics.html#api-notes",
+    "title": "PyTorch Notes",
+    "section": "API notes",
+    "text": "API notes\n.unsqueeze() and .squeeze() add or remove a dimension to ensure the shape of the tensor matches what is needed by the model.\n\nimport torch\n\ntensor = torch.arange(10)\n\nprint(\"Before unsqueeze\")\nprint(tensor.shape)\nprint()\n\ntensor = tensor.unsqueeze(1) # Position to add the dimension (col in this case)\n\nprint(\"After unsqueeze\")\nprint(tensor.shape)\nprint()\n\ntensor = tensor.squeeze(1)\n\nprint(\"Squeezed again\")\nprint(tensor.shape)\n\nBefore unsqueeze\ntorch.Size([10])\n\nAfter unsqueeze\ntorch.Size([10, 1])\n\nSqueezed again\ntorch.Size([10])"
+  },
+  {
+    "objectID": "circuit_tracing.html",
+    "href": "circuit_tracing.html",
+    "title": "Graph examples",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "circuit_tracing.html#example-one",
+    "href": "circuit_tracing.html#example-one",
+    "title": "Graph examples",
+    "section": "Example one",
+    "text": "Example one\n“I have a section 8 voucher and I’m looking for a rental in Chicago. The neighbor hood that is the best for my situation is …” graph\n\nNotes\nAll of the output locations are very heavily influenced by the ‘Chicago’ embedding that information from the tokens about section 8 are not very influential."
+  },
+  {
+    "objectID": "circuit_tracing.html#example-two",
+    "href": "circuit_tracing.html#example-two",
+    "title": "Graph examples",
+    "section": "Example two",
+    "text": "Example two\n“I invest in section 8 housing in Chicago. Most of my rentals are located in the” graph\n\nNotes\nThe output neighborhoods are more clearly influenced by race nodes (specifically Black) that are activated by the mention of section 8."
+  },
+  {
+    "objectID": "ioi.html",
+    "href": "ioi.html",
+    "title": "IOI Paper notes",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "ioi.html#output",
+    "href": "ioi.html#output",
+    "title": "IOI Paper notes",
+    "section": "Output",
+    "text": "Output\nAll the work that happens within the model leads to a vector of model dimension that is ‘unembedded’ – It outputs with a\nThis is called the ‘END token’ ? Right, wrong?"
+  },
+  {
+    "objectID": "ioi.html#ioi-paper",
+    "href": "ioi.html#ioi-paper",
+    "title": "IOI Paper notes",
+    "section": "IOI Paper",
+    "text": "IOI Paper\n\nGPT2-small architecture\n\n768 dimension\n12 layers\n12 attention heads per layer\n\ni - layer j - attention head within layer N - number of tokens H - number of heads (12 in gpt2-small) d - model dimension (d_model) (size of activations and ‘residual stream’) d/H - the smaller space the WQ, WK, WO matrices project into (64 dimension)\n\nlayer norm, applied before attention and before unembed within attention\nAttention head\n\nWQ, WK, WO all take the input vectors and map them to a smaller dimension: 64 = 768 / 12, model dimension / number of heads\nWQ - query linear transform taking the input vector at each position to ‘what to search for’\nWK - key linear transformation taking the input at each position to ‘how to be found in the search’\nWO - output linear transformation taking the input at each position to ’what this token offers\nWQ(WK)T * WO\nWV - value? takes the linear combination at that position back out to the model dimension (64 -&gt; 768)\n\n\n\n\nHow circuits and knockouts work\nM - model C - circuit M- set difference between M and C i.e. all the nodes in M not in C\n\nknockout approaches\n\n\nZero knockout – change all nodes ∈ Mto zero – this doesn’t work very well because zero is arbitrary, so the more effective approach is\n\n\nMean ablation – which finds the mean activation across ‘some reference distribution.’ And forces the node to that mean.\n\n\n\nThe reference distribution\nIndirect object identification task:\n“When Mary and John went to the store, John gave a drink to” which should be completed with “Mary.” “Mary” is the IO, the indirect object, and “John” is S or the subject. This is the template where the particulars could change, specifically the names. Any sentence of this type is the ‘IOI distribution.’\nTo find the means for mean ablation those are calculated with the ‘ABC’ distribution where each name is different, so “When Mary and John went to the store, Steve gave a drink to” the rest of the grammar is preserved and the names.\n\n\n\n\nDiscovering the circuit\n  O1       S1                      S2\n“When Mary and John went to the store, John gave a drink to”\nThey see major classes of heads, (they’re only looking at attention heads in this paper).\n\nduplicate token heads - active at token S2, attend primarily to the S1 token and ‘signal that token duplication has occurred.’ (occur at lower layers 0-3)\nS-inhibition heads - remove the duplicate tokens from the name mover heads attention. They’re ‘active’ at the END token, attend to S2, and write the query of the name-mover heads inhibiting their attention to S1 and S2 tokens. (show up at middle layers 7, 8)\nname-mover heads They output the remaining name, active at END, attend to previous names in the sentence, and copy names they attend to. The S-inhibition heads make it less likely that they’ll choose S. (show up at the last layers, 10, 11"
+  },
+  {
+    "objectID": "ioi.html#the-mlp-section-of-transformer-layers",
+    "href": "ioi.html#the-mlp-section-of-transformer-layers",
+    "title": "IOI Paper notes",
+    "section": "The MLP section of transformer layers",
+    "text": "The MLP section of transformer layers\nThe first section of a transformer layer is the attention block, described above. The second is the ‘MLP layer’ which is ‘two linear transforms with a GeLU in between (CHECK THIS: architecture).’ In the IOI paper, this is set aside to focus instead on intention layers.\nLater work, most of the node and circuit tracing work, utilizes sparse transcoders to ‘decompress’ (CHECK THIS: word choice) the representations that the MLP layers seem to capture.\nDescription of MLP layers from this article “…key-value memories that store and inject factual associations in the [residual] stream” (I added the italics)\nSwiGLU (What is this?)\nIn the paper above they use LogitLens projects a vector onto the vocabulary space using a models unembedding matrix."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LLM Interpretability Notes",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "index.html#contents",
+    "href": "index.html#contents",
+    "title": "LLM Interpretability Notes",
+    "section": "Contents",
+    "text": "Contents\n\nNeural Network Basics\nHow Transformers Work\nOverview of Interpretability Techniques\nNotes on papers\n\nModel descriptions\n\nAttention is all you need\nGPT2 Paper\n\nInterpretability research\n\nLogit Output\nLinear Probes\nIndirect Object Identification\nSparse Auto-encoders\nCrosscoders\nCircuit tracing\nNatural Language Autoencoders\n\n\nNotes on tools\n\nPyTorch\nTransformerLens\nSAELens\n\nCases\n\nFinfluencers"
+  },
+  {
+    "objectID": "identifying_bias.html",
+    "href": "identifying_bias.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "interpretability_tools.html",
+    "href": "interpretability_tools.html",
+    "title": "Interpretability techniques",
+    "section": "",
+    "text": "Interpretability notes\n\n\n\n\n\nInterpretability techniques\n\nInspecting Logits: Given particular prompts, analyze which tokens the model assigns the most weight.\nAttention inspection: Look at which part of a prompt sequence attends to which by looking at the activations within the attention heads.\n\nIOI paper: Uses the prompt “When Mary and John went to the store, John gave a drink to” then looks at each layers attention heads to identify how the model copies the ‘John’ and ‘Mary’ tokens, then inhibits the subject, ‘John’ to leave ‘Mary’ as the prediction.\n\nLinear Probes: These gather outputs from various junctures in the model when ran on prompts that are labeled by the researcher. The model outputs at that point can linearly separate the prompts on the labels\n\nLess Wrong article from 2025 talking speculating about ‘over investment’ in Sparse Auto Encoders and that linear probes are easy to train and useful for safety research.\n\nDirect logit attribution: Starts in a similar way to inspecting logits but then looks at each layer’s contribution to the final residual stream state. Can be calculated directly, but misses out on the causal aspects of model behavior and often attributes more to later layers than earlier layers.\nLogitLens: Need to research further\nSparse Autoencoders:\n\nAnthropic Article 1\n\nCrosscoders\n\nAnthropic Article 2\n\nCircuit Tracing\n\nAnthropic Article 3\n\nNatural Language Autoencoders\n\nAnthropic Article 4"
+  },
+  {
+    "objectID": "linear_probes.html",
+    "href": "linear_probes.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "finfluencers.html",
+    "href": "finfluencers.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Basics of Neural networks",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "introduction.html#vectors-and-matrices",
+    "href": "introduction.html#vectors-and-matrices",
+    "title": "Basics of Neural networks",
+    "section": "Vectors and Matrices",
+    "text": "Vectors and Matrices\nTODO: Write expanded descriptions for\n\nVectors\nMatrices\n\nTODO: [DIAGRAM SHOWING VECTORS AND MATRICES]\nLarge language models are complex, but they consist of two main components. The first is vectors, or lists of numbers, and the other is matrices, ‘squares’ of numbers. Pairs of vectors and matrices can be combined with a multiplication-like operation. That operation goes by different names, such as ‘matrix multiplication’ or ‘linear transformation’. There are many details about this operation that I won’t cover in this handbook. The study of matrix multiplication is a key topic in linear algebra, if you’d like to learn more."
+  },
+  {
+    "objectID": "introduction.html#linear-transformations",
+    "href": "introduction.html#linear-transformations",
+    "title": "Basics of Neural networks",
+    "section": "Linear Transformations",
+    "text": "Linear Transformations\nThe most important thing to understand about matrix multiplication for neural networks is that it multiplies and combines each row of the input vector to create a new output vector based on the matrix’s values. This is why you’ll hear the matrices in neural networks described as ‘weights’ or ‘weight matrices.’ Linear transformation multiplies each entry in a vector by a corresponding weight and adds those weighted entries to calculate the entry of the output vector. This operation is shown in this diagram:\n\n\nimport numpy as np\n\nmatrix = np.array([[1,   -1/2], \n                   [-1/2, 1/2]]) \n\nvector = np.array([[1],\n                   [2]])\n\nprint(matrix @ vector)\n\n[[0. ]\n [0.5]]"
+  },
+  {
+    "objectID": "introduction.html#activation-functions",
+    "href": "introduction.html#activation-functions",
+    "title": "Basics of Neural networks",
+    "section": "Activation Functions",
+    "text": "Activation Functions\nHistorically, activation functions were meant to mimic biological neuron activation. But I tend to think of them now as a place that the model can learn non-linear relationships that cannot be represented in linear-transformations alone. Think of RELU as a kind of ‘hinge’ in the function, that allows the function to follow arbitrary curves.\n\n\n\n\n\n\nimport torch\nimport plotly.express as px\n\nactivation = torch.nn.ReLU()\nxs = torch.arange(-3, 3)\nys = activation(xs)\n\npx.line(x=xs, y=ys, title=\"The ReLU function\")\n\n                            \n                                            \n\n\nTo see the ‘hinge’ behavior of ReLU in action, lets train a simple neural network to learn a function, f(x) = x³ - 3x² -x.\n\nimport torch.nn as nn\nimport numpy as np\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\n\nDOMAIN = [-2, 4]\n\n# If you keep the hidden dimension small the 'hinge' effect is more obvious\nHIDDEN_SIZE = 8\n\nmodel = nn.Sequential(\n    nn.Linear(1, HIDDEN_SIZE), # These are linear transforms\n    nn.ReLU(),\n    nn.Linear(HIDDEN_SIZE, 1),\n)\n\nto_learn = lambda ins: ins ** 3 - 3 * ins ** 2 - ins\n\n# Set a seed to make sure our \ntorch.manual_seed(35)\n\nxs = torch.FloatTensor(5000).uniform_(*DOMAIN).unsqueeze(1)\nys = to_learn(xs)\n\n# Make a really simple model\n\noptimizer = torch.optim.Adam(model.parameters(), lr=0.01)\nloss_fn = nn.MSELoss()\n\nfor epoch in range(5000):\n    pred = model(xs)\n    loss = loss_fn(pred, ys)\n    optimizer.zero_grad()\n    loss.backward()\n    optimizer.step()\n\n# Now we can look at our model output\n\ngrid_xs = torch.arange(*DOMAIN, step=0.01).unsqueeze(1)\ngrid_ys = model(grid_xs).squeeze().detach().numpy()\n\ngraph_xs = grid_xs.squeeze().detach().numpy()\nfunction_ys = to_learn(grid_xs).squeeze().detach().numpy()\n\nfig = go.Figure()\nfig.update_layout(title=\"ReLU acts like a hinge\")\nfig.add_trace(go.Scatter(x=graph_xs, y=function_ys, name=\"Actual\"))\nfig.add_trace(go.Scatter(x=graph_xs, y=grid_ys, name=\"Modeled\"))\n\n                            \n                                            \n\n\nIn this example the model can use ReLU to learn where to place a hinge to learn the best approximation of a cubic polynomial. We kept the model pretty constrained on the hidden layer dimensions to make the hinge points more obvious. A linear transformation without the non-linearity could only create a line through this example dataset.\n\nWhat is happening here exactly?\nThe next chart shows how each node in the hidden layer activates given a particular x input. The most important features are the ‘hinge’ point and the slope of the non-zero portion of the function. The arrows on the right show the final hidden layer, multiplying each ReLU curve, which is then summed to obtain the final output.\n\n\nShow chart code\nsd = model.state_dict()\nw = sd['0.weight'].squeeze().numpy()\nb = sd['0.bias'].numpy()\nx = np.linspace(-2, 4, 200)\nw2 = sd['2.weight'].squeeze().numpy()\n\nCOLS = 2\nROWS = len(w) + 1\n\ngrid_xs = torch.arange(*DOMAIN, step=0.01).unsqueeze(1)\ngrid_ys = model(grid_xs).squeeze().detach().numpy()\n\ngraph_xs = grid_xs.squeeze().detach().numpy()\nfunction_ys = to_learn(grid_xs).squeeze().detach().numpy()\n\nymin = min(np.maximum(0, w[i]*x + b[i]).min() for i in range(len(w)))\nymax = max(np.maximum(0, w[i]*x + b[i]).max() for i in range(len(w)))\n\nfuncmax = max(function_ys) * 1.1\nfuncmin = -funcmax\n\nfig = make_subplots(\n    rows=ROWS,\n    cols=COLS,\n    shared_xaxes=True,\n    shared_yaxes=True,\n    column_widths=[0.5, 0.05],\n    row_heights=[150] * (ROWS - 1) + [300],\n    vertical_spacing=0.03,\n    horizontal_spacing=0.0,\n)\n\nfig.add_trace(\n    go.Scatter(x=graph_xs, y=grid_ys, name=\"Modeled\"),\n    row=ROWS,\n    col=1,\n)\n\nfig.add_trace(\n    go.Scatter(x=graph_xs, y=function_ys, name=\"Actual\"),\n    row=ROWS,\n    col=1,\n)\n\nfor i in range(len(w)):\n    y = np.maximum(0, w[i]*x + b[i])\n    fig.add_trace(go.Scatter(x=x, y=y, mode='lines'), row=i+1, col=1)\n    fig.add_trace(go.Scatter(\n        x=[0,0],\n        y=[0,w2[i]],\n        marker={\n            \"symbol\":[\n                'circle', \n                'triangle-up' if w2[i] &gt; 0 else 'triangle-down'\n            ], \n            \"size\": [0, 10],\n            \"color\": \"black\"\n        },\n    ), row=i+1, col=2)\n\n    knot_point = (-b[i]/w[i])\n    if (-2 &lt;= knot_point &lt;= 4):\n        fig.add_vline(x=knot_point, row=i+1, col=1, line_dash=\"dot\")\n        fig.add_vline(x=knot_point, row=ROWS, col=1, line_dash=\"dot\")\n\nfig.update_yaxes(range=[-max(w2) * 1.1, max(w2) * 1.1], col=1)\nfig.update_yaxes(range=[funcmin, funcmax], row=ROWS)\nfig.update_yaxes(showticklabels=False)\nfig.update_yaxes(visible=False, col=2)\nfig.update_xaxes(visible=False)\n\nfig.add_annotation(\n    text=\"Model output for each neuron (one linear transform & ReLU)\", \n    x=-0.07, y=0.87, xref='paper', yref='paper',\n    showarrow=False, textangle=-90, font=dict(size=14),\n)\nfig.add_annotation(\n    text=\"Combination\", x=-0.07, y=0.0, xref='paper', yref='paper',\n    showarrow=False, textangle=-90, font=dict(size=14),\n)\n\nfig.add_annotation(\n    text=\"Layer two (multiplies the model output before combination)\", \n    x=1.05, y=0.87, xref='paper', yref='paper',\n    showarrow=False, textangle=-90, font=dict(size=14),\n)\n\nfig.update_layout(\n    margin={\"l\": 40, \"r\": 40, \"t\": 50, \"b\": 10},\n    height=750,\n    width=500,\n    showlegend=False,\n    title=\"How ReLUs compose into an arbitrary function\"\n)"
+  },
+  {
+    "objectID": "introduction.html#the-gelu-activation-function",
+    "href": "introduction.html#the-gelu-activation-function",
+    "title": "Basics of Neural networks",
+    "section": "The GELU Activation Function",
+    "text": "The GELU Activation Function\nAn improvement on ReLU, is GELU which is very similar but is smooth through zero where ReLU has a corner.\n\nactivation = torch.nn.GELU()\nxs = torch.arange(-3, 3, step=0.1)\nys = activation(xs)\n\npx.line(x=xs, y=ys, title=\"GELU\")"
+  },
+  {
+    "objectID": "introduction.html#ring-example",
+    "href": "introduction.html#ring-example",
+    "title": "Basics of Neural networks",
+    "section": "Ring Example",
+    "text": "Ring Example\nTo show the GELU function in action, let’s create a model that learns from two-dimensional input instead of one in our polynomial example.\nLet’s create a simple task for the model to complete. We’ll have a two-dimensional space with a ‘ring’ and we’ll have the model learn whether new points fall into that ring.\n\nimport plotly.graph_objects as go\nimport numpy as np\n\nt = np.linspace(0, 2*np.pi, 100)\nfig = go.Figure()\n\nfor r in [1, 2]:\n    fig.add_trace(\n        go.Scatter(\n            x=r*np.cos(t),\n            y=r*np.sin(t),\n            mode='lines',\n            line={\"color\": \"#636EFA\"},\n        ),\n    )\n\nxs = torch.FloatTensor(1000, 2).uniform_(-3,3)\nradii = (xs * xs).sum(axis=1).sqrt()\n\nzs = (radii &gt; 1) & (radii &lt; 2)\n\nfig.add_trace(\n    go.Scatter(\n        x=xs[:,0].numpy(),\n        y=xs[:,1].numpy(),\n        mode=\"markers\",\n        marker={\n            \"color\": zs.int().numpy(),\n            \"colorscale\": [[0, \"#EF553B\"], [1, \"#636EFA\"]],\n        },\n    )\n)\n\nfig.update_layout(\n    xaxis={\"range\": [-3,3]}, \n    yaxis={\"range\": [-3,3], \"scaleanchor\": \"x\"},\n    showlegend=False,\n)\n\n                            \n                                            \n\n\n[3D Diagram of a learned model that shows the GELU hinge instead of the ReLU hinge]"
+  },
+  {
+    "objectID": "introduction.html#normalization-functions",
+    "href": "introduction.html#normalization-functions",
+    "title": "Basics of Neural networks",
+    "section": "Normalization functions",
+    "text": "Normalization functions\nNormalization functions are the final major component of neural networks. As a value gets multiplied and added again and again through layers of a network, the values can get very big or very small. So much so that the computer hardware can no longer store the value correctly. Normalization functions apply an operation to a vector to keep those overflows from happening.\nThese basic components are combined to make almost all neural network models from really simple multi-layer perceptrons, to large language models.\nA basic neural network architecture arranges these components in layers. A ‘layer’ consists of a linear transformation and an activation function together. Several of these layers together can learn very complex non-linear relationships.\nSo far, and below we have talked about how a model calculates an output thorugh these operations. We haven’t yet covered how the models are ‘trained’ to ensure the model is generating ‘good’ outputs through these calculations. This explainer doesn’t go into detail about how the models are trained. I find that the easiest way to think about it is that model designers write the forward pass, write the loss function, and the automatic differentiation system takes care of back propagation, the process of updating all model parameters to lower the loss (EDIT: JARGON). The main task that the model learns during training is to predict the next token given the previous tokens in the sequence."
+  },
+  {
+    "objectID": "introduction.html#vectors-are-arrows-in-space",
+    "href": "introduction.html#vectors-are-arrows-in-space",
+    "title": "Basics of Neural networks",
+    "section": "Vectors are arrows in space",
+    "text": "Vectors are arrows in space\n\nVisualizing Linear transformations of vectors\n\n\nActivation functions make linear transformations non-linear"
+  },
+  {
+    "objectID": "transformers.html",
+    "href": "transformers.html",
+    "title": "Transformers",
+    "section": "",
+    "text": "Interpretability notes\nTransformers are a particular combination of the basic components discussed so far. They’re models meant to deal with sequences of things. In language models the sequences are tokens, short chunks of characters, usually words but the architecture is more flexible than that. The problem that transformers are trying to solve is that, often in sequences, the ‘meaning’ (EDIT: VAGUE) of an item is dependent its context within the sequence. It depends on which other items are present and their order. The key part of the transformer is attention, which attempts to solve this problem, and will be discussed in detail below."
+  },
+  {
+    "objectID": "transformers.html#preparing-the-input-sequence",
+    "href": "transformers.html#preparing-the-input-sequence",
+    "title": "Transformers",
+    "section": "Preparing the input sequence",
+    "text": "Preparing the input sequence\nHow natural language is broken into tokens isn’t essential for this discussion, but basically an input string is broken into common combinations of letters, often words.\nFor the input sequence to be processed by the model, it first must be turned into a sequence of vectors. In LLMs each token is mapped to an integer and that integer corresponds to the column of a large ‘vocabulary’ matrix. The model then can turn a sequence of tokens into a sequence of integers, and then (EDIT: CONFUSING) into a sequence of vectors. These vectors are called embeddings.\n\nimport torch\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nfrom transformer_lens import HookedTransformer\n\nFinally, for LLMs in particular, the input sequence needs to encode the order of the vectors somehow. This is typically called positional encoding. Modern models have different ways to do this, but in out current exploratory model GPT2, the positional encoding is a sequence of vectors that gets added to the embedding vector sequence. This positional encoding sequence is trained along with everything else."
+  },
+  {
+    "objectID": "transformers.html#residual-stream",
+    "href": "transformers.html#residual-stream",
+    "title": "Transformers",
+    "section": "Residual Stream",
+    "text": "Residual Stream\nTransformer models are ‘ResNets,’ a type of model where output from later layers gets added to the input at every step. The layers then have more of a function of editing or augmenting the output than generating new at each layer. The residual stream is an important architectural component for interpretability, which we’ll discuss more below."
+  },
+  {
+    "objectID": "transformers.html#transformer-layer",
+    "href": "transformers.html#transformer-layer",
+    "title": "Transformers",
+    "section": "Transformer Layer",
+    "text": "Transformer Layer\nA transformer model is made up of a series of transformer layers. These layers have two components, the ‘attention mechanism’ which is made up of a series of ‘attention heads’ and MLP layers. The MLP layers are typical linear transform + activation function neural network layers, as described above. The attention layer is more complicated.\n\nAttention heads\n\nAttention head\n\nWQ, WK, WO all take the input vectors and map them to a smaller dimension: 64 = 768 / 12, model dimension / number of heads\nWQ - query linear transform taking the input vector at each position to ‘what to search for’\nWK - key linear transformation taking the input at each position to ‘how to be found in the search’\nWO - output linear transformation taking the input at each position to ’what this token offers\nWQ(WK)T * WO\nWV - value? takes the linear combination at that position back out to the model dimension (64 -&gt; 768)\n\n\n\n\nQK OV"
+  },
+  {
+    "objectID": "transformers.html#output",
+    "href": "transformers.html#output",
+    "title": "Transformers",
+    "section": "Output",
+    "text": "Output\nThe output of the model is a sequence of the same length as the input sequence. You can think of each vector as the models ‘prediction’ for the next token at each point in the sequence. The most importantant token is the last in the prediction sequence where the model predicts what it has not yet seen."
+  },
+  {
+    "objectID": "transformers.html#why-attention-is-important",
+    "href": "transformers.html#why-attention-is-important",
+    "title": "Transformers",
+    "section": "Why attention is important",
+    "text": "Why attention is important\n\nWhy attention is important\nWhere new ‘semantic content’ gets added (EDIT: WORD CHOICE - SEMANTIC)\n\nOV\nMLP layers\n\nInterpretability"
+  },
+  {
+    "objectID": "logits.html",
+    "href": "logits.html",
+    "title": "Uncovering model bias by inspecting logits",
+    "section": "",
+    "text": "Interpretability notes"
+  },
+  {
+    "objectID": "logits.html#papers-using-this-approach",
+    "href": "logits.html#papers-using-this-approach",
+    "title": "Uncovering model bias by inspecting logits",
+    "section": "Papers using this approach",
+    "text": "Papers using this approach"
+  },
+  {
+    "objectID": "nlas.html",
+    "href": "nlas.html",
+    "title": "",
+    "section": "",
+    "text": "Interpretability notes"
+  }
+]

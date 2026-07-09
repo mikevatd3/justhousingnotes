@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>introduction</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-63a80bcf8af3ec45b65cc5398da38620.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script>
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+</script>
+<script type="module">import "https://cdn.plot.ly/plotly-3.6.0.min"</script>
+
+
+
+<link rel="stylesheet" href="static/notebook.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vectors-and-matrices" id="toc-vectors-and-matrices" class="nav-link active" data-scroll-target="#vectors-and-matrices">Vectors and Matrices</a></li>
+  <li><a href="#linear-transformations" id="toc-linear-transformations" class="nav-link" data-scroll-target="#linear-transformations">Linear Transformations</a></li>
+  <li><a href="#activation-functions" id="toc-activation-functions" class="nav-link" data-scroll-target="#activation-functions">Activation Functions</a>
+  <ul class="collapse">
+  <li><a href="#what-is-happening-here-exactly" id="toc-what-is-happening-here-exactly" class="nav-link" data-scroll-target="#what-is-happening-here-exactly">What is happening here exactly?</a></li>
+  </ul></li>
+  <li><a href="#the-gelu-activation-function" id="toc-the-gelu-activation-function" class="nav-link" data-scroll-target="#the-gelu-activation-function">The GELU Activation Function</a></li>
+  <li><a href="#ring-example" id="toc-ring-example" class="nav-link" data-scroll-target="#ring-example">Ring Example</a></li>
+  <li><a href="#normalization-functions" id="toc-normalization-functions" class="nav-link" data-scroll-target="#normalization-functions">Normalization functions</a></li>
+  <li><a href="#vectors-are-arrows-in-space" id="toc-vectors-are-arrows-in-space" class="nav-link" data-scroll-target="#vectors-are-arrows-in-space">Vectors are arrows in space</a>
+  <ul class="collapse">
+  <li><a href="#visualizing-linear-transformations-of-vectors" id="toc-visualizing-linear-transformations-of-vectors" class="nav-link" data-scroll-target="#visualizing-linear-transformations-of-vectors">Visualizing Linear transformations of vectors</a></li>
+  <li><a href="#activation-functions-make-linear-transformations-non-linear" id="toc-activation-functions-make-linear-transformations-non-linear" class="nav-link" data-scroll-target="#activation-functions-make-linear-transformations-non-linear">Activation functions make linear transformations non-linear</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div class="back-link"><a href="index.html">Interpretability notes</a></div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Basics of Neural networks</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./static/network.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<section id="vectors-and-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="vectors-and-matrices">Vectors and Matrices</h2>
+<p>TODO: Write expanded descriptions for</p>
+<ul>
+<li>Vectors</li>
+<li>Matrices</li>
+</ul>
+<p>TODO: [DIAGRAM SHOWING VECTORS AND MATRICES]</p>
+<p>Large language models are complex, but they consist of two main components. The first is vectors, or lists of numbers, and the other is matrices, ‘squares’ of numbers. Pairs of vectors and matrices can be combined with a multiplication-like operation. That operation goes by different names, such as ‘matrix multiplication’ or ‘linear transformation’. There are many details about this operation that I won’t cover in this handbook. The study of matrix multiplication is a key topic in linear algebra, if you’d like to learn more.</p>
+</section>
+<section id="linear-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="linear-transformations">Linear Transformations</h2>
+<p>The most important thing to understand about matrix multiplication for neural networks is that it multiplies and combines each row of the input vector to create a new output vector based on the matrix’s values. This is why you’ll hear the matrices in neural networks described as ‘weights’ or ‘weight matrices.’ Linear transformation multiplies each entry in a vector by a corresponding weight and adds those weighted entries to calculate the entry of the output vector. This operation is shown in this diagram:</p>
+<p><img src="./static/matmul.png" class="img-fluid" alt="Diagram of matrix multiplication and its relationship to the graph diagram that is often used."></p>
+<div id="3e686f0f" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>,   <span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>], </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   [<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>]]) </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([[<span class="dv">1</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                   [<span class="dv">2</span>]])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix <span class="op">@</span> vector)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[0. ]
+ [0.5]]</code></pre>
+</div>
+</div>
+</section>
+<section id="activation-functions" class="level2">
+<h2 class="anchored" data-anchor-id="activation-functions">Activation Functions</h2>
+<p>Historically, activation functions were meant to mimic biological neuron activation. But I tend to think of them now as a place that the model can learn non-linear relationships that cannot be represented in linear-transformations alone. Think of RELU as a kind of ‘hinge’ in the function, that allows the function to follow arbitrary curves.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="./static/network_activation.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<div id="198e921d" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>activation <span class="op">=</span> torch.nn.ReLU()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> torch.arange(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> activation(xs)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>px.line(x<span class="op">=</span>xs, y<span class="op">=</span>ys, title<span class="op">=</span><span class="st">"The ReLU function"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div style="height:525px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="37256228-7e1c-4d83-a115-20fdd7825db3" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("37256228-7e1c-4d83-a115-20fdd7825db3")) {                    Plotly.newPlot(                        "37256228-7e1c-4d83-a115-20fdd7825db3",                        [{"hovertemplate":"x=%{x}\u003cbr\u003ey=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"","orientation":"v","showlegend":false,"x":{"dtype":"i1","bdata":"\u002ff7\u002fAAEC"},"xaxis":"x","y":{"dtype":"i1","bdata":"AAAAAAEC"},"yaxis":"y","type":"scatter"}],                        {"template":{"layout":{"font":{"color":"#2b2b2b","family":"EB Garamond"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"gridcolor":"#e0dbd4"},"yaxis":{"gridcolor":"#e0dbd4"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y"}},"legend":{"tracegroupgap":0},"title":{"text":"The ReLU function"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('37256228-7e1c-4d83-a115-20fdd7825db3');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<p>To see the ‘hinge’ behavior of ReLU in action, lets train a simple neural network to learn a function, f(x) = x³ - 3x² -x.</p>
+<div id="5afc104a" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>DOMAIN <span class="op">=</span> [<span class="op">-</span><span class="dv">2</span>, <span class="dv">4</span>]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># If you keep the hidden dimension small the 'hinge' effect is more obvious</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>HIDDEN_SIZE <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Sequential(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    nn.Linear(<span class="dv">1</span>, HIDDEN_SIZE), <span class="co"># These are linear transforms</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    nn.ReLU(),</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    nn.Linear(HIDDEN_SIZE, <span class="dv">1</span>),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>to_learn <span class="op">=</span> <span class="kw">lambda</span> ins: ins <span class="op">**</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">*</span> ins <span class="op">**</span> <span class="dv">2</span> <span class="op">-</span> ins</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a seed to make sure our </span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>torch.manual_seed(<span class="dv">35</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> torch.FloatTensor(<span class="dv">5000</span>).uniform_(<span class="op">*</span>DOMAIN).unsqueeze(<span class="dv">1</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> to_learn(xs)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a really simple model</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(model.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>loss_fn <span class="op">=</span> nn.MSELoss()</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5000</span>):</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    pred <span class="op">=</span> model(xs)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> loss_fn(pred, ys)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we can look at our model output</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>grid_xs <span class="op">=</span> torch.arange(<span class="op">*</span>DOMAIN, step<span class="op">=</span><span class="fl">0.01</span>).unsqueeze(<span class="dv">1</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>grid_ys <span class="op">=</span> model(grid_xs).squeeze().detach().numpy()</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>graph_xs <span class="op">=</span> grid_xs.squeeze().detach().numpy()</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>function_ys <span class="op">=</span> to_learn(grid_xs).squeeze().detach().numpy()</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>fig.update_layout(title<span class="op">=</span><span class="st">"ReLU acts like a hinge"</span>)</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Scatter(x<span class="op">=</span>graph_xs, y<span class="op">=</span>function_ys, name<span class="op">=</span><span class="st">"Actual"</span>))</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>fig.add_trace(go.Scatter(x<span class="op">=</span>graph_xs, y<span class="op">=</span>grid_ys, name<span class="op">=</span><span class="st">"Modeled"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div style="height:525px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="f72638bf-7ac2-4f41-98bf-b34d4b471384" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f72638bf-7ac2-4f41-98bf-b34d4b471384")) {                    Plotly.newPlot(                        "f72638bf-7ac2-4f41-98bf-b34d4b471384",                        [{"name":"Actual","x":{"dtype":"f4","bdata":"AAAAwFK4\u002fr+kcP2\u002f9ij8v0jh+r+amfm\u002f7FH4vz0K97+PwvW\u002f4Xr0vzMz87+F6\u002fG\u002f16Pwvylc7797FO6\u002fzMzsvx+F679xPeq\u002fw\u002fXovxWu579nZua\u002fuR7lvwvX479cj+K\u002frkfhvwAA4L9SuN6\u002fpHDdv\u002fYo3L9I4dq\u002fmpnZv+tR2L89Cte\u002fj8LVv+F61L8zM9O\u002fhevRv9ej0L8pXM+\u002fehTOv83MzL8fhcu\u002fcT3Kv8P1yL8Vrse\u002fZ2bGv7kexb8K18O\u002fXI\u002fCv65Hwb8AAMC\u002fUri+v6Rwvb\u002f2KLy\u002fSOG6v5mZub\u002fsUbi\u002fPgq3v5DCtb\u002fierS\u002fNDOzv4brsb\u002fYo7C\u002fKVyvv3sUrr\u002fNzKy\u002fH4Wrv3E9qr\u002fD9ai\u002fFa6nv2dmpr+4HqW\u002fCtejv1yPor+uR6G\u002fAACgv1K4nr+kcJ2\u002f9iicv0fhmr+amZm\u002f7FGYvz4Kl7+QwpW\u002f4nqUvzQzk7+G65G\u002f16OQvylcj797FI6\u002fzcyMvx+Fi79xPYq\u002fw\u002fWIvxWuh79mZoa\u002fuB6FvwrXg79cj4K\u002frkeBv\u002f\u002f\u002ff7+jcH2\u002fR+F6v+tReL+PwnW\u002fMzNzv9ejcL97FG6\u002fHoVrv8L1aL9mZma\u002fCtdjv65HYb9SuF6\u002f9ihcv5qZWb89Cle\u002f4XpUv4XrUb8pXE+\u002fzcxMv3E9Sr8Vrke\u002fuR5Fv1yPQr8AAEC\u002fpHA9v0jhOr\u002fsUTi\u002fkMI1vzQzM7\u002fYozC\u002fexQuvx+FK7\u002fD9Si\u002fZ2YmvwrXI7+uRyG\u002fUrgev\u002fYoHL+ZmRm\u002fPQoXv+F6FL+F6xG\u002fKVwPv83MDL9xPQq\u002fFa4Hv7geBb9cjwK\u002fAAAAv0jh+r6PwvW+16Pwvh6F675mZua+rkfhvvUo3L49Cte+hevRvs3MzL4Vrse+XI\u002fCvqRwvb7sUbi+MzOzvnsUrr7D9ai+CtejvlK4nr6ZmZm+4XqUvilcj75wPYq+uB6FvgAAgL6PwnW+HoVrvq5HYb49Cle+zMxMvlyPQr7rUTi+exQuvgrXI76ZmRm+KVwPvrgeBb6PwvW9rkfhvczMzL3rUbi9CtejvSlcj72PwnW9zMxMvQrXI72OwvW8CdejvAjXI7wAAEAkCtcjPArXozyPwvU8CtcjPc3MTD2PwnU9KVyPPQrXoz3rUbg9zczMPa5H4T2PwvU9uB4FPilcDz6ZmRk+CtcjPnsULj7rUTg+XI9CPs3MTD49Clc+rkdhPh6Faz6PwnU+AACAPrgehT5wPYo+KVyPPuF6lD6ZmZk+UriePgrXoz7C9ag+exSuPjMzsz7rUbg+pHC9PlyPwj4Ursc+zczMPoXr0T4+Ctc+9ijcPq5H4T5nZuY+H4XrPtej8D6PwvU+R+H6PgAAAD9cjwI\u002fuB4FPxSuBz9wPQo\u002fzcwMPylcDz+F6xE\u002f4XoUPz0KFz+amRk\u002f9igcP1K4Hj+uRyE\u002fCtcjP2ZmJj\u002fC9Sg\u002fHoUrP3sULj\u002fXozA\u002fMzMzP4\u002fCNT\u002fsUTg\u002fSOE6P6RwPT8AAEA\u002fXY9CP7keRT8Vrkc\u002fcT1KP83MTD8pXE8\u002fhetRP+F6VD8+Clc\u002fmplZP\u002fYoXD9SuF4\u002frkdhPwrXYz9mZmY\u002fwvVoPx+Faz97FG4\u002f16NwPzMzcz+PwnU\u002f61F4P0fhej+jcH0\u002fAACAP65HgT9cj4I\u002fCteDP7gehT9mZoY\u002fFK6HP8L1iD9wPYo\u002fHoWLP8zMjD97FI4\u002fKVyPP9ejkD+F65E\u002fMzOTP+F6lD+PwpU\u002fPQqXP+xRmD+amZk\u002fSOGaP\u002fYonD+kcJ0\u002fUriePwAAoD+uR6E\u002fXY+iPwrXoz+4HqU\u002fZmamPxSupz\u002fC9ag\u002fcD2qPx6Fqz\u002fNzKw\u002fexSuPylcrz\u002fXo7A\u002fheuxPzMzsz\u002fherQ\u002fj8K1Pz4Ktz\u002fsUbg\u002fmpm5P0jhuj\u002f2KLw\u002fpHC9P1K4vj8AAMA\u002fr0fBP1yPwj8K18M\u002fuB7FP2Zmxj8Ursc\u002fwvXIP3A9yj8fhcs\u002fzczMP3sUzj8pXM8\u002f16PQP4Xr0T8zM9M\u002f4XrUP5DC1T89Ctc\u002f61HYP5mZ2T9H4do\u002f9SjcP6Nw3T9RuN4\u002fAADgP65H4T9cj+I\u002fCtfjP7ge5T9mZuY\u002fFK7nP8L16D9xPeo\u002fH4XrP83M7D97FO4\u002fKVzvP9ej8D+F6\u002fE\u002fMzPzP+J69D+PwvU\u002fPQr3P+tR+D+Zmfk\u002fR+H6P\u002fUo\u002fD+jcP0\u002fUrj+PwAAAEDXowBArkcBQIXrAUBcjwJAMzMDQArXA0DhegRAuB4FQI\u002fCBUBmZgZAPQoHQBSuB0DrUQhAwvUIQJmZCUBxPQpASOEKQB+FC0D2KAxAzcwMQKRwDUB7FA5AUrgOQClcD0AAABBA16MQQK5HEUCF6xFAXI8SQDMzE0AK1xNA4XoUQLgeFUCPwhVAZmYWQD0KF0AUrhdA61EYQML1GECamRlAcT0aQEjhGkAfhRtA9igcQM3MHECkcB1AexQeQFK4HkApXB9AAAAgQNejIECuRyFAheshQFyPIkAzMyNACtcjQOF6JEC4HiVAj8IlQGZmJkA9CidAFK4nQOtRKEDD9ShAmpkpQHE9KkBI4SpAH4UrQPYoLEDNzCxApHAtQHsULkBSuC5AKVwvQAAAMEDXozBArkcxQIXrMUBcjzJAMzMzQArXM0DhejRAuB41QI\u002fCNUBmZjZAPQo3QBSuN0DsUThAw\u002fU4QJqZOUBxPTpASOE6QB+FO0D2KDxAzcw8QKRwPUB7FD5AUrg+QClcP0AAAEBA16NAQK5HQUCF60FAXI9CQDMzQ0AK10NA4XpEQLgeRUCPwkVAZmZGQD0KR0AUrkdA61FIQML1SECZmUlAcD1KQEfhSkAehUtA9ShMQM3MTECkcE1AexROQFK4TkApXE9AAABQQNejUECuR1FAhetRQFyPUkAzM1NACtdTQOF6VEC4HlVAj8JVQGZmVkA9CldAFK5XQOtRWEDC9VhAmZlZQHA9WkBH4VpAHoVbQPYoXEDNzFxApHBdQHsUXkBSuF5AKVxfQAAAYEDXo2BArkdhQIXrYUBcj2JAMzNjQArXY0DhemRAuB5lQI\u002fCZUBmZmZAPQpnQBSuZ0DrUWhAwvVoQJmZaUBwPWpAR+FqQB+Fa0D2KGxAzcxsQKRwbUB7FG5AUrhuQClcb0AAAHBA16NwQK5HcUCF63FAXI9yQDMzc0AK13NA4Xp0QLgedUCPwnVAZmZ2QD0Kd0AUrndA61F4QML1eECZmXlAcD16QEjhekAfhXtA9ih8QM3MfECkcH1AexR+QFK4fkApXH9A"},"y":{"dtype":"f4","bdata":"AACQwc0qjsFHWYzBa4uKwTTBiMGg+obBrDeFwVV4g8GZvIHBcgSAwb6ffMG5PXnBzeJ1wfeOcsEtQm\u002fBaPxrwaq9aMHkhWXBElViwS0rX8EzCFzBGexYwdvWVcFuyFLB0sBPwQDATMHwxUnBnNJGwfvlQ8ENAEHBxSA+wR9IO8EXdjjBpqo1wcXlMsFsJzDBl28twT++KsFdEyjB624lwebQIsFCOSDB\u002facdwRAdG8FwmBjBHRoWwQ+iE8E9MBHBpMQOwTxfDMEAAArB6KYHwfBTBcEPBwPBQcAAwfb+\u002fMB\u002fifjABCD0wHjC78DUcOvABSvnwALx4sDCwt7ALqDawEWJ1sD1fdLAMX7OwPCJysAgocbAucPCwKzxvsDrKrvAbm+3wCS\u002fs8AEGrDAAICswAzxqMAYbaXAHPShwAWGnsDSIpvAbMqXwMh8lMDeOZHAngGOwPrTisDosIfAWJiEwESKgcA0DX3Aohp3wLA8ccBOc2vAWr5lwMQdYMBlkVrANhlVwBO1T8DiZErAkShFwP3\u002fP8AX6zrAv+k1wN\u002f7MMBcISzAHFonwAmmIsAHBR7A\u002fnYZwNb7FMB0kxDAwD0MwKD6B8D8yQPAcVf\u002fv30\u002f97\u002fmS++\u002fgHznvxTR379uSdi\u002fYuXQv7ikyb8+h8K\u002fwoy7vxS1tL8AAK6\u002fVm2nv+D8oL9trpq\u002fzIGUv8t2jr81jYi\u002f2MSCvwU7er8JLm+\u002fUWJkv3bXWb8ejU+\u002f3IJFv1C4O78NLTK\u002fueAov+fSH787Axe\u002fR3EOv60cBr8KCvy+1lPsvvAV3b6UT86+AADAvmAmsr7twaS+3dGXvmhVi76Ml36+WGhnvqIbUb7Wrzu+ZiMnvr50E75GogC+3FTdvUwXu72wiJq9wEt3vZjXPL1orgW98JOjvCCQBLyAm0Q7gBZaPMAruzzYgAE9yEwiPQAAQD3IoFo9dDVyPSBigz3AKYw9vHSTPT1GmT1moZ09XImgPUcBoj1JDKI9iq2gPS3onT1Zv5k9MjaUPd9PjT2ED4U9jPB2PZgaYT1yo0g9aJEtPcTqDz2fa988rfGZPIzoHjwAAECkI70ovNiarbwg1AW9GD03vQ0Ca71YjpC9XcOsve8cyr3pl+i9lBgEvsFyFL7qWCW+fck2vujCSL6UQ1u+9EluvjrqgL6+8Iq+wTeVvne+n74WhKq+14e1vu7IwL6VRsy+AADYvmb04779IvC+AIv8vtCVBL8MAgu\u002fzokRv7IsGL9S6h6\u002fTMIlvzm0LL+1vzO\u002fXOQ6v8ghQr+Wd0m\u002fYOVQv8JqWL9YB2C\u002fu7pnv4iEb79cZHe\u002fzll\u002fvz6yg78Bwoe\u002f\u002fduLvwAAkL\u002fXLZS\u002fUWWYvzqmnL9i8KC\u002flkOlv6Kfqb9TBK6\u002feHGyv+Lmtr9aZLu\u002fsOm\u002fv7B2xL8pC8m\u002f56bNv7pJ0r9u89a\u002f0aPbv7Ra4L\u002fgF+W\u002fItvpv0yk7r8rc\u002fO\u002fiEf4vzYh\u002fb8AAAHA23EDwBHmBcCKXAjALdUKwN9PDcCJzA\u002fAEksSwGDLFMBaTRfA5tAZwOxVHMBQ3B7A\u002fmMhwNjsI8DIdibAtAEpwIONK8AZGi7AYacwwEA1M8CcwzXAXVI4wGnhOsCncD3AAABAwFePQsCWHkXAo61HwGQ8SsC\u002fykzAnlhPwOXlUcB8clTAS\u002f5WwDaJWcAoE1zAApxewLAjYcAUqmPAGi9mwKSyaMCgNGvA7rRtwHgzcMAhsHLA1ip1wHijd8DwGXrAJo58wAAAf8Czt4DAH+6BwDUjg8DtVoTAN4mFwAi6hsBT6YfACheJwCRDisCRbYvAR5aMwDa9jcBU4o7AlAWQwOkmkcBHRpLAoWOTwOx+lMAYmJXAHK+WwOfDl8By1pjArOaZwIr0msAAAJzAAgmdwIAPnsBwE5\u002fAxhSgwHQTocBvD6LAqAijwBT\u002fo8Co8qTAVOOlwA7RpsDGu6fAdaOowAmIqcB5aarAtkerwLUirMBp+qzAxs6twL+frsBFba\u002fATzewwM\u002f9sMC5wLHAAICywJY7s8Bx87PAgqe0wL9XtcAYBLbAgqy2wPRQt8Bd8bfAsY24wOIlucDoubnAs0m6wDnVusBqXLvAPN+7wKJdvMCO17zA80y9wMi9vcD8Kb7AhpG+wFj0vsBlUr\u002fAoKu\u002fwAAAwMB2T8DA8ZnAwGzfwMDUH8HAJFvBwEeRwcA0wsHA4u3BwEAUwsA9NcLA2FDCwPxmwsCid8LAt4LCwDCIwsAGiMLAJoLCwIZ2wsAXZcLA0k3CwKYwwsCIDcLAaeTBwEK1wcAAgMHAmkTBwAEDwcAqu8DACm3AwJQYwMC3vb\u002fAaly\u002fwKT0vsBShr7AaRG+wN6VvcCkE73ArIq8wO\u002f6u8BZZLvA5Ma6wIQiusAmd7nAv8S4wEILuMCqSrfA4oK2wOGztcCa3bTAAAC0wAYbs8CjLrLAwjqxwGI\u002fsMBuPK\u002fA1TGuwJgfrcCkBazA6OOqwF+6qcD2iKjApk+nwF4OpsASxaTAtXOjwEAaosCguKDAzE6fwLPcncBKYpzAit+awGZUmcDJwJfArCSWwACAlMC80pLAzxyRwDJej8DSlo3ApsaLwKXticC8C4jA4CCGwAgthMAjMILAJiqAwAQ2fMBkBXjAO8JzwIpsb8AhBGvA+IhmwPf6YcD2WV3A5aVYwKTeU8AjBE\u002fAQhZKwOkURcAAAEDAb9c6wB6bNcDtSjDAzOYqwJtuJcBC4h\u002fAqUEawLCMFMBXww7AXuUIwM3yAsAI1\u002fm\u002ftp7tv2Q84b8ysNS\u002foPnHv54Yu7\u002fcDK6\u002fatagv7p0k7\u002fo54W\u002fLF9wv0iXVL+kdzi\u002fAAAcv\u002fhf\u002fr5wDcS+KAmJvsCiGr7ALAe9wO6wPfAjVD5Anqg+COPnPqjvEz8MSjQ\u002fcAFVP9QVdj\u002f8w4s\u002f7qucPyDDrT\u002fSCb8\u002fBIDQP\u002fQl4j\u002fm+\u002fM\u002f\u002fAADQEUcDEC+TxVAp5seQAAAKEDpfDFAkhI7QOvAREA0iE5AbWhYQLZhYkAvdGxA6J92QIBygEDFoYVA0t2KQL4mkEB6fJVAJ9+aQNROoECIy6VARFWrQDDssEBFkLZAkkG8QBYAwkD6y8dAN6XNQOSL00AAgNlApIHfQNmQ5UCuretAKtjxQF4Q+EBTVv5AEFUCQeKFBUGkvQhBZvwLQSlCD0HzjhJByeIVQbg9GUG6nxxB4AggQTZ5I0Gs8CZBWm8qQUH1LUFrgjFB1RY1QZCyOEGaVTxB"},"type":"scatter"},{"name":"Modeled","x":{"dtype":"f4","bdata":"AAAAwFK4\u002fr+kcP2\u002f9ij8v0jh+r+amfm\u002f7FH4vz0K97+PwvW\u002f4Xr0vzMz87+F6\u002fG\u002f16Pwvylc7797FO6\u002fzMzsvx+F679xPeq\u002fw\u002fXovxWu579nZua\u002fuR7lvwvX479cj+K\u002frkfhvwAA4L9SuN6\u002fpHDdv\u002fYo3L9I4dq\u002fmpnZv+tR2L89Cte\u002fj8LVv+F61L8zM9O\u002fhevRv9ej0L8pXM+\u002fehTOv83MzL8fhcu\u002fcT3Kv8P1yL8Vrse\u002fZ2bGv7kexb8K18O\u002fXI\u002fCv65Hwb8AAMC\u002fUri+v6Rwvb\u002f2KLy\u002fSOG6v5mZub\u002fsUbi\u002fPgq3v5DCtb\u002fierS\u002fNDOzv4brsb\u002fYo7C\u002fKVyvv3sUrr\u002fNzKy\u002fH4Wrv3E9qr\u002fD9ai\u002fFa6nv2dmpr+4HqW\u002fCtejv1yPor+uR6G\u002fAACgv1K4nr+kcJ2\u002f9iicv0fhmr+amZm\u002f7FGYvz4Kl7+QwpW\u002f4nqUvzQzk7+G65G\u002f16OQvylcj797FI6\u002fzcyMvx+Fi79xPYq\u002fw\u002fWIvxWuh79mZoa\u002fuB6FvwrXg79cj4K\u002frkeBv\u002f\u002f\u002ff7+jcH2\u002fR+F6v+tReL+PwnW\u002fMzNzv9ejcL97FG6\u002fHoVrv8L1aL9mZma\u002fCtdjv65HYb9SuF6\u002f9ihcv5qZWb89Cle\u002f4XpUv4XrUb8pXE+\u002fzcxMv3E9Sr8Vrke\u002fuR5Fv1yPQr8AAEC\u002fpHA9v0jhOr\u002fsUTi\u002fkMI1vzQzM7\u002fYozC\u002fexQuvx+FK7\u002fD9Si\u002fZ2YmvwrXI7+uRyG\u002fUrgev\u002fYoHL+ZmRm\u002fPQoXv+F6FL+F6xG\u002fKVwPv83MDL9xPQq\u002fFa4Hv7geBb9cjwK\u002fAAAAv0jh+r6PwvW+16Pwvh6F675mZua+rkfhvvUo3L49Cte+hevRvs3MzL4Vrse+XI\u002fCvqRwvb7sUbi+MzOzvnsUrr7D9ai+CtejvlK4nr6ZmZm+4XqUvilcj75wPYq+uB6FvgAAgL6PwnW+HoVrvq5HYb49Cle+zMxMvlyPQr7rUTi+exQuvgrXI76ZmRm+KVwPvrgeBb6PwvW9rkfhvczMzL3rUbi9CtejvSlcj72PwnW9zMxMvQrXI72OwvW8CdejvAjXI7wAAEAkCtcjPArXozyPwvU8CtcjPc3MTD2PwnU9KVyPPQrXoz3rUbg9zczMPa5H4T2PwvU9uB4FPilcDz6ZmRk+CtcjPnsULj7rUTg+XI9CPs3MTD49Clc+rkdhPh6Faz6PwnU+AACAPrgehT5wPYo+KVyPPuF6lD6ZmZk+UriePgrXoz7C9ag+exSuPjMzsz7rUbg+pHC9PlyPwj4Ursc+zczMPoXr0T4+Ctc+9ijcPq5H4T5nZuY+H4XrPtej8D6PwvU+R+H6PgAAAD9cjwI\u002fuB4FPxSuBz9wPQo\u002fzcwMPylcDz+F6xE\u002f4XoUPz0KFz+amRk\u002f9igcP1K4Hj+uRyE\u002fCtcjP2ZmJj\u002fC9Sg\u002fHoUrP3sULj\u002fXozA\u002fMzMzP4\u002fCNT\u002fsUTg\u002fSOE6P6RwPT8AAEA\u002fXY9CP7keRT8Vrkc\u002fcT1KP83MTD8pXE8\u002fhetRP+F6VD8+Clc\u002fmplZP\u002fYoXD9SuF4\u002frkdhPwrXYz9mZmY\u002fwvVoPx+Faz97FG4\u002f16NwPzMzcz+PwnU\u002f61F4P0fhej+jcH0\u002fAACAP65HgT9cj4I\u002fCteDP7gehT9mZoY\u002fFK6HP8L1iD9wPYo\u002fHoWLP8zMjD97FI4\u002fKVyPP9ejkD+F65E\u002fMzOTP+F6lD+PwpU\u002fPQqXP+xRmD+amZk\u002fSOGaP\u002fYonD+kcJ0\u002fUriePwAAoD+uR6E\u002fXY+iPwrXoz+4HqU\u002fZmamPxSupz\u002fC9ag\u002fcD2qPx6Fqz\u002fNzKw\u002fexSuPylcrz\u002fXo7A\u002fheuxPzMzsz\u002fherQ\u002fj8K1Pz4Ktz\u002fsUbg\u002fmpm5P0jhuj\u002f2KLw\u002fpHC9P1K4vj8AAMA\u002fr0fBP1yPwj8K18M\u002fuB7FP2Zmxj8Ursc\u002fwvXIP3A9yj8fhcs\u002fzczMP3sUzj8pXM8\u002f16PQP4Xr0T8zM9M\u002f4XrUP5DC1T89Ctc\u002f61HYP5mZ2T9H4do\u002f9SjcP6Nw3T9RuN4\u002fAADgP65H4T9cj+I\u002fCtfjP7ge5T9mZuY\u002fFK7nP8L16D9xPeo\u002fH4XrP83M7D97FO4\u002fKVzvP9ej8D+F6\u002fE\u002fMzPzP+J69D+PwvU\u002fPQr3P+tR+D+Zmfk\u002fR+H6P\u002fUo\u002fD+jcP0\u002fUrj+PwAAAEDXowBArkcBQIXrAUBcjwJAMzMDQArXA0DhegRAuB4FQI\u002fCBUBmZgZAPQoHQBSuB0DrUQhAwvUIQJmZCUBxPQpASOEKQB+FC0D2KAxAzcwMQKRwDUB7FA5AUrgOQClcD0AAABBA16MQQK5HEUCF6xFAXI8SQDMzE0AK1xNA4XoUQLgeFUCPwhVAZmYWQD0KF0AUrhdA61EYQML1GECamRlAcT0aQEjhGkAfhRtA9igcQM3MHECkcB1AexQeQFK4HkApXB9AAAAgQNejIECuRyFAheshQFyPIkAzMyNACtcjQOF6JEC4HiVAj8IlQGZmJkA9CidAFK4nQOtRKEDD9ShAmpkpQHE9KkBI4SpAH4UrQPYoLEDNzCxApHAtQHsULkBSuC5AKVwvQAAAMEDXozBArkcxQIXrMUBcjzJAMzMzQArXM0DhejRAuB41QI\u002fCNUBmZjZAPQo3QBSuN0DsUThAw\u002fU4QJqZOUBxPTpASOE6QB+FO0D2KDxAzcw8QKRwPUB7FD5AUrg+QClcP0AAAEBA16NAQK5HQUCF60FAXI9CQDMzQ0AK10NA4XpEQLgeRUCPwkVAZmZGQD0KR0AUrkdA61FIQML1SECZmUlAcD1KQEfhSkAehUtA9ShMQM3MTECkcE1AexROQFK4TkApXE9AAABQQNejUECuR1FAhetRQFyPUkAzM1NACtdTQOF6VEC4HlVAj8JVQGZmVkA9CldAFK5XQOtRWEDC9VhAmZlZQHA9WkBH4VpAHoVbQPYoXEDNzFxApHBdQHsUXkBSuF5AKVxfQAAAYEDXo2BArkdhQIXrYUBcj2JAMzNjQArXY0DhemRAuB5lQI\u002fCZUBmZmZAPQpnQBSuZ0DrUWhAwvVoQJmZaUBwPWpAR+FqQB+Fa0D2KGxAzcxsQKRwbUB7FG5AUrhuQClcb0AAAHBA16NwQK5HcUCF63FAXI9yQDMzc0AK13NA4Xp0QLgedUCPwnVAZmZ2QD0Kd0AUrndA61F4QML1eECZmXlAcD16QEjhekAfhXtA9ih8QM3MfECkcH1AexR+QFK4fkApXH9A"},"y":{"dtype":"f4","bdata":"qoaNwXwAjMFOeorBIPSIwfJth8HE54XBlmGEwWfbgsE5VYHBFp5\u002fwbqRfMFehXnBAnl2wadsc8FKYHDB61NtwZJHasE2O2fB2i5kwX4iYcEjFl7BxwlbwWv9V8EM8VTBsORRwVXYTsH4y0vBnb9IwUCzRcHlpkLBiZo\u002fwSuOPMHOgTnBc3U2wRdpM8G6XDDBX1AtwQNEKsGnNyfBSSskwfAeIcGTEh7BOAYbwdz5F8GA7RTBJOERwQZND8F1aA3B54MLwVifCcHKugfBPNYFwazxA8EeDQLBkCgAwf+H\u002fMDmvvjAyvX0wKss8cCPY+3AcZrpwFTR5cA4COLAFT\u002fewPl12sDdrNbAvuPSwKIaz8CFUcvAaIjHwEu\u002fw8Ar9r\u002fADi28wPBjuMDTmrTAttGwwJgIrcB8P6nAX3alwD+tocAl5J3ABhuawOpRlsDNiJLAr7+OwJP2isB1LYfAVWSDwHA2f8A2pHfA\u002fBFwwMF\u002faMCH7WDATFtZwBPJUcDSNkrAmKRCwO4yP8Cr0jvAa3I4wCcSNcDksTHAo1EuwGHxKsAfkSfA3DAkwJvQIMBYcB3AFRAawNSvFsCRTxPAT+8PwA6PDMDLLgnAic4FwEduAsAGHP6\u002fglv3vwCb8L962um\u002f+Bnjv3RZ3L\u002fumNW\u002fbNjOv+QXyL9gV8G\u002f3Ja6v1jWs7\u002fUFa2\u002fUFWmv8yUn79I1Ji\u002fwhOSvz5Ti7+6koS\u002fa6R7v10jbr9VomC\u002fTSFTv0WgRb83Hzi\u002fL54qvycdHb8fnA+\u002fFxsCvx406b4OMs6+\u002fi+zvuQtmL6oV3q+hlNEvmZPDr54lrC9bBwJvbg1rrxQ\u002fay88MSrvIiMqrwkVKm8wBuovFzjprz8qqW8lHKkvDQ6o7zMAaK8aMmgvASRn7ygWJ68PCCdvNjnm7xwr5q8EHeZvKw+mLxIBpe85M2VvICVlLwcXZO8uCSSvFTskLzss4+8iHuOvCZDjbzCCoy8XtKKvPqZibyUYYi8MimHvM7whbxquIS8BoCDvKJHgrw8D4G8sK1\u002fvIjcg7yEyYi8gLaNvICjkrx4kJe8dH2cvHBqobxsV6a8aESrvGQxsLxgHrW8XAu6vFj4vrxY5cO8VNLIvFC\u002fzbxMrNK8RJnXvECG3LwIIWy9FBS5vagX\u002fL2ajR++ZA9Bvi6RYr56CYK+X8qSvkOLo74nTLS+Cw3Fvu7N1b7Tjua+uE\u002f3vk0IBL+\u002faAy\u002fMskUv6QpHb8WiiW\u002fieotv\u002fpKNr9rqz6\u002f3wtHv1BsT7\u002fCzFe\u002fNi1gv6eNaL8Z7nC\u002fjU55v37XgL+4B4W\u002f8jeJvypojb9kmJG\u002fnMiVv9b4mb8OKZ6\u002fRlmiv4CJpr+6uaq\u002f8umuvyoas79kSre\u002fnnq7v9aqv78Q28O\u002fSAvIv4A7zL+8a9C\u002f9JvUvyzM2L9m\u002fNy\u002fnizhv9hc5b8Qjem\u002fSr3tv4Tt8b+8Hfa\u002f9k36vy5+\u002fr80VwHAUW8DwG2HBcCJnwfAp7cJwMPPC8Dg5w3A\u002fP8PwBgYEsA0MBTAUkgWwG5gGMCLeBrAp5AcwMOoHsDgwCDA\u002fdgiwBnxJMA1CSfAUiEpwG85K8CLUS3Ap2kvwMSBMcDhmTPA\u002fbE1wBnKN8A24jnAU\u002fo7wG8SPsCMKkDAqEJCwMRaRMDhckbA\u002fopIwBmjSsA2u0zAU9NOwG\u002frUMCNA1PAqhtVwMUzV8DjS1nA\u002f2NbwBp8XcA3lF\u002fAVKxhwHHEY8CO3GXAq\u002fRnwMYMasDjJGzAAD1uwBxVcMA4bXLAVoV0wHGddsCOtXjAqc16wMblfMDk\u002fX7AAIuAwA2XgcAdo4LALK+DwDm7hMBIx4XAVdOGwGTfh8By64jAgPeJwI8Di8CeD4zArBuNwLonjsDIM4\u002fA1j+QwOVLkcDzV5LAAmSTwA9wlMAdfJXALIiWwDmUl8BIoJjAVayZwGS4msB0xJvAgdCcwJDcncCe6J7ArPSfwLoAocDIDKLA1hijwOYkpMDzMKXAAT2mwA9Jp8AdVajALGGpwDptqsBIeavAV4WswGWRrcB0na7AgamvwJC1sMCewbHArc2ywLrZs8DK5bTA2PG1wOX9tsD0CbjAAxa5wBAiusAfLrvALjq8wDxGvcBJUr7AV16\u002fwGZqwMB1dsHAgYLCwJCOw8CemsTArqbFwLyyxsDJvsfA2MrIwObWycD14srAAu\u002fLwBD7zMAfB87ALRPPwDwf0MBLK9HAVzfSwGZD08B1T9TAg1vVwJFn1sChc9fAr3\u002fYwL2L2cDLl9rAqLLawA0t2cBzp9fA2SHWwD6c1MCkFtPACZHRwHAL0MDXhc7AOgDNwKF6y8AH9cnAbW\u002fIwNPpxsA4ZMXAnd7DwARZwsBp08DAz02\u002fwDXIvcCYQrzA\u002fry6wGM3ucDKsbfALiy2wJWmtMD8ILPAYJuxwMUVsMArkK7AkgqtwPiEq8Bd\u002f6nAwnmowCn0psCObqXA9OijwFtjosC\u002f3aDAJVifwIrSncDyTJzAVseawL1BmcAhvJfAhDaWwOywlMBPK5PAt6WRwB0gkMCBmo7A5xSNwE6Pi8CzCYrAGISIwH7+hsDkeIXASvODwK5tgsAW6IDA9sR+wMS5e8CLrnjAWqN1wCSYcsDxjG\u002fAuoFswIV2acBQa2bAFmBjwOVUYMCuSV3AfT5awEgzV8ASKFTA3RxRwKoRTsB1BkvAQftHwAzwRMDX5EHAotk+wGvOO8A7wzjABrg1wM+sMsCaoS\u002fAaJYswDOLKcAAgCbAyXQjwJRpIMBgXh3ALVMawPZHF8DDPBTAkTERwFomDsAnGwvAszICwEyK779Ir9q\u002fUtTFv0z5sL9YHpy\u002fWkOHv7rQZL+\u002fGju\u002fw2QRv5Zdz7784ne+KBeivSiZqz1EpHw+Fr7RPgeVEj8RSzw\u002f6QBmP3rbhz9+tpw\u002fdJGxP3Bsxj9uR9s\u002fdCLwP8R+AkBD7AxAwVkXQD3HIUC\u002fNCxAOqI2QLwPQUA6fUtAtupVQDhYYEC0xWpAMjN1QLagf0AYB4VA2D2KQJZ0j0BVq5RAFOKZQNQYn0CTT6RAUYapQBS9rkDN87NAkCq5QFhhvkAZmMNA1M7IQJUFzkBTPNNAE3PYQNGp3UCR4OJAUhfoQA9O7UDRhPJAjrv3QE7y\u002fECGFAFB5q8DQUZLBkGl5ghBBoILQWUdDkHEuBBBJFQTQYTvFUHjihhBQyYbQabBHUEFXSBBZ\u002fgiQcWTJUEkLyhBhcoqQeRlLUFEATBB"},"type":"scatter"}],                        {"template":{"layout":{"font":{"color":"#2b2b2b","family":"EB Garamond"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"gridcolor":"#e0dbd4"},"yaxis":{"gridcolor":"#e0dbd4"}}},"title":{"text":"ReLU acts like a hinge"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('f72638bf-7ac2-4f41-98bf-b34d4b471384');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<p>In this example the model can use ReLU to learn where to place a hinge to learn the best approximation of a cubic polynomial. We kept the model pretty constrained on the hidden layer dimensions to make the hinge points more obvious. A linear transformation without the non-linearity could <em>only</em> create a line through this example dataset.</p>
+<section id="what-is-happening-here-exactly" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-happening-here-exactly">What is happening here exactly?</h3>
+<p>The next chart shows how each node in the hidden layer activates given a particular x input. The most important features are the ‘hinge’ point and the slope of the non-zero portion of the function. The arrows on the right show the final hidden layer, multiplying each ReLU curve, which is then summed to obtain the final output.</p>
+<div id="a7db77ce" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Show chart code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sd <span class="op">=</span> model.state_dict()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> sd[<span class="st">'0.weight'</span>].squeeze().numpy()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> sd[<span class="st">'0.bias'</span>].numpy()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">200</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>w2 <span class="op">=</span> sd[<span class="st">'2.weight'</span>].squeeze().numpy()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>COLS <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ROWS <span class="op">=</span> <span class="bu">len</span>(w) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>grid_xs <span class="op">=</span> torch.arange(<span class="op">*</span>DOMAIN, step<span class="op">=</span><span class="fl">0.01</span>).unsqueeze(<span class="dv">1</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>grid_ys <span class="op">=</span> model(grid_xs).squeeze().detach().numpy()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>graph_xs <span class="op">=</span> grid_xs.squeeze().detach().numpy()</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>function_ys <span class="op">=</span> to_learn(grid_xs).squeeze().detach().numpy()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>ymin <span class="op">=</span> <span class="bu">min</span>(np.maximum(<span class="dv">0</span>, w[i]<span class="op">*</span>x <span class="op">+</span> b[i]).<span class="bu">min</span>() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w)))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>ymax <span class="op">=</span> <span class="bu">max</span>(np.maximum(<span class="dv">0</span>, w[i]<span class="op">*</span>x <span class="op">+</span> b[i]).<span class="bu">max</span>() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w)))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>funcmax <span class="op">=</span> <span class="bu">max</span>(function_ys) <span class="op">*</span> <span class="fl">1.1</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>funcmin <span class="op">=</span> <span class="op">-</span>funcmax</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> make_subplots(</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    rows<span class="op">=</span>ROWS,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    cols<span class="op">=</span>COLS,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    shared_xaxes<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    shared_yaxes<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    column_widths<span class="op">=</span>[<span class="fl">0.5</span>, <span class="fl">0.05</span>],</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    row_heights<span class="op">=</span>[<span class="dv">150</span>] <span class="op">*</span> (ROWS <span class="op">-</span> <span class="dv">1</span>) <span class="op">+</span> [<span class="dv">300</span>],</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    vertical_spacing<span class="op">=</span><span class="fl">0.03</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    horizontal_spacing<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>graph_xs, y<span class="op">=</span>grid_ys, name<span class="op">=</span><span class="st">"Modeled"</span>),</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span>ROWS,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>graph_xs, y<span class="op">=</span>function_ys, name<span class="op">=</span><span class="st">"Actual"</span>),</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span>ROWS,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(w)):</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.maximum(<span class="dv">0</span>, w[i]<span class="op">*</span>x <span class="op">+</span> b[i])</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    fig.add_trace(go.Scatter(x<span class="op">=</span>x, y<span class="op">=</span>y, mode<span class="op">=</span><span class="st">'lines'</span>), row<span class="op">=</span>i<span class="op">+</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    fig.add_trace(go.Scatter(</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">0</span>],</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>[<span class="dv">0</span>,w2[i]],</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span>{</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>            <span class="st">"symbol"</span>:[</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>                <span class="st">'circle'</span>, </span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>                <span class="st">'triangle-up'</span> <span class="cf">if</span> w2[i] <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">'triangle-down'</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>            ], </span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>            <span class="st">"size"</span>: [<span class="dv">0</span>, <span class="dv">10</span>],</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>            <span class="st">"color"</span>: <span class="st">"black"</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    ), row<span class="op">=</span>i<span class="op">+</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    knot_point <span class="op">=</span> (<span class="op">-</span>b[i]<span class="op">/</span>w[i])</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">-</span><span class="dv">2</span> <span class="op">&lt;=</span> knot_point <span class="op">&lt;=</span> <span class="dv">4</span>):</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>        fig.add_vline(x<span class="op">=</span>knot_point, row<span class="op">=</span>i<span class="op">+</span><span class="dv">1</span>, col<span class="op">=</span><span class="dv">1</span>, line_dash<span class="op">=</span><span class="st">"dot"</span>)</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>        fig.add_vline(x<span class="op">=</span>knot_point, row<span class="op">=</span>ROWS, col<span class="op">=</span><span class="dv">1</span>, line_dash<span class="op">=</span><span class="st">"dot"</span>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>fig.update_yaxes(<span class="bu">range</span><span class="op">=</span>[<span class="op">-</span><span class="bu">max</span>(w2) <span class="op">*</span> <span class="fl">1.1</span>, <span class="bu">max</span>(w2) <span class="op">*</span> <span class="fl">1.1</span>], col<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>fig.update_yaxes(<span class="bu">range</span><span class="op">=</span>[funcmin, funcmax], row<span class="op">=</span>ROWS)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>fig.update_yaxes(showticklabels<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>fig.update_yaxes(visible<span class="op">=</span><span class="va">False</span>, col<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>fig.update_xaxes(visible<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>fig.add_annotation(</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    text<span class="op">=</span><span class="st">"Model output for each neuron (one linear transform &amp; ReLU)"</span>, </span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=-</span><span class="fl">0.07</span>, y<span class="op">=</span><span class="fl">0.87</span>, xref<span class="op">=</span><span class="st">'paper'</span>, yref<span class="op">=</span><span class="st">'paper'</span>,</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>    showarrow<span class="op">=</span><span class="va">False</span>, textangle<span class="op">=-</span><span class="dv">90</span>, font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">14</span>),</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>fig.add_annotation(</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    text<span class="op">=</span><span class="st">"Combination"</span>, x<span class="op">=-</span><span class="fl">0.07</span>, y<span class="op">=</span><span class="fl">0.0</span>, xref<span class="op">=</span><span class="st">'paper'</span>, yref<span class="op">=</span><span class="st">'paper'</span>,</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    showarrow<span class="op">=</span><span class="va">False</span>, textangle<span class="op">=-</span><span class="dv">90</span>, font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">14</span>),</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>fig.add_annotation(</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>    text<span class="op">=</span><span class="st">"Layer two (multiplies the model output before combination)"</span>, </span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="fl">1.05</span>, y<span class="op">=</span><span class="fl">0.87</span>, xref<span class="op">=</span><span class="st">'paper'</span>, yref<span class="op">=</span><span class="st">'paper'</span>,</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    showarrow<span class="op">=</span><span class="va">False</span>, textangle<span class="op">=-</span><span class="dv">90</span>, font<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span><span class="dv">14</span>),</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>    margin<span class="op">=</span>{<span class="st">"l"</span>: <span class="dv">40</span>, <span class="st">"r"</span>: <span class="dv">40</span>, <span class="st">"t"</span>: <span class="dv">50</span>, <span class="st">"b"</span>: <span class="dv">10</span>},</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">750</span>,</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">500</span>,</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>    showlegend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"How ReLUs compose into an arbitrary function"</span></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div style="height:750px; width:500px;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="f538ca05-fbb3-4fca-8c97-28715cabd7a2" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f538ca05-fbb3-4fca-8c97-28715cabd7a2")) {                    Plotly.newPlot(                        "f538ca05-fbb3-4fca-8c97-28715cabd7a2",                        [{"name":"Modeled","x":{"dtype":"f4","bdata":"AAAAwFK4\u002fr+kcP2\u002f9ij8v0jh+r+amfm\u002f7FH4vz0K97+PwvW\u002f4Xr0vzMz87+F6\u002fG\u002f16Pwvylc7797FO6\u002fzMzsvx+F679xPeq\u002fw\u002fXovxWu579nZua\u002fuR7lvwvX479cj+K\u002frkfhvwAA4L9SuN6\u002fpHDdv\u002fYo3L9I4dq\u002fmpnZv+tR2L89Cte\u002fj8LVv+F61L8zM9O\u002fhevRv9ej0L8pXM+\u002fehTOv83MzL8fhcu\u002fcT3Kv8P1yL8Vrse\u002fZ2bGv7kexb8K18O\u002fXI\u002fCv65Hwb8AAMC\u002fUri+v6Rwvb\u002f2KLy\u002fSOG6v5mZub\u002fsUbi\u002fPgq3v5DCtb\u002fierS\u002fNDOzv4brsb\u002fYo7C\u002fKVyvv3sUrr\u002fNzKy\u002fH4Wrv3E9qr\u002fD9ai\u002fFa6nv2dmpr+4HqW\u002fCtejv1yPor+uR6G\u002fAACgv1K4nr+kcJ2\u002f9iicv0fhmr+amZm\u002f7FGYvz4Kl7+QwpW\u002f4nqUvzQzk7+G65G\u002f16OQvylcj797FI6\u002fzcyMvx+Fi79xPYq\u002fw\u002fWIvxWuh79mZoa\u002fuB6FvwrXg79cj4K\u002frkeBv\u002f\u002f\u002ff7+jcH2\u002fR+F6v+tReL+PwnW\u002fMzNzv9ejcL97FG6\u002fHoVrv8L1aL9mZma\u002fCtdjv65HYb9SuF6\u002f9ihcv5qZWb89Cle\u002f4XpUv4XrUb8pXE+\u002fzcxMv3E9Sr8Vrke\u002fuR5Fv1yPQr8AAEC\u002fpHA9v0jhOr\u002fsUTi\u002fkMI1vzQzM7\u002fYozC\u002fexQuvx+FK7\u002fD9Si\u002fZ2YmvwrXI7+uRyG\u002fUrgev\u002fYoHL+ZmRm\u002fPQoXv+F6FL+F6xG\u002fKVwPv83MDL9xPQq\u002fFa4Hv7geBb9cjwK\u002fAAAAv0jh+r6PwvW+16Pwvh6F675mZua+rkfhvvUo3L49Cte+hevRvs3MzL4Vrse+XI\u002fCvqRwvb7sUbi+MzOzvnsUrr7D9ai+CtejvlK4nr6ZmZm+4XqUvilcj75wPYq+uB6FvgAAgL6PwnW+HoVrvq5HYb49Cle+zMxMvlyPQr7rUTi+exQuvgrXI76ZmRm+KVwPvrgeBb6PwvW9rkfhvczMzL3rUbi9CtejvSlcj72PwnW9zMxMvQrXI72OwvW8CdejvAjXI7wAAEAkCtcjPArXozyPwvU8CtcjPc3MTD2PwnU9KVyPPQrXoz3rUbg9zczMPa5H4T2PwvU9uB4FPilcDz6ZmRk+CtcjPnsULj7rUTg+XI9CPs3MTD49Clc+rkdhPh6Faz6PwnU+AACAPrgehT5wPYo+KVyPPuF6lD6ZmZk+UriePgrXoz7C9ag+exSuPjMzsz7rUbg+pHC9PlyPwj4Ursc+zczMPoXr0T4+Ctc+9ijcPq5H4T5nZuY+H4XrPtej8D6PwvU+R+H6PgAAAD9cjwI\u002fuB4FPxSuBz9wPQo\u002fzcwMPylcDz+F6xE\u002f4XoUPz0KFz+amRk\u002f9igcP1K4Hj+uRyE\u002fCtcjP2ZmJj\u002fC9Sg\u002fHoUrP3sULj\u002fXozA\u002fMzMzP4\u002fCNT\u002fsUTg\u002fSOE6P6RwPT8AAEA\u002fXY9CP7keRT8Vrkc\u002fcT1KP83MTD8pXE8\u002fhetRP+F6VD8+Clc\u002fmplZP\u002fYoXD9SuF4\u002frkdhPwrXYz9mZmY\u002fwvVoPx+Faz97FG4\u002f16NwPzMzcz+PwnU\u002f61F4P0fhej+jcH0\u002fAACAP65HgT9cj4I\u002fCteDP7gehT9mZoY\u002fFK6HP8L1iD9wPYo\u002fHoWLP8zMjD97FI4\u002fKVyPP9ejkD+F65E\u002fMzOTP+F6lD+PwpU\u002fPQqXP+xRmD+amZk\u002fSOGaP\u002fYonD+kcJ0\u002fUriePwAAoD+uR6E\u002fXY+iPwrXoz+4HqU\u002fZmamPxSupz\u002fC9ag\u002fcD2qPx6Fqz\u002fNzKw\u002fexSuPylcrz\u002fXo7A\u002fheuxPzMzsz\u002fherQ\u002fj8K1Pz4Ktz\u002fsUbg\u002fmpm5P0jhuj\u002f2KLw\u002fpHC9P1K4vj8AAMA\u002fr0fBP1yPwj8K18M\u002fuB7FP2Zmxj8Ursc\u002fwvXIP3A9yj8fhcs\u002fzczMP3sUzj8pXM8\u002f16PQP4Xr0T8zM9M\u002f4XrUP5DC1T89Ctc\u002f61HYP5mZ2T9H4do\u002f9SjcP6Nw3T9RuN4\u002fAADgP65H4T9cj+I\u002fCtfjP7ge5T9mZuY\u002fFK7nP8L16D9xPeo\u002fH4XrP83M7D97FO4\u002fKVzvP9ej8D+F6\u002fE\u002fMzPzP+J69D+PwvU\u002fPQr3P+tR+D+Zmfk\u002fR+H6P\u002fUo\u002fD+jcP0\u002fUrj+PwAAAEDXowBArkcBQIXrAUBcjwJAMzMDQArXA0DhegRAuB4FQI\u002fCBUBmZgZAPQoHQBSuB0DrUQhAwvUIQJmZCUBxPQpASOEKQB+FC0D2KAxAzcwMQKRwDUB7FA5AUrgOQClcD0AAABBA16MQQK5HEUCF6xFAXI8SQDMzE0AK1xNA4XoUQLgeFUCPwhVAZmYWQD0KF0AUrhdA61EYQML1GECamRlAcT0aQEjhGkAfhRtA9igcQM3MHECkcB1AexQeQFK4HkApXB9AAAAgQNejIECuRyFAheshQFyPIkAzMyNACtcjQOF6JEC4HiVAj8IlQGZmJkA9CidAFK4nQOtRKEDD9ShAmpkpQHE9KkBI4SpAH4UrQPYoLEDNzCxApHAtQHsULkBSuC5AKVwvQAAAMEDXozBArkcxQIXrMUBcjzJAMzMzQArXM0DhejRAuB41QI\u002fCNUBmZjZAPQo3QBSuN0DsUThAw\u002fU4QJqZOUBxPTpASOE6QB+FO0D2KDxAzcw8QKRwPUB7FD5AUrg+QClcP0AAAEBA16NAQK5HQUCF60FAXI9CQDMzQ0AK10NA4XpEQLgeRUCPwkVAZmZGQD0KR0AUrkdA61FIQML1SECZmUlAcD1KQEfhSkAehUtA9ShMQM3MTECkcE1AexROQFK4TkApXE9AAABQQNejUECuR1FAhetRQFyPUkAzM1NACtdTQOF6VEC4HlVAj8JVQGZmVkA9CldAFK5XQOtRWEDC9VhAmZlZQHA9WkBH4VpAHoVbQPYoXEDNzFxApHBdQHsUXkBSuF5AKVxfQAAAYEDXo2BArkdhQIXrYUBcj2JAMzNjQArXY0DhemRAuB5lQI\u002fCZUBmZmZAPQpnQBSuZ0DrUWhAwvVoQJmZaUBwPWpAR+FqQB+Fa0D2KGxAzcxsQKRwbUB7FG5AUrhuQClcb0AAAHBA16NwQK5HcUCF63FAXI9yQDMzc0AK13NA4Xp0QLgedUCPwnVAZmZ2QD0Kd0AUrndA61F4QML1eECZmXlAcD16QEjhekAfhXtA9ih8QM3MfECkcH1AexR+QFK4fkApXH9A"},"y":{"dtype":"f4","bdata":"qoaNwXwAjMFOeorBIPSIwfJth8HE54XBlmGEwWfbgsE5VYHBFp5\u002fwbqRfMFehXnBAnl2wadsc8FKYHDB61NtwZJHasE2O2fB2i5kwX4iYcEjFl7BxwlbwWv9V8EM8VTBsORRwVXYTsH4y0vBnb9IwUCzRcHlpkLBiZo\u002fwSuOPMHOgTnBc3U2wRdpM8G6XDDBX1AtwQNEKsGnNyfBSSskwfAeIcGTEh7BOAYbwdz5F8GA7RTBJOERwQZND8F1aA3B54MLwVifCcHKugfBPNYFwazxA8EeDQLBkCgAwf+H\u002fMDmvvjAyvX0wKss8cCPY+3AcZrpwFTR5cA4COLAFT\u002fewPl12sDdrNbAvuPSwKIaz8CFUcvAaIjHwEu\u002fw8Ar9r\u002fADi28wPBjuMDTmrTAttGwwJgIrcB8P6nAX3alwD+tocAl5J3ABhuawOpRlsDNiJLAr7+OwJP2isB1LYfAVWSDwHA2f8A2pHfA\u002fBFwwMF\u002faMCH7WDATFtZwBPJUcDSNkrAmKRCwO4yP8Cr0jvAa3I4wCcSNcDksTHAo1EuwGHxKsAfkSfA3DAkwJvQIMBYcB3AFRAawNSvFsCRTxPAT+8PwA6PDMDLLgnAic4FwEduAsAGHP6\u002fglv3vwCb8L962um\u002f+Bnjv3RZ3L\u002fumNW\u002fbNjOv+QXyL9gV8G\u002f3Ja6v1jWs7\u002fUFa2\u002fUFWmv8yUn79I1Ji\u002fwhOSvz5Ti7+6koS\u002fa6R7v10jbr9VomC\u002fTSFTv0WgRb83Hzi\u002fL54qvycdHb8fnA+\u002fFxsCvx406b4OMs6+\u002fi+zvuQtmL6oV3q+hlNEvmZPDr54lrC9bBwJvbg1rrxQ\u002fay88MSrvIiMqrwkVKm8wBuovFzjprz8qqW8lHKkvDQ6o7zMAaK8aMmgvASRn7ygWJ68PCCdvNjnm7xwr5q8EHeZvKw+mLxIBpe85M2VvICVlLwcXZO8uCSSvFTskLzss4+8iHuOvCZDjbzCCoy8XtKKvPqZibyUYYi8MimHvM7whbxquIS8BoCDvKJHgrw8D4G8sK1\u002fvIjcg7yEyYi8gLaNvICjkrx4kJe8dH2cvHBqobxsV6a8aESrvGQxsLxgHrW8XAu6vFj4vrxY5cO8VNLIvFC\u002fzbxMrNK8RJnXvECG3LwIIWy9FBS5vagX\u002fL2ajR++ZA9Bvi6RYr56CYK+X8qSvkOLo74nTLS+Cw3Fvu7N1b7Tjua+uE\u002f3vk0IBL+\u002faAy\u002fMskUv6QpHb8WiiW\u002fieotv\u002fpKNr9rqz6\u002f3wtHv1BsT7\u002fCzFe\u002fNi1gv6eNaL8Z7nC\u002fjU55v37XgL+4B4W\u002f8jeJvypojb9kmJG\u002fnMiVv9b4mb8OKZ6\u002fRlmiv4CJpr+6uaq\u002f8umuvyoas79kSre\u002fnnq7v9aqv78Q28O\u002fSAvIv4A7zL+8a9C\u002f9JvUvyzM2L9m\u002fNy\u002fnizhv9hc5b8Qjem\u002fSr3tv4Tt8b+8Hfa\u002f9k36vy5+\u002fr80VwHAUW8DwG2HBcCJnwfAp7cJwMPPC8Dg5w3A\u002fP8PwBgYEsA0MBTAUkgWwG5gGMCLeBrAp5AcwMOoHsDgwCDA\u002fdgiwBnxJMA1CSfAUiEpwG85K8CLUS3Ap2kvwMSBMcDhmTPA\u002fbE1wBnKN8A24jnAU\u002fo7wG8SPsCMKkDAqEJCwMRaRMDhckbA\u002fopIwBmjSsA2u0zAU9NOwG\u002frUMCNA1PAqhtVwMUzV8DjS1nA\u002f2NbwBp8XcA3lF\u002fAVKxhwHHEY8CO3GXAq\u002fRnwMYMasDjJGzAAD1uwBxVcMA4bXLAVoV0wHGddsCOtXjAqc16wMblfMDk\u002fX7AAIuAwA2XgcAdo4LALK+DwDm7hMBIx4XAVdOGwGTfh8By64jAgPeJwI8Di8CeD4zArBuNwLonjsDIM4\u002fA1j+QwOVLkcDzV5LAAmSTwA9wlMAdfJXALIiWwDmUl8BIoJjAVayZwGS4msB0xJvAgdCcwJDcncCe6J7ArPSfwLoAocDIDKLA1hijwOYkpMDzMKXAAT2mwA9Jp8AdVajALGGpwDptqsBIeavAV4WswGWRrcB0na7AgamvwJC1sMCewbHArc2ywLrZs8DK5bTA2PG1wOX9tsD0CbjAAxa5wBAiusAfLrvALjq8wDxGvcBJUr7AV16\u002fwGZqwMB1dsHAgYLCwJCOw8CemsTArqbFwLyyxsDJvsfA2MrIwObWycD14srAAu\u002fLwBD7zMAfB87ALRPPwDwf0MBLK9HAVzfSwGZD08B1T9TAg1vVwJFn1sChc9fAr3\u002fYwL2L2cDLl9rAqLLawA0t2cBzp9fA2SHWwD6c1MCkFtPACZHRwHAL0MDXhc7AOgDNwKF6y8AH9cnAbW\u002fIwNPpxsA4ZMXAnd7DwARZwsBp08DAz02\u002fwDXIvcCYQrzA\u002fry6wGM3ucDKsbfALiy2wJWmtMD8ILPAYJuxwMUVsMArkK7AkgqtwPiEq8Bd\u002f6nAwnmowCn0psCObqXA9OijwFtjosC\u002f3aDAJVifwIrSncDyTJzAVseawL1BmcAhvJfAhDaWwOywlMBPK5PAt6WRwB0gkMCBmo7A5xSNwE6Pi8CzCYrAGISIwH7+hsDkeIXASvODwK5tgsAW6IDA9sR+wMS5e8CLrnjAWqN1wCSYcsDxjG\u002fAuoFswIV2acBQa2bAFmBjwOVUYMCuSV3AfT5awEgzV8ASKFTA3RxRwKoRTsB1BkvAQftHwAzwRMDX5EHAotk+wGvOO8A7wzjABrg1wM+sMsCaoS\u002fAaJYswDOLKcAAgCbAyXQjwJRpIMBgXh3ALVMawPZHF8DDPBTAkTERwFomDsAnGwvAszICwEyK779Ir9q\u002fUtTFv0z5sL9YHpy\u002fWkOHv7rQZL+\u002fGju\u002fw2QRv5Zdz7784ne+KBeivSiZqz1EpHw+Fr7RPgeVEj8RSzw\u002f6QBmP3rbhz9+tpw\u002fdJGxP3Bsxj9uR9s\u002fdCLwP8R+AkBD7AxAwVkXQD3HIUC\u002fNCxAOqI2QLwPQUA6fUtAtupVQDhYYEC0xWpAMjN1QLagf0AYB4VA2D2KQJZ0j0BVq5RAFOKZQNQYn0CTT6RAUYapQBS9rkDN87NAkCq5QFhhvkAZmMNA1M7IQJUFzkBTPNNAE3PYQNGp3UCR4OJAUhfoQA9O7UDRhPJAjrv3QE7y\u002fECGFAFB5q8DQUZLBkGl5ghBBoILQWUdDkHEuBBBJFQTQYTvFUHjihhBQyYbQabBHUEFXSBBZ\u002fgiQcWTJUEkLyhBhcoqQeRlLUFEATBB"},"type":"scatter","xaxis":"x17","yaxis":"y17"},{"name":"Actual","x":{"dtype":"f4","bdata":"AAAAwFK4\u002fr+kcP2\u002f9ij8v0jh+r+amfm\u002f7FH4vz0K97+PwvW\u002f4Xr0vzMz87+F6\u002fG\u002f16Pwvylc7797FO6\u002fzMzsvx+F679xPeq\u002fw\u002fXovxWu579nZua\u002fuR7lvwvX479cj+K\u002frkfhvwAA4L9SuN6\u002fpHDdv\u002fYo3L9I4dq\u002fmpnZv+tR2L89Cte\u002fj8LVv+F61L8zM9O\u002fhevRv9ej0L8pXM+\u002fehTOv83MzL8fhcu\u002fcT3Kv8P1yL8Vrse\u002fZ2bGv7kexb8K18O\u002fXI\u002fCv65Hwb8AAMC\u002fUri+v6Rwvb\u002f2KLy\u002fSOG6v5mZub\u002fsUbi\u002fPgq3v5DCtb\u002fierS\u002fNDOzv4brsb\u002fYo7C\u002fKVyvv3sUrr\u002fNzKy\u002fH4Wrv3E9qr\u002fD9ai\u002fFa6nv2dmpr+4HqW\u002fCtejv1yPor+uR6G\u002fAACgv1K4nr+kcJ2\u002f9iicv0fhmr+amZm\u002f7FGYvz4Kl7+QwpW\u002f4nqUvzQzk7+G65G\u002f16OQvylcj797FI6\u002fzcyMvx+Fi79xPYq\u002fw\u002fWIvxWuh79mZoa\u002fuB6FvwrXg79cj4K\u002frkeBv\u002f\u002f\u002ff7+jcH2\u002fR+F6v+tReL+PwnW\u002fMzNzv9ejcL97FG6\u002fHoVrv8L1aL9mZma\u002fCtdjv65HYb9SuF6\u002f9ihcv5qZWb89Cle\u002f4XpUv4XrUb8pXE+\u002fzcxMv3E9Sr8Vrke\u002fuR5Fv1yPQr8AAEC\u002fpHA9v0jhOr\u002fsUTi\u002fkMI1vzQzM7\u002fYozC\u002fexQuvx+FK7\u002fD9Si\u002fZ2YmvwrXI7+uRyG\u002fUrgev\u002fYoHL+ZmRm\u002fPQoXv+F6FL+F6xG\u002fKVwPv83MDL9xPQq\u002fFa4Hv7geBb9cjwK\u002fAAAAv0jh+r6PwvW+16Pwvh6F675mZua+rkfhvvUo3L49Cte+hevRvs3MzL4Vrse+XI\u002fCvqRwvb7sUbi+MzOzvnsUrr7D9ai+CtejvlK4nr6ZmZm+4XqUvilcj75wPYq+uB6FvgAAgL6PwnW+HoVrvq5HYb49Cle+zMxMvlyPQr7rUTi+exQuvgrXI76ZmRm+KVwPvrgeBb6PwvW9rkfhvczMzL3rUbi9CtejvSlcj72PwnW9zMxMvQrXI72OwvW8CdejvAjXI7wAAEAkCtcjPArXozyPwvU8CtcjPc3MTD2PwnU9KVyPPQrXoz3rUbg9zczMPa5H4T2PwvU9uB4FPilcDz6ZmRk+CtcjPnsULj7rUTg+XI9CPs3MTD49Clc+rkdhPh6Faz6PwnU+AACAPrgehT5wPYo+KVyPPuF6lD6ZmZk+UriePgrXoz7C9ag+exSuPjMzsz7rUbg+pHC9PlyPwj4Ursc+zczMPoXr0T4+Ctc+9ijcPq5H4T5nZuY+H4XrPtej8D6PwvU+R+H6PgAAAD9cjwI\u002fuB4FPxSuBz9wPQo\u002fzcwMPylcDz+F6xE\u002f4XoUPz0KFz+amRk\u002f9igcP1K4Hj+uRyE\u002fCtcjP2ZmJj\u002fC9Sg\u002fHoUrP3sULj\u002fXozA\u002fMzMzP4\u002fCNT\u002fsUTg\u002fSOE6P6RwPT8AAEA\u002fXY9CP7keRT8Vrkc\u002fcT1KP83MTD8pXE8\u002fhetRP+F6VD8+Clc\u002fmplZP\u002fYoXD9SuF4\u002frkdhPwrXYz9mZmY\u002fwvVoPx+Faz97FG4\u002f16NwPzMzcz+PwnU\u002f61F4P0fhej+jcH0\u002fAACAP65HgT9cj4I\u002fCteDP7gehT9mZoY\u002fFK6HP8L1iD9wPYo\u002fHoWLP8zMjD97FI4\u002fKVyPP9ejkD+F65E\u002fMzOTP+F6lD+PwpU\u002fPQqXP+xRmD+amZk\u002fSOGaP\u002fYonD+kcJ0\u002fUriePwAAoD+uR6E\u002fXY+iPwrXoz+4HqU\u002fZmamPxSupz\u002fC9ag\u002fcD2qPx6Fqz\u002fNzKw\u002fexSuPylcrz\u002fXo7A\u002fheuxPzMzsz\u002fherQ\u002fj8K1Pz4Ktz\u002fsUbg\u002fmpm5P0jhuj\u002f2KLw\u002fpHC9P1K4vj8AAMA\u002fr0fBP1yPwj8K18M\u002fuB7FP2Zmxj8Ursc\u002fwvXIP3A9yj8fhcs\u002fzczMP3sUzj8pXM8\u002f16PQP4Xr0T8zM9M\u002f4XrUP5DC1T89Ctc\u002f61HYP5mZ2T9H4do\u002f9SjcP6Nw3T9RuN4\u002fAADgP65H4T9cj+I\u002fCtfjP7ge5T9mZuY\u002fFK7nP8L16D9xPeo\u002fH4XrP83M7D97FO4\u002fKVzvP9ej8D+F6\u002fE\u002fMzPzP+J69D+PwvU\u002fPQr3P+tR+D+Zmfk\u002fR+H6P\u002fUo\u002fD+jcP0\u002fUrj+PwAAAEDXowBArkcBQIXrAUBcjwJAMzMDQArXA0DhegRAuB4FQI\u002fCBUBmZgZAPQoHQBSuB0DrUQhAwvUIQJmZCUBxPQpASOEKQB+FC0D2KAxAzcwMQKRwDUB7FA5AUrgOQClcD0AAABBA16MQQK5HEUCF6xFAXI8SQDMzE0AK1xNA4XoUQLgeFUCPwhVAZmYWQD0KF0AUrhdA61EYQML1GECamRlAcT0aQEjhGkAfhRtA9igcQM3MHECkcB1AexQeQFK4HkApXB9AAAAgQNejIECuRyFAheshQFyPIkAzMyNACtcjQOF6JEC4HiVAj8IlQGZmJkA9CidAFK4nQOtRKEDD9ShAmpkpQHE9KkBI4SpAH4UrQPYoLEDNzCxApHAtQHsULkBSuC5AKVwvQAAAMEDXozBArkcxQIXrMUBcjzJAMzMzQArXM0DhejRAuB41QI\u002fCNUBmZjZAPQo3QBSuN0DsUThAw\u002fU4QJqZOUBxPTpASOE6QB+FO0D2KDxAzcw8QKRwPUB7FD5AUrg+QClcP0AAAEBA16NAQK5HQUCF60FAXI9CQDMzQ0AK10NA4XpEQLgeRUCPwkVAZmZGQD0KR0AUrkdA61FIQML1SECZmUlAcD1KQEfhSkAehUtA9ShMQM3MTECkcE1AexROQFK4TkApXE9AAABQQNejUECuR1FAhetRQFyPUkAzM1NACtdTQOF6VEC4HlVAj8JVQGZmVkA9CldAFK5XQOtRWEDC9VhAmZlZQHA9WkBH4VpAHoVbQPYoXEDNzFxApHBdQHsUXkBSuF5AKVxfQAAAYEDXo2BArkdhQIXrYUBcj2JAMzNjQArXY0DhemRAuB5lQI\u002fCZUBmZmZAPQpnQBSuZ0DrUWhAwvVoQJmZaUBwPWpAR+FqQB+Fa0D2KGxAzcxsQKRwbUB7FG5AUrhuQClcb0AAAHBA16NwQK5HcUCF63FAXI9yQDMzc0AK13NA4Xp0QLgedUCPwnVAZmZ2QD0Kd0AUrndA61F4QML1eECZmXlAcD16QEjhekAfhXtA9ih8QM3MfECkcH1AexR+QFK4fkApXH9A"},"y":{"dtype":"f4","bdata":"AACQwc0qjsFHWYzBa4uKwTTBiMGg+obBrDeFwVV4g8GZvIHBcgSAwb6ffMG5PXnBzeJ1wfeOcsEtQm\u002fBaPxrwaq9aMHkhWXBElViwS0rX8EzCFzBGexYwdvWVcFuyFLB0sBPwQDATMHwxUnBnNJGwfvlQ8ENAEHBxSA+wR9IO8EXdjjBpqo1wcXlMsFsJzDBl28twT++KsFdEyjB624lwebQIsFCOSDB\u002facdwRAdG8FwmBjBHRoWwQ+iE8E9MBHBpMQOwTxfDMEAAArB6KYHwfBTBcEPBwPBQcAAwfb+\u002fMB\u002fifjABCD0wHjC78DUcOvABSvnwALx4sDCwt7ALqDawEWJ1sD1fdLAMX7OwPCJysAgocbAucPCwKzxvsDrKrvAbm+3wCS\u002fs8AEGrDAAICswAzxqMAYbaXAHPShwAWGnsDSIpvAbMqXwMh8lMDeOZHAngGOwPrTisDosIfAWJiEwESKgcA0DX3Aohp3wLA8ccBOc2vAWr5lwMQdYMBlkVrANhlVwBO1T8DiZErAkShFwP3\u002fP8AX6zrAv+k1wN\u002f7MMBcISzAHFonwAmmIsAHBR7A\u002fnYZwNb7FMB0kxDAwD0MwKD6B8D8yQPAcVf\u002fv30\u002f97\u002fmS++\u002fgHznvxTR379uSdi\u002fYuXQv7ikyb8+h8K\u002fwoy7vxS1tL8AAK6\u002fVm2nv+D8oL9trpq\u002fzIGUv8t2jr81jYi\u002f2MSCvwU7er8JLm+\u002fUWJkv3bXWb8ejU+\u002f3IJFv1C4O78NLTK\u002fueAov+fSH787Axe\u002fR3EOv60cBr8KCvy+1lPsvvAV3b6UT86+AADAvmAmsr7twaS+3dGXvmhVi76Ml36+WGhnvqIbUb7Wrzu+ZiMnvr50E75GogC+3FTdvUwXu72wiJq9wEt3vZjXPL1orgW98JOjvCCQBLyAm0Q7gBZaPMAruzzYgAE9yEwiPQAAQD3IoFo9dDVyPSBigz3AKYw9vHSTPT1GmT1moZ09XImgPUcBoj1JDKI9iq2gPS3onT1Zv5k9MjaUPd9PjT2ED4U9jPB2PZgaYT1yo0g9aJEtPcTqDz2fa988rfGZPIzoHjwAAECkI70ovNiarbwg1AW9GD03vQ0Ca71YjpC9XcOsve8cyr3pl+i9lBgEvsFyFL7qWCW+fck2vujCSL6UQ1u+9EluvjrqgL6+8Iq+wTeVvne+n74WhKq+14e1vu7IwL6VRsy+AADYvmb04779IvC+AIv8vtCVBL8MAgu\u002fzokRv7IsGL9S6h6\u002fTMIlvzm0LL+1vzO\u002fXOQ6v8ghQr+Wd0m\u002fYOVQv8JqWL9YB2C\u002fu7pnv4iEb79cZHe\u002fzll\u002fvz6yg78Bwoe\u002f\u002fduLvwAAkL\u002fXLZS\u002fUWWYvzqmnL9i8KC\u002flkOlv6Kfqb9TBK6\u002feHGyv+Lmtr9aZLu\u002fsOm\u002fv7B2xL8pC8m\u002f56bNv7pJ0r9u89a\u002f0aPbv7Ra4L\u002fgF+W\u002fItvpv0yk7r8rc\u002fO\u002fiEf4vzYh\u002fb8AAAHA23EDwBHmBcCKXAjALdUKwN9PDcCJzA\u002fAEksSwGDLFMBaTRfA5tAZwOxVHMBQ3B7A\u002fmMhwNjsI8DIdibAtAEpwIONK8AZGi7AYacwwEA1M8CcwzXAXVI4wGnhOsCncD3AAABAwFePQsCWHkXAo61HwGQ8SsC\u002fykzAnlhPwOXlUcB8clTAS\u002f5WwDaJWcAoE1zAApxewLAjYcAUqmPAGi9mwKSyaMCgNGvA7rRtwHgzcMAhsHLA1ip1wHijd8DwGXrAJo58wAAAf8Czt4DAH+6BwDUjg8DtVoTAN4mFwAi6hsBT6YfACheJwCRDisCRbYvAR5aMwDa9jcBU4o7AlAWQwOkmkcBHRpLAoWOTwOx+lMAYmJXAHK+WwOfDl8By1pjArOaZwIr0msAAAJzAAgmdwIAPnsBwE5\u002fAxhSgwHQTocBvD6LAqAijwBT\u002fo8Co8qTAVOOlwA7RpsDGu6fAdaOowAmIqcB5aarAtkerwLUirMBp+qzAxs6twL+frsBFba\u002fATzewwM\u002f9sMC5wLHAAICywJY7s8Bx87PAgqe0wL9XtcAYBLbAgqy2wPRQt8Bd8bfAsY24wOIlucDoubnAs0m6wDnVusBqXLvAPN+7wKJdvMCO17zA80y9wMi9vcD8Kb7AhpG+wFj0vsBlUr\u002fAoKu\u002fwAAAwMB2T8DA8ZnAwGzfwMDUH8HAJFvBwEeRwcA0wsHA4u3BwEAUwsA9NcLA2FDCwPxmwsCid8LAt4LCwDCIwsAGiMLAJoLCwIZ2wsAXZcLA0k3CwKYwwsCIDcLAaeTBwEK1wcAAgMHAmkTBwAEDwcAqu8DACm3AwJQYwMC3vb\u002fAaly\u002fwKT0vsBShr7AaRG+wN6VvcCkE73ArIq8wO\u002f6u8BZZLvA5Ma6wIQiusAmd7nAv8S4wEILuMCqSrfA4oK2wOGztcCa3bTAAAC0wAYbs8CjLrLAwjqxwGI\u002fsMBuPK\u002fA1TGuwJgfrcCkBazA6OOqwF+6qcD2iKjApk+nwF4OpsASxaTAtXOjwEAaosCguKDAzE6fwLPcncBKYpzAit+awGZUmcDJwJfArCSWwACAlMC80pLAzxyRwDJej8DSlo3ApsaLwKXticC8C4jA4CCGwAgthMAjMILAJiqAwAQ2fMBkBXjAO8JzwIpsb8AhBGvA+IhmwPf6YcD2WV3A5aVYwKTeU8AjBE\u002fAQhZKwOkURcAAAEDAb9c6wB6bNcDtSjDAzOYqwJtuJcBC4h\u002fAqUEawLCMFMBXww7AXuUIwM3yAsAI1\u002fm\u002ftp7tv2Q84b8ysNS\u002foPnHv54Yu7\u002fcDK6\u002fatagv7p0k7\u002fo54W\u002fLF9wv0iXVL+kdzi\u002fAAAcv\u002fhf\u002fr5wDcS+KAmJvsCiGr7ALAe9wO6wPfAjVD5Anqg+COPnPqjvEz8MSjQ\u002fcAFVP9QVdj\u002f8w4s\u002f7qucPyDDrT\u002fSCb8\u002fBIDQP\u002fQl4j\u002fm+\u002fM\u002f\u002fAADQEUcDEC+TxVAp5seQAAAKEDpfDFAkhI7QOvAREA0iE5AbWhYQLZhYkAvdGxA6J92QIBygEDFoYVA0t2KQL4mkEB6fJVAJ9+aQNROoECIy6VARFWrQDDssEBFkLZAkkG8QBYAwkD6y8dAN6XNQOSL00AAgNlApIHfQNmQ5UCuretAKtjxQF4Q+EBTVv5AEFUCQeKFBUGkvQhBZvwLQSlCD0HzjhJByeIVQbg9GUG6nxxB4AggQTZ5I0Gs8CZBWm8qQUH1LUFrgjFB1RY1QZCyOEGaVTxB"},"type":"scatter","xaxis":"x17","yaxis":"y17"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwGr0rIixsP9mBjd4rgZA\u002fdmCjd9N8nT+Kn1yIPTylP8uO51QRuqs\u002fBj+5kPIbsT+mtv523Fq0P0guRF3Gmbc\u002f9aWJQ7DYuj+WHc8pmhe+P5xKCghCq8A\u002fbAYt+7ZKwj88wk\u002fuK+rDPxN+cuGgicU\u002f4zmV1BUpxz+09bfHisjIP4Sx2rr\u002fZ8o\u002fVG39rXQHzD8rKSCh6abNP\u002fvkQpReRs8\u002fZtCyw+ly0D9OLkQ9pELRPzaM1bZeEtI\u002fIupmMBni0j8KSPip07HTP\u002fKliSOOgdQ\u002f2gMbnUhR1T\u002fCYawWAyHWP66\u002fPZC98NY\u002flh3PCXjA1z9+e2CDMpDYP2bZ8fzsX9k\u002fUjeDdqcv2j86lRTwYf\u002faPyLzpWkcz9s\u002fClE349ae3D\u002fyrshckW7dP94MWtZLPt4\u002fxmrrTwYO3z+uyHzJwN3fP0sTh6G9VuA\u002fQMJP3pq+4D81cRgbeCbhPykg4VdVjuE\u002fHc+plDL24T8RfnLRD17iPwUtOw7txeI\u002f+9sDS8ot4z\u002fvisyHp5XjP+M5lcSE\u002feM\u002f1+hdAWJl5D\u002fLlyY+P83kP8FG73ocNeU\u002ftfW3t\u002fmc5T+ppID01gTmP51TSTG0bOY\u002fkQISbpHU5j+HsdqqbjznP3tgo+dLpOc\u002fbw9sJCkM6D9jvjRhBnToP1dt\u002fZ3j2+g\u002fTRzG2sBD6T9By44XnqvpPzV6V1R7E+o\u002fKSkgkVh76j8e2OjNNePqPxOHsQoTS+s\u002fBzZ6R\u002fCy6z\u002f75EKEzRrsP\u002fGTC8Gqguw\u002f5ELU\u002fYfq7D\u002fZ8Zw6ZVLtP8ygZXdCuu0\u002fwk8utB8i7j+3\u002fvbw\u002fInuP6qtvy3a8e4\u002fn1yIardZ7z+SC1GnlMHvP0TdDPK4FPA\u002fvjRxkKdI8D84jNUulnzwP7PjOc2EsPA\u002fLDuea3Pk8D+nkgIKYhjxPyLqZqhQTPE\u002fm0HLRj+A8T8WmS\u002flLbTxP4\u002fwk4Mc6PE\u002fCkj4IQsc8j+Fn1zA+U\u002fyP\u002f72wF7og\u002fI\u002feU4l\u002fda38j\u002fypYmbxevyP2397Tm0H\u002fM\u002f6FRS2KJT8z9hrLZ2kYfzP9wDGxWAu\u002fM\u002fVVt\u002fs27v8z\u002fQsuNRXSP0P0sKSPBLV\u002fQ\u002fxGGsjjqL9D8\u002fuRAtKb\u002f0P7gQdcsX8\u002fQ\u002fM2jZaQYn9T+uvz0I9Vr1PycXoqbjjvU\u002fom4GRdLC9T8bxmrjwPb1P5Ydz4GvKvY\u002fEXUzIJ5e9j+KzJe+jJL2PwUk\u002fFx7xvY\u002ffntg+2n69j\u002f50sSZWC73P3QqKThHYvc\u002f7YGN1jWW9z9o2fF0JMr3P+EwVhMT\u002fvc\u002fXIi6sQEy+D\u002fX3x5Q8GX4P1A3g+7emfg\u002fy47njM3N+D9E5ksrvAH5P789sMmqNfk\u002fOpUUaJlp+T+z7HgGiJ35Py5E3aR20fk\u002fqZtBQ2UF+j8i86XhUzn6P51KCoBCbfo\u002fFqJuHjGh+j+R+dK8H9X6PwxRN1sOCfs\u002fhaib+fw8+z8AAACY63D7Pw=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-0.1784122735261917],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGD50sScqrI\u002f1qmkAPqvwj\u002fU1t+epQrMP+qBjZ6ostI\u002faBirbf5f1z\u002forsg8VA3cP70i8wVVXeA\u002f\u002fe2B7f+z4j88uRDVqgrlP3yEn7xVYec\u002fvE8upAC46T8EG72Lqw7sP0TmS3NWZe4\u002fwlhtrQBe8D9ivjQhVonxPwIk\u002fJSrtPI\u002fponDCAHg8z9G74p8Vgv1P+ZUUvCrNvY\u002fhroZZAFi9z8mIOHXVo34P8qFqEusuPk\u002fautvvwHk+j8KUTczVw\u002f8P6q2\u002fqasOv0\u002fThzGGgJm\u002fj\u002fugY2OV5H\u002fP8dzKoFWXgBAlyYOOwH0AEBn2fH0q4kBQDmM1a5WHwJACT+5aAG1AkDZ8ZwirEoDQKmkgNxW4ANAeVdklgF2BEBLCkhQrAsFQBu9KwpXoQVA628PxAE3BkC7IvN9rMwGQIvV1jdXYgdAXYi68QH4B0AtO56rrI0IQP3tgWVXIwlAzaBlHwK5CUCdU0nZrE4KQG8GLZNX5ApAP7kQTQJ6C0APbPQGrQ8MQN8e2MBXpQxArtG7egI7DUCBhJ80rdANQFA3g+5XZg5AIOpmqAL8DkDwnEpirZEPQOAnFw6sExBASQEJa4FeEECx2vrHVqkQQBm07CQs9BBAgY3egQE\u002fEUDpZtDe1okRQFJAwjus1BFAuhm0mIEfEkAi86X1VmoSQIvMl1IstRJA8qWJrwEAE0Bbf3sM10oTQMJYbWmslRNAKzJfxoHgE0CUC1EjVysUQPvkQoAsdhRAZL403QHBFEDLlyY61wsVQDRxGJesVhVAnUoK9IGhFUAEJPxQV+wVQG397a0sNxZA1NbfCgKCFkA9sNFn18wWQKaJw8SsFxdADWO1IYJiF0B2PKd+V60XQN0Vmdss+BdARu+KOAJDGECvyHyV140YQBaibvKs2BhAf3tgT4IjGUDmVFKsV24ZQE8uRAktuRlAuAc2ZgIEGkAf4SfD104aQIi6GSCtmRpA75MLfYLkGkBYbf3ZVy8bQMFG7zYtehtAKCDhkwLFG0CR+dLw1w8cQPjSxE2tWhxAYay2qoKlHEDKhagHWPAcQDFfmmQtOx1AmjiMwQKGHUABEn4e2NAdQGrrb3utGx5A08Rh2IJmHkA6nlM1WLEeQKR3RZIt\u002fB5AClE37wJHH0ByKilM2JEfQNwDG6mt3B9AoW4Gg8ETIEBWW38xLDkgQAlI+N+WXiBAvjRxjgGEIEBzIeo8bKkgQCYOY+vWziBA2vrbmUH0IECO51RIrBkhQELUzfYWPyFA98BGpYFkIUCqrb9T7IkhQF+aOAJXryFAFIexsMHUIUDHcypfLPohQHxgow2XHyJAL00cvAFFIkDjOZVqbGoiQJgmDhnXjyJASxOHx0G1IkAAAAB2rNoiQA=="},"type":"scatter","xaxis":"x3","yaxis":"y3"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-1.3252041339874268],"type":"scatter","xaxis":"x4","yaxis":"y4"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMnEYq3CAP4BBy473DrI\u002fYC5E3ewHwT+guyLzXQjJP6CkgIRnhNA\u002fUOtvD6CE1D8gMl+a2ITYP\u002fB4TiURhdw\u002f0N8e2KRC4D84g5YdwULiP4gmDmPdQuQ\u002f8MmFqPlC5j9Ybf3tFUPoP7AQdTMyQ+o\u002fGLTseE5D7D9wV2S+akPuP2z97YHDIfA\u002fHM+ppNEh8T\u002fIoGXH3yHyP3xyIertIfM\u002fMETdDPwh9D\u002fcFZkvCiL1P5DnVFIYIvY\u002fOLkQdSYi9z\u002fwisyXNCL4P6BciLpCIvk\u002fUC5E3VAi+j8AAAAAXyL7Pw=="},"type":"scatter","xaxis":"x5","yaxis":"y5"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-up"]},"x":[0,0],"y":[0,5.56458854675293],"type":"scatter","xaxis":"x6","yaxis":"y6"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAsCQ3D0DwiswH55kOQN4VmV+p\u002fA1AzqBlt2tfDUC8KzIPLsIMQKy2\u002fmbwJAxAnEHLvrKHC0CKzJcWdeoKQHpXZG43TQpAauIwxvmvCUBYbf0dvBIJQEj4yXV+dQhAOIOWzUDYB0AoDmMlAzsHQBaZL33FnQZABST81IcABkD1rsgsSmMFQOQ5lYQMxgRA0sRh3M4oBEDCTy40kYsDQLLa+otT7gJAomXH4xVRAkCQ8JM72LMBQH97YJOaFgFAbgYt61x5AEC8IvOFPrj\u002fP5w4jDXDff4\u002fek4l5UdD\u002fT9WZL6UzAj8PzZ6V0RRzvo\u002fFpDw89WT+T\u002f2pYmjWln4P9K7IlPfHvc\u002fsNG7AmTk9T+O51Sy6Kn0P2797WFtb\u002fM\u002fTBOHEfI08j8sKSDBdvrwPxR+cuH2f+8\u002f0KmkQAAL7T+Q1dafCZbqP0gBCf8SIeg\u002fCC07Xhys5T\u002fIWG29JTfjP4KEnxwvwuA\u002fgGCj93Ca3D\u002f0twe2g7DXP3QPbHSWxtI\u002f0M2gZVK5yz\u002fQfGnid+XBP5BXZL46I7A\u002fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="},"type":"scatter","xaxis":"x7","yaxis":"y7"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-2.0656580924987793],"type":"scatter","xaxis":"x8","yaxis":"y8"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAACLhq9j+8IvMF4U32P3hF5gMKMfY\u002fNGjZATMU9j\u002fvisz\u002fW\u002ff1P6utv\u002f2E2vU\u002fZ9Cy+6299T8j86X51qD1P94Vmff\u002fg\u002fU\u002fmjiM9Shn9T9WW3\u002fzUUr1PxJ+cvF6LfU\u002fzqBl76MQ9T+Kw1jtzPP0P0bmS+v11vQ\u002fAQk\u002f6R669D+9KzLnR530P3lOJeVwgPQ\u002fNHEY45lj9D\u002fwkwvhwkb0P6y2\u002ft7rKfQ\u002faNnx3BQN9D8k\u002fOTaPfDzP+Ae2Nhm0\u002fM\u002fnEHL1o+28z9YZL7UuJnzPxSHsdLhfPM\u002fz6mk0Apg8z+LzJfOM0PzP0fvisxcJvM\u002fAxJ+yoUJ8z+\u002fNHHIruzyP3pXZMbXz\u002fI\u002fNnpXxACz8j\u002fynErCKZbyP66\u002fPcBSefI\u002fauIwvntc8j8lBSS8pD\u002fyP+EnF7rNIvI\u002fnUoKuPYF8j9Zbf21H+nxPxSQ8LNIzPE\u002f0LLjsXGv8T+M1davmpLxP0j4ya3DdfE\u002fBBu9q+xY8T\u002fAPbCpFTzxP3xgo6c+H\u002fE\u002fN4OWpWcC8T\u002fzpYmjkOXwP6\u002fIfKG5yPA\u002fa+tvn+Kr8D8nDmOdC4\u002fwP+IwVps0cvA\u002fnlNJmV1V8D9adjyXhjjwPxaZL5WvG\u002fA\u002fpHdFJrH97z8bvSsiA8TvP5MCEh5Viu8\u002fC0j4GadQ7z+Cjd4V+RbvP\u002frSxBFL3e4\u002fcRirDZ2j7j\u002fpXZEJ72nuP2GjdwVBMO4\u002f2OhdAZP27T9QLkT95LztP8dzKvk2g+0\u002fP7kQ9YhJ7T+3\u002fvbw2g\u002ftPy9E3ews1uw\u002fponD6H6c7D8ez6nk0GLsP5UUkOAiKew\u002fDVp23HTv6z+Fn1zYxrXrP\u002fzkQtQYfOs\u002fdCop0GpC6z\u002fsbw\u002fMvAjrP2S19ccOz+o\u002f2\u002frbw2CV6j9SQMK\u002fslvqP8qFqLsEIuo\u002fQsuOt1bo6T+6EHWzqK7pPzJWW6\u002f6dOk\u002fqJtBq0w76T8g4SenngHpP5gmDqPwx+g\u002fEGz0nkKO6D+IsdqalFToP\u002f\u002f2wJbmGug\u002fdjynkjjh5z\u002fugY2OiqfnP2bHc4rcbec\u002f3Qxahi405z9VUkCCgPrmP82XJn7SwOY\u002fRN0MeiSH5j+8IvN1dk3mPzNo2XHIE+Y\u002fq62\u002fbRra5T8j86VpbKDlP5s4jGW+ZuU\u002fEn5yYRAt5T+Kw1hdYvPkPwIJP1m0ueQ\u002feU4lVQaA5D\u002fxkwtRWEbkP2nZ8UyqDOQ\u002f4B7YSPzS4z9YZL5ETpnjP9CppECgX+M\u002fR++KPPIl4z+\u002fNHE4ROziPzZ6VzSWsuI\u002frr89MOh44j8mBSQsOj\u002fiP55KCiiMBeI\u002fFpDwI97L4T+M1dYfMJLhPwQbvRuCWOE\u002ffGCjF9Qe4T\u002f0pYkTJuXgP2zrbw94q+A\u002f4jBWC8px4D9adjwHHDjgP6R3RQbc\u002fN8\u002flAIS\u002fn+J3z+Djd71IxbfP3EYq+3Hot4\u002fYaN35Wsv3j9RLkTdD7zdPz65ENWzSN0\u002fMETdzFfV3D8ez6nE+2HcPw9adryf7ts\u002f\u002fORCtEN72z\u002fqbw+s5wfbP9z626OLlNo\u002fyoWomy8h2j+8EHWT063ZP6qbQYt3Otk\u002fmCYOgxvH2D+Isdp6v1PYP3Y8p3Jj4Nc\u002faMdzagdt1z9WUkBiq\u002fnWP0TdDFpPhtY\u002fNmjZUfMS1j8i86VJl5\u002fVPxR+ckE7LNU\u002fAgk\u002fOd+41D\u002fwkwsxg0XUP+Ie2Cgn0tM\u002f0KmkIMte0z\u002fANHEYb+vSP66\u002fPRATeNI\u002fnEoKCLcE0j+O1db\u002fWpHRP3xgo\u002ff+HdE\u002fbutv76Kq0D9cdjznRjfQP5ACEr7Vh88\u002fdBirrR2hzj9QLkSdZbrNPzRE3Yyt08w\u002fEFp2fPXsyz\u002fsbw9sPQbLP8yFqFuFH8o\u002fqJtBS804yT+Msdo6FVLIP2jHcypda8c\u002fRN0MGqWExj8o86UJ7Z3FPwQJP\u002fk0t8Q\u002f5B7Y6HzQwz\u002fANHHYxOnCP5xKCsgMA8I\u002fgGCjt1QcwT9cdjynnDXAP4AYqy3Jnb4\u002fMETdDFnQvD\u002fobw\u002fs6AK7P7CbQct4Nbk\u002faMdzqghotz8w86WJmJq1P+ge2GgozbM\u002foEoKSLj\u002fsT9gdjwnSDKwPzBE3Qywyaw\u002foJtBy88uqT8w86WJ75OlP6BKCkgP+aE\u002fYETdDF68nD8g86WJnYaVPwBE3Qy6oYw\u002fgETdDHJsfD8AAAAAAAAAAA=="},"type":"scatter","xaxis":"x9","yaxis":"y9"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-0.06378719210624695],"type":"scatter","xaxis":"x10","yaxis":"y10"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAwBiaB0C29bdHXdwGQGrrb8+hHgZAIOEnV+ZgBUDW1t\u002feKqMEQIzMl2Zv5QNAQsJP7rMnA0D2twd2+GkCQKytv\u002f08rAFAYKN3hYHuAEAWmS8NxjAAQJgdzykV5v4\u002fAAk\u002fOZ5q\u002fT9s9K5IJ+\u002f7P9jfHliwc\u002fo\u002fRMuOZzn4+D+wtv52wnz3PxiiboZLAfY\u002fgI3eldSF9D\u002fseE6lXQrzP1hkvrTmjvE\u002fxE8uxG8T8D9Ydjyn8S\u002ftPzBNHMYDOeo\u002fBCT85BVC5z\u002fc+tsDKEvkP7TRuyI6VOE\u002fEFE3g5i63D+w\u002fvbAvMzWP2Cstv7g3tA\u002fILTseArixT8AH9jopQy0PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="},"type":"scatter","xaxis":"x11","yaxis":"y11"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-2.1333367824554443],"type":"scatter","xaxis":"x12","yaxis":"y12"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAgAS+7D\u002f4rsh8b9fqP+hdkXna8Og\u002f4AxadkUK5z\u002fQuyJzsCPlP8hq628bPeM\u002fvBm0bIZW4T9gkfnS4t\u002feP0jvisy4Ets\u002fME0cxo5F1z8Yq62\u002fZHjTPxASfnJ1Vs8\u002f0M2gZSG8xz+wicNYzSHAP+CKzJfyDrE\u002fACog4aekfT8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="},"type":"scatter","xaxis":"x13","yaxis":"y13"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-down"]},"x":[0,0],"y":[0,-3.6658430099487305],"type":"scatter","xaxis":"x14","yaxis":"y14"},{"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAMAez6mkgIT\u002fvzueU0kBCf+\u002fWW397YGN\u002fr92PKeSAhL+v5QLUTeDlv2\u002fstr62wMb\u002fb\u002fPqaSAhJ\u002f8v+14TiUFJPy\u002fCkj4yYWo+78oF6JuBi37v0bmSxOHsfq\u002fY7X1twc2+r+BhJ9ciLr5v55TSQEJP\u002fm\u002fvCLzpYnD+L\u002fa8ZxKCkj4v\u002ffARu+KzPe\u002fFJDwkwtR978yX5o4jNX2v1AuRN0MWva\u002fbv3tgY3e9b+LzJcmDmP1v6ibQcuO5\u002fS\u002fxmrrbw9s9L\u002fkOZUUkPDzvwIJP7kQdfO\u002fH9joXZH58r88p5ICEn7yv1p2PKeSAvK\u002feEXmSxOH8b+WFJDwkwvxv7PjOZUUkPC\u002f0LLjOZUU8L\u002fcAxu9KzLvvxiibgYtO+6\u002fUkDCTy5E7b+O3hWZL03sv8p8aeIwVuu\u002fBBu9KzJf6r9AuRB1M2jpv3pXZL40cei\u002ftvW3BzZ657\u002fykwtRN4PmvywyX5o4jOW\u002faNCy4zmV5L+ibgYtO57jv94MWnY8p+K\u002fGKutvz2w4b9USQEJP7ngvyDPqaSAhN+\u002flAtRN4OW3b8MSPjJhajbv4CEn1yIutm\u002f+MBG74rM179w\u002fe2Bjd7Vv+Q5lRSQ8NO\u002fXHY8p5IC0r\u002fQsuM5lRTQv5DeFZkvTcy\u002fgFdkvjRxyL9o0LLjOZXEv1hJAQk\u002fucC\u002fgISfXIi6ub9gdjynkgKyv4DQsuM5laS\u002fgNCy4zmVhL+A0LLjOZWUP4CEn1yIuqk\u002fYNCy4zmVtD+A3hWZL028P1B2PKeSAsI\u002fcP3tgY3exT+AhJ9ciLrJP5ALUTeDls0\u002fUEkBCT+50D\u002fYDFp2PKfSP2jQsuM5ldQ\u002f8JMLUTeD1j94V2S+NHHYPwAbvSsyX9o\u002fiN4VmS9N3D8Yom4GLTveP9Cy4zmVFOA\u002flBSQ8JML4T9YdjynkgLiPxzY6F2R+eI\u002f5DmVFJDw4z+om0HLjufkP2z97YGN3uU\u002fMF+aOIzV5j\u002f0wEbvisznP7wi86WJw+g\u002fgISfXIi66T9E5ksTh7HqPwhI+MmFqOs\u002f0KmkgISf7D+UC1E3g5btP1ht\u002fe2Bje4\u002fHM+ppICE7z9wGKutvz3wP1RJAQk\u002fufA\u002fNnpXZL408T8Yq62\u002fPbDxP\u002frbAxu9K\u002fI\u002f3Axadjyn8j\u002fAPbDRuyLzP6JuBi07nvM\u002fhJ9ciLoZ9D9m0LLjOZX0P0gBCT+5EPU\u002fLDJfmjiM9T8OY7X1twf2P\u002fCTC1E3g\u002fY\u002f0sRhrLb+9j+09bcHNnr3P5gmDmO19fc\u002feldkvjRx+D9ciLoZtOz4Pz65EHUzaPk\u002fIOpm0LLj+T8EG70rMl\u002f6P+ZLE4ex2vo\u002fyHxp4jBW+z+qrb89sNH7P4zeFZkvTfw\u002fcA9s9K7I\u002fD9SQMJPLkT9PzRxGKutv\u002f0\u002fFqJuBi07\u002fj\u002f40sRhrLb+P9wDG70rMv8\u002fvjRxGKut\u002fz\u002fQsuM5lRQAQELLjudUUgBAsuM5lRSQAEAk\u002fORC1M0AQJQUkPCTCwFABi07nlNJAUB4ReZLE4cBQOhdkfnSxAFAWnY8p5ICAkDKjudUUkACQDynkgISfgJArr89sNG7AkAe2OhdkfkCQJDwkwtRNwNAAAk\u002fuRB1A0ByIepm0LIDQOQ5lRSQ8ANAVFJAwk8uBEDGautvD2wEQDaDlh3PqQRAqJtBy47nBEAatOx4TiUFQIrMlyYOYwVA\u002fORC1M2gBUBs\u002fe2Bjd4FQN4VmS9NHAZAUC5E3QxaBkDARu+KzJcGQDJfmjiM1QZAondF5ksTB0AUkPCTC1EHQIaom0HLjgdA9sBG74rMB0Bo2fGcSgoIQNjxnEoKSAhASgpI+MmFCEC8IvOlicMIQCw7nlNJAQlAnlNJAQk\u002fCUAObPSuyHwJQICEn1yIuglA8pxKCkj4CUBitfW3BzYKQNTNoGXHcwpAROZLE4exCkC2\u002fvbARu8KQCgXom4GLQtAmC9NHMZqC0AKSPjJhagLQHpgo3dF5gtA7HhOJQUkDEBekfnSxGEMQM6ppICEnwxAQMJPLkTdDECw2vrbAxsNQCLzpYnDWA1AlAtRN4OWDUAEJPzkQtQNQHY8p5ICEg5A6FRSQMJPDkBYbf3tgY0OQMqFqJtByw5AOp5TSQEJD0Cstv72wEYPQB7PqaSAhA9AjudUUkDCD0AAAAAAAAAQQA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICXJg7Tuqs\u002fgEoKSFi9vj+ApICEo87HPwASfnJNH9A\u002fsNG7IklX1D9QkfnSRI\u002fYPxBRN4NAx9w\u002fUIi6GZ5\u002f4D8waNnxm5viPxBI+MmZt+Q\u002f2CcXopfT5j+4BzZ6le\u002foP4DnVFKTC+s\u002fYMdzKpEn7T9Ap5ICj0PvP4TDWG3Gr\u002fA\u002fdDNoWcW98T9co3dFxMvyP0gThzHD2fM\u002fOIOWHcLn9D8g86UJwfX1PwxjtfW\u002fA\u002fc\u002f9NLE4b4R+D\u002fkQtTNvR\u002f5P9Cy47m8Lfo\u002fuCLzpbs7+z+okgKSukn8P4wCEn65V\u002f0\u002ffHIharhl\u002fj9s4jBWt3P\u002fPygpICHbQABAIOEnl9rHAEASmS8N2k4BQApRN4PZ1QFAAgk\u002f+dhcAkD0wEZv2OMCQOx4TuXXagNA4DBWW9fxA0DW6F3R1ngEQM6gZUfW\u002fwRAwlhtvdWGBUC4EHUz1Q0GQKzIfKnUlAZApICEH9QbB0CaOIyV06IHQI7wkwvTKQhAhqibgdKwCEB4YKP30TcJQHAYq23RvglAaNCy49BFCkBciLpZ0MwKQFBAws\u002fPUwtASPjJRc\u002faC0A8sNG7zmEMQDRo2THO6AxAKCDhp81vDUAg2OgdzfYNQBSQ8JPMfQ5ACEj4CcwED0AAAACAy4sPQA=="},"type":"scatter","xaxis":"x15","yaxis":"y15"},{"marker":{"color":"black","size":[0,10],"symbol":["circle","triangle-up"]},"x":[0,0],"y":[0,3.67207670211792],"type":"scatter","xaxis":"x16","yaxis":"y16"}],                        {"template":{"layout":{"font":{"color":"#2b2b2b","family":"EB Garamond"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"gridcolor":"#e0dbd4"},"yaxis":{"gridcolor":"#e0dbd4"}}},"xaxis":{"anchor":"y","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis":{"anchor":"x","domain":[0.9240000000000002,1.0],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis2":{"anchor":"y2","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis2":{"anchor":"x2","domain":[0.9240000000000002,1.0],"matches":"y","showticklabels":false,"visible":false},"xaxis3":{"anchor":"y3","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis3":{"anchor":"x3","domain":[0.8180000000000001,0.8940000000000001],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis4":{"anchor":"y4","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis4":{"anchor":"x4","domain":[0.8180000000000001,0.8940000000000001],"matches":"y3","showticklabels":false,"visible":false},"xaxis5":{"anchor":"y5","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis5":{"anchor":"x5","domain":[0.712,0.788],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis6":{"anchor":"y6","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis6":{"anchor":"x6","domain":[0.712,0.788],"matches":"y5","showticklabels":false,"visible":false},"xaxis7":{"anchor":"y7","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis7":{"anchor":"x7","domain":[0.6060000000000001,0.6820000000000002],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis8":{"anchor":"y8","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis8":{"anchor":"x8","domain":[0.6060000000000001,0.6820000000000002],"matches":"y7","showticklabels":false,"visible":false},"xaxis9":{"anchor":"y9","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis9":{"anchor":"x9","domain":[0.5,0.5760000000000001],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis10":{"anchor":"y10","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis10":{"anchor":"x10","domain":[0.5,0.5760000000000001],"matches":"y9","showticklabels":false,"visible":false},"xaxis11":{"anchor":"y11","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis11":{"anchor":"x11","domain":[0.394,0.47000000000000003],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis12":{"anchor":"y12","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis12":{"anchor":"x12","domain":[0.394,0.47000000000000003],"matches":"y11","showticklabels":false,"visible":false},"xaxis13":{"anchor":"y13","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis13":{"anchor":"x13","domain":[0.28800000000000003,0.36400000000000005],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis14":{"anchor":"y14","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis14":{"anchor":"x14","domain":[0.28800000000000003,0.36400000000000005],"matches":"y13","showticklabels":false,"visible":false},"xaxis15":{"anchor":"y15","domain":[0.0,0.9090909090909091],"matches":"x17","showticklabels":false,"visible":false},"yaxis15":{"anchor":"x15","domain":[0.18200000000000002,0.258],"range":[-6.121047496795654,6.121047496795654],"showticklabels":false},"xaxis16":{"anchor":"y16","domain":[0.9090909090909091,1.0],"matches":"x18","showticklabels":false,"visible":false},"yaxis16":{"anchor":"x16","domain":[0.18200000000000002,0.258],"matches":"y15","showticklabels":false,"visible":false},"xaxis17":{"anchor":"y17","domain":[0.0,0.9090909090909091],"visible":false},"yaxis17":{"anchor":"x17","domain":[0.0,0.15200000000000002],"range":[-12.947988510131836,12.947988510131836],"showticklabels":false},"xaxis18":{"anchor":"y18","domain":[0.9090909090909091,1.0],"visible":false},"yaxis18":{"anchor":"x18","domain":[0.0,0.15200000000000002],"matches":"y17","showticklabels":false,"range":[-12.947988510131836,12.947988510131836],"visible":false},"shapes":[{"line":{"dash":"dot"},"type":"line","x0":-0.07852992415428162,"x1":-0.07852992415428162,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"dash":"dot"},"type":"line","x0":-0.07852992415428162,"x1":-0.07852992415428162,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":0.11062030494213104,"x1":0.11062030494213104,"xref":"x3","y0":0,"y1":1,"yref":"y3 domain"},{"line":{"dash":"dot"},"type":"line","x0":0.11062030494213104,"x1":0.11062030494213104,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":3.1820578575134277,"x1":3.1820578575134277,"xref":"x5","y0":0,"y1":1,"yref":"y5 domain"},{"line":{"dash":"dot"},"type":"line","x0":3.1820578575134277,"x1":3.1820578575134277,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":-0.4677073657512665,"x1":-0.4677073657512665,"xref":"x7","y0":0,"y1":1,"yref":"y7 domain"},{"line":{"dash":"dot"},"type":"line","x0":-0.4677073657512665,"x1":-0.4677073657512665,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":3.9995648860931396,"x1":3.9995648860931396,"xref":"x9","y0":0,"y1":1,"yref":"y9 domain"},{"line":{"dash":"dot"},"type":"line","x0":3.9995648860931396,"x1":3.9995648860931396,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":-1.0398378372192383,"x1":-1.0398378372192383,"xref":"x11","y0":0,"y1":1,"yref":"y11 domain"},{"line":{"dash":"dot"},"type":"line","x0":-1.0398378372192383,"x1":-1.0398378372192383,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":-1.544064998626709,"x1":-1.544064998626709,"xref":"x13","y0":0,"y1":1,"yref":"y13 domain"},{"line":{"dash":"dot"},"type":"line","x0":-1.544064998626709,"x1":-1.544064998626709,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"},{"line":{"dash":"dot"},"type":"line","x0":2.1963326930999756,"x1":2.1963326930999756,"xref":"x15","y0":0,"y1":1,"yref":"y15 domain"},{"line":{"dash":"dot"},"type":"line","x0":2.1963326930999756,"x1":2.1963326930999756,"xref":"x17","y0":0,"y1":1,"yref":"y17 domain"}],"annotations":[{"font":{"size":14},"showarrow":false,"text":"Model output for each neuron (one linear transform & ReLU)","textangle":-90,"x":-0.07,"xref":"paper","y":0.87,"yref":"paper"},{"font":{"size":14},"showarrow":false,"text":"Combination","textangle":-90,"x":-0.07,"xref":"paper","y":0.0,"yref":"paper"},{"font":{"size":14},"showarrow":false,"text":"Layer two (multiplies the model output before combination)","textangle":-90,"x":1.05,"xref":"paper","y":0.87,"yref":"paper"}],"margin":{"l":40,"r":40,"t":50,"b":10},"height":750,"width":500,"showlegend":false,"title":{"text":"How ReLUs compose into an arbitrary function"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('f538ca05-fbb3-4fca-8c97-28715cabd7a2');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-gelu-activation-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-gelu-activation-function">The GELU Activation Function</h2>
+<p>An improvement on ReLU, is GELU which is very similar but is smooth through zero where ReLU has a corner.</p>
+<div id="373e6c71" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>activation <span class="op">=</span> torch.nn.GELU()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> torch.arange(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, step<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>ys <span class="op">=</span> activation(xs)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>px.line(x<span class="op">=</span>xs, y<span class="op">=</span>ys, title<span class="op">=</span><span class="st">"GELU"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div style="height:525px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="99905c0d-05dc-459d-bc0e-60271410935f" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("99905c0d-05dc-459d-bc0e-60271410935f")) {                    Plotly.newPlot(                        "99905c0d-05dc-459d-bc0e-60271410935f",                        [{"hovertemplate":"x=%{x}\u003cbr\u003ey=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","line":{"color":"#1F77B4","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f4","bdata":"AABAwJqZOcAzMzPAzcwswGZmJsAAACDAmpkZwDMzE8DNzAzAZ2YGwAAAAMA0M\u002fO\u002fZ2bmv5qZ2b\u002fNzMy\u002fAADAvzMzs79mZqa\u002fmZmZv83MjL8AAIC\u002fZmZmv8zMTL8zMzO\u002fmpkZvwAAAL\u002fOzMy+mpmZvs7MTL7QzMy9zczMssrMzD3NzEw+mpmZPs3MzD4AAAA\u002fmpkZPzMzMz\u002fNzEw\u002fZmZmPwAAgD\u002fNzIw\u002fmpmZP2Zmpj8zM7M\u002fAADAP83MzD+amdk\u002fZmbmPzMz8z8AAABAZmYGQM3MDEAzMxNAmpkZQAAAIEBmZiZAzcwsQDMzM0CamTlA"},"xaxis":"x","y":{"dtype":"f4","bdata":"wLeEu4dPsbtmbOq7Cl0ZvFOORrwgWX68DSyhvCUPyrzqkvq8qakZvYBeOr3Le1+9H3SEvcQom736kLO9WjvNvaaL571f3AC+y2UNvnLQGL6GdiK+O6EpvkyNLb6GcC2+SoAovqL4Hb6nIw2+V8HqvdJVrL2PfDy9zMxMsgodXT3IQ+09idI9Pvo6hj6vA7E+D\u002fPePhLXBz96aSE\u002fGP47P15iVz9+ZXM\u002f4eyHP9pKlj95uqQ\u002fSiyzP72TwT8O588\u002fJR\u002feP1Q37D8MLfo\u002fv\u002f8DQKfXCkAVnxFAQlcYQKcBH0DYnyVAcDMsQP29MkDzQDlA"},"yaxis":"y","type":"scatter"}],                        {"template":{"layout":{"font":{"color":"#2b2b2b","family":"EB Garamond"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"gridcolor":"#e0dbd4"},"yaxis":{"gridcolor":"#e0dbd4"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y"}},"legend":{"tracegroupgap":0},"title":{"text":"GELU"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('99905c0d-05dc-459d-bc0e-60271410935f');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</section>
+<section id="ring-example" class="level2">
+<h2 class="anchored" data-anchor-id="ring-example">Ring Example</h2>
+<p>To show the GELU function in action, let’s create a model that learns from two-dimensional input instead of one in our polynomial example.</p>
+<p>Let’s create a simple task for the model to complete. We’ll have a two-dimensional space with a ‘ring’ and we’ll have the model learn whether new points fall into that ring.</p>
+<div id="58071df3" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">100</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>]:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    fig.add_trace(</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        go.Scatter(</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span>r<span class="op">*</span>np.cos(t),</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>r<span class="op">*</span>np.sin(t),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            mode<span class="op">=</span><span class="st">'lines'</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            line<span class="op">=</span>{<span class="st">"color"</span>: <span class="st">"#636EFA"</span>},</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> torch.FloatTensor(<span class="dv">1000</span>, <span class="dv">2</span>).uniform_(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>radii <span class="op">=</span> (xs <span class="op">*</span> xs).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>).sqrt()</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>zs <span class="op">=</span> (radii <span class="op">&gt;</span> <span class="dv">1</span>) <span class="op">&amp;</span> (radii <span class="op">&lt;</span> <span class="dv">2</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    go.Scatter(</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>xs[:,<span class="dv">0</span>].numpy(),</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>xs[:,<span class="dv">1</span>].numpy(),</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        mode<span class="op">=</span><span class="st">"markers"</span>,</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span>{</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"color"</span>: zs.<span class="bu">int</span>().numpy(),</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">"colorscale"</span>: [[<span class="dv">0</span>, <span class="st">"#EF553B"</span>], [<span class="dv">1</span>, <span class="st">"#636EFA"</span>]],</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    xaxis<span class="op">=</span>{<span class="st">"range"</span>: [<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>]}, </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    yaxis<span class="op">=</span>{<span class="st">"range"</span>: [<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>], <span class="st">"scaleanchor"</span>: <span class="st">"x"</span>},</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    showlegend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div style="height:525px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="b129675e-1eae-45b9-9c27-fdef8931d919" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("b129675e-1eae-45b9-9c27-fdef8931d919")) {                    Plotly.newPlot(                        "b129675e-1eae-45b9-9c27-fdef8931d919",                        [{"line":{"color":"#636EFA"},"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAA8D+VSynBge\u002fvP2j6BgUYvu8\u002fJek3u\u002fVr7z8jfxaOb\u002fnuP\u002fFJcov7Zu4\u002fXLHeqjC17T9+NRQyxuTsP1+hBPiS9us\u002fuvBkh4zr6j9WMpEhxsTpPzlQz6Jvg+g\u002ftDkVSdQo5z+WUJVeWbblP0ATccl8LeQ\u002fA6sNgtOP4j9cLKDxB9\u002fgP1a1P3WwOd4\u002fthLH2SiW2j+KU4hOOdfWP1tDY1G+ANM\u002fjFrgSlktzj+Mcwt+GjrGPyLsuGvkX7w\u002fcyCwKKhcqD\u002fN+ijPKj+QvwzJ6KS5SbS\u002f3kQPZF83wr9P3qvaGjfKv5OAwi7oDdG\u002fPSGBd67u1L83i\u002fTn4LnYv4vJmF6Wa9y\u002fAgAAAAAA4L\u002fP5tyRtrnhv860DJEnYeO\u002fhlh3f5705L\u002fbPrV2e3Lmv11Sx9Q02ee\u002fJuDa0Vgn6b9dHHf9jlvqv4pZi6GZdOu\u002fwfLvCVdx7L\u002fZTwivwlDtvxstUkL2Ee6\u002fV1DNmyq07r9D8kaHuDbvvwQ9tXAZme+\u002fXjTx7ufa778HB0As4PvvvwcHQCzg+++\u002fXjTx7ufa778EPbVwGZnvv0PyRoe4Nu+\u002fV1DNmyq07r8cLVJC9hHuv9lPCK\u002fCUO2\u002fwvLvCVdx7L+JWYuhmXTrv14cd\u002f2OW+q\u002fJeDa0Vgn6b9eUsfUNNnnv9o+tXZ7cua\u002fiFh3f5705L\u002fMtAyRJ2Hjv9Hm3JG2ueG\u002f+f\u002f\u002f\u002f\u002f\u002f\u002f37+IyZhelmvcvzeL9Ofgudi\u002fQSGBd67u1L+MgMIu6A3Rv0jeq9oaN8q\u002f3kQPZF83wr8eyeikuUm0v1T6KM8qP5C\u002fkCCwKKhcqD8R7Lhr5F+8P3xzC34aOsY\u002fk1rgSlktzj9bQ2NRvgDTP4ZTiE4519Y\u002fvRLH2SiW2j9ZtT91sDneP1wsoPEH3+A\u002fAasNgtOP4j9DE3HJfC3kP5dQlV5ZtuU\u002ftDkVSdQo5z83UM+ib4PoP1cykSHGxOk\u002fuvBkh4zr6j9foQT4kvbrP301FDLG5Ow\u002fXbHeqjC17T\u002fxSXKL+2buPyN\u002fFo5v+e4\u002fJuk3u\u002fVr7z9o+gYFGL7vP5VLKcGB7+8\u002fAAAAAAAA8D8="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAADhrXMjDywP\u002fCDAnguNMA\u002fkayggGI5yD+aiNkBzxLQP9ofIiFb+NM\u002f+5MNU1HJ1z+CQNqEwoHbPxlNPurYHd8\u002fC1i7+O1M4T9GhZoMGvniPxwWPFK3keQ\u002fABg\u002flCAV5j+GGZN4xoHnP4hAIRwx1ug\u002flkFFlgER6j93zoZi8zDrPzKcHq\u002fdNOw\u002fEyzujrQb7T\u002fB8a4NiuTtP\u002f0jPCWPju4\u002f3176khQZ7z8XHIGMi4PvPzTGy1KGze8\u002fg6xao7j27z\u002fvOc8G+P7vP2Zmsvw75u8\u002f70I4BJ6s7z+\u002fl\u002feBWVLvPwOssILL1+4\u002fxVNiW3I97j+TIxAn7YPtP1EHwCL7q+w\u002fqUxY6Hq26z+RVimJaaTqP5aCD4nhduk\u002foSg6uxkv6D+158MBZM7mP9OHZvErVuU\u002f8XixWvXH4z8mRkW6WiXiP2ITsJELcOA\u002f8qg+VZVT3T\u002fagWKM2KjZP\u002fgLinSo49U\u002fv412\u002fecH0j\u002flKaSyIjPMP+bENsZjOcQ\u002f3FNHxZdVuD+s23zJpD6gP8nbfMmkPqC\u002f6lNHxZdVuL\u002ftxDbGYznEv9wppLIiM8y\u002fwo12\u002fecH0r\u002f0C4p0qOPVv92BYozYqNm\u002f7qg+VZVT3b9jE7CRC3DgvyRGRbpaJeK\u002f83ixWvXH47\u002fRh2bxK1blv7fnwwFkzua\u002foCg6uxkv6L+Xgg+J4Xbpv5BWKYlppOq\u002frExY6Hq2679SB8Ai+6vsv5MjECftg+2\u002fxFNiW3I97r8ErLCCy9fuv7+X94FZUu+\u002f70I4BJ6s779lZrL8O+bvv+85zwb4\u002fu+\u002fg6xao7j27780xstShs3vvxgcgYyLg++\u002f3176khQZ77\u002f9Izwlj47uv8Lxrg2K5O2\u002fEizujrQb7b8xnB6v3TTsv3fOhmLzMOu\u002fl0FFlgER6r+GQCEcMdbov4UZk3jGgee\u002fABg\u002flCAV5r8fFjxSt5Hkv0SFmgwa+eK\u002fCli7+O1M4b8bTT7q2B3fv4dA2oTCgdu\u002f9ZMNU1HJ17\u002fZHyIhW\u002fjTv52I2QHPEtC\u002fgKyggGI5yL\u002fogwJ4LjTAvwSGtcyMPLC\u002fB1wUMyamsbw="},"type":"scatter"},{"line":{"color":"#636EFA"},"mode":"lines","x":{"dtype":"f8","bdata":"AAAAAAAAAECVSynBge\u002f\u002fP2j6BgUYvv8\u002fJek3u\u002fVr\u002fz8jfxaOb\u002fn+P\u002fFJcov7Zv4\u002fXLHeqjC1\u002fT9+NRQyxuT8P1+hBPiS9vs\u002fuvBkh4zr+j9WMpEhxsT5PzlQz6Jvg\u002fg\u002ftDkVSdQo9z+WUJVeWbb1P0ATccl8LfQ\u002fA6sNgtOP8j9cLKDxB9\u002fwP1a1P3WwOe4\u002fthLH2SiW6j+KU4hOOdfmP1tDY1G+AOM\u002fjFrgSlkt3j+Mcwt+GjrWPyLsuGvkX8w\u002fcyCwKKhcuD\u002fN+ijPKj+gvwzJ6KS5ScS\u002f3kQPZF830r9P3qvaGjfav5OAwi7oDeG\u002fPSGBd67u5L83i\u002fTn4Lnov4vJmF6Wa+y\u002fAgAAAAAA8L\u002fP5tyRtrnxv860DJEnYfO\u002fhlh3f5709L\u002fbPrV2e3L2v11Sx9Q02fe\u002fJuDa0Vgn+b9dHHf9jlv6v4pZi6GZdPu\u002fwfLvCVdx\u002fL\u002fZTwivwlD9vxstUkL2Ef6\u002fV1DNmyq0\u002fr9D8kaHuDb\u002fvwQ9tXAZmf+\u002fXjTx7ufa\u002f78HB0As4Pv\u002fvwcHQCzg+\u002f+\u002fXjTx7ufa\u002f78EPbVwGZn\u002fv0PyRoe4Nv+\u002fV1DNmyq0\u002fr8cLVJC9hH+v9lPCK\u002fCUP2\u002fwvLvCVdx\u002fL+JWYuhmXT7v14cd\u002f2OW\u002fq\u002fJeDa0Vgn+b9eUsfUNNn3v9o+tXZ7cva\u002fiFh3f5709L\u002fMtAyRJ2Hzv9Hm3JG2ufG\u002f+f\u002f\u002f\u002f\u002f\u002f\u002f77+IyZhelmvsvzeL9Ofguei\u002fQSGBd67u5L+MgMIu6A3hv0jeq9oaN9q\u002f3kQPZF830r8eyeikuUnEv1T6KM8qP6C\u002fkCCwKKhcuD8R7Lhr5F\u002fMP3xzC34aOtY\u002fk1rgSlkt3j9bQ2NRvgDjP4ZTiE451+Y\u002fvRLH2SiW6j9ZtT91sDnuP1wsoPEH3\u002fA\u002fAasNgtOP8j9DE3HJfC30P5dQlV5ZtvU\u002ftDkVSdQo9z83UM+ib4P4P1cykSHGxPk\u002fuvBkh4zr+j9foQT4kvb7P301FDLG5Pw\u002fXbHeqjC1\u002fT\u002fxSXKL+2b+PyN\u002fFo5v+f4\u002fJuk3u\u002fVr\u002fz9o+gYFGL7\u002fP5VLKcGB7\u002f8\u002fAAAAAAAAAEA="},"y":{"dtype":"f8","bdata":"AAAAAAAAAAADhrXMjDzAP\u002fCDAnguNNA\u002fkayggGI52D+aiNkBzxLgP9ofIiFb+OM\u002f+5MNU1HJ5z+CQNqEwoHrPxlNPurYHe8\u002fC1i7+O1M8T9GhZoMGvnyPxwWPFK3kfQ\u002fABg\u002flCAV9j+GGZN4xoH3P4hAIRwx1vg\u002flkFFlgER+j93zoZi8zD7PzKcHq\u002fdNPw\u002fEyzujrQb\u002fT\u002fB8a4NiuT9P\u002f0jPCWPjv4\u002f3176khQZ\u002fz8XHIGMi4P\u002fPzTGy1KGzf8\u002fg6xao7j2\u002fz\u002fvOc8G+P7\u002fP2Zmsvw75v8\u002f70I4BJ6s\u002fz+\u002fl\u002feBWVL\u002fPwOssILL1\u002f4\u002fxVNiW3I9\u002fj+TIxAn7YP9P1EHwCL7q\u002fw\u002fqUxY6Hq2+z+RVimJaaT6P5aCD4nhdvk\u002foSg6uxkv+D+158MBZM72P9OHZvErVvU\u002f8XixWvXH8z8mRkW6WiXyP2ITsJELcPA\u002f8qg+VZVT7T\u002fagWKM2KjpP\u002fgLinSo4+U\u002fv412\u002fecH4j\u002flKaSyIjPcP+bENsZjOdQ\u002f3FNHxZdVyD+s23zJpD6wP8nbfMmkPrC\u002f6lNHxZdVyL\u002ftxDbGYznUv9wppLIiM9y\u002fwo12\u002fecH4r\u002f0C4p0qOPlv92BYozYqOm\u002f7qg+VZVT7b9jE7CRC3DwvyRGRbpaJfK\u002f83ixWvXH87\u002fRh2bxK1b1v7fnwwFkzva\u002foCg6uxkv+L+Xgg+J4Xb5v5BWKYlppPq\u002frExY6Hq2+79SB8Ai+6v8v5MjECftg\u002f2\u002fxFNiW3I9\u002fr8ErLCCy9f+v7+X94FZUv+\u002f70I4BJ6s\u002f79lZrL8O+b\u002fv+85zwb4\u002fv+\u002fg6xao7j2\u002f780xstShs3\u002fvxgcgYyLg\u002f+\u002f3176khQZ\u002f7\u002f9Izwlj47+v8Lxrg2K5P2\u002fEizujrQb\u002fb8xnB6v3TT8v3fOhmLzMPu\u002fl0FFlgER+r+GQCEcMdb4v4UZk3jGgfe\u002fABg\u002flCAV9r8fFjxSt5H0v0SFmgwa+fK\u002fCli7+O1M8b8bTT7q2B3vv4dA2oTCgeu\u002f9ZMNU1HJ57\u002fZHyIhW\u002fjjv52I2QHPEuC\u002fgKyggGI52L\u002fogwJ4LjTQvwSGtcyMPMC\u002fB1wUMyamwbw="},"type":"scatter"},{"marker":{"color":{"dtype":"i4","bdata":"AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=="},"colorscale":[[0,"#EF553B"],[1,"#636EFA"]]},"mode":"markers","x":{"dtype":"f4","bdata":"HUsFwAoMab8soOQ+mNYpQHUeLkCHazJAcPLbvmDMhL71X9Q\u002fRkIJP92b9T8o2z8+6CX6PgBsK7vWqpy\u002fN8D+PzIvoT\u002f3\u002f7k\u002fWs3gv4K9nj\u002ftQo0\u002fnAM3wDTyKL8EGMg\u002f+nkTQO6HXT8UZBk\u002fOuIqQOzhzb44JhBASL4JvkQtOsCH5JC\u002fPU29v3Dplj+4ny\u002fAztL3v8pWkD9WPhU\u002fqEBjP3LiPsBg\u002f6K\u002f4HIsPbL7K79w\u002f2k\u002fBa4+wB7TJMAIDBxAZzSdPwLdJD\u002fQiDXAkVLlP34z57+lCeQ\u002fGM89QL7gfD8WM0W\u002fLpIuv4C9AcDHzqW\u002fx6uAP9KaFb8XYPG\u002fBdbJvzQTKkB4rJs+3OmrPrICgT+\u002fp8s\u002fNGnOvhDy8D0Aq9I9AEmtvDLbNMCQ3xlAvlktwKiZLsC2\u002fiS\u002f9BY7v8CzMEAhubs\u002ffBvdv4iF8b5uk+u\u002fyOE1PsxpvT4aewrAIlDYP2iv5L+SJQhA5lDgP1WB3T8MNpm+OhBcvwADVT7xpMa\u002foNVIvitVKcCkuBZAUGUtPpy8Yr8SeMa\u002frAioPyI+K7983A7AJiTWv7akOkA6TAI\u002f10PYvxUaLEBolHk+ZBs8P+sRMcB7IxTAyBUswFBoS757Gby\u002fcOddP3D+GT97BKo\u002ftnohPxQ59D9J0uO\u002fHAQXv2WqM8AQz629BF\u002fMvqaHwj\u002fs0Zi+lIg8wE2H1r\u002fkf10\u002fWGRWvgQu8T+5OgRA\u002fUzWv1S0McBOoxvA8K7Mvt0ghj\u002fbIIi\u002fyn0NwBAF4T0oBYc+AGQzvahUZ75f7vO\u002fAADDNywVuz9Ap9U+Qpp+PwvypL9pmBRAYKCYvv11G0Cz7fo\u002fSaXvv2ClPECO4Vo\u002fEssbwCwOpz8MhDG\u002fpp8XQJCoKz5maRpAGOAdQImosr83nIy\u002fjsEMwEmDnD8etsE\u002fqxiWP8RaIUAiiAI\u002fML8jvuKPNMC11BzAvJcPQBhoiD6lVfi\u002fOENwv8KzEUDCDBZAIwuYvxAe7L7K11U\u002fUZsjQErxPT\u002f2LNY\u002f8Cb6P6P+DcDeHx3Agr9JP8NctT+Ur5G+mP9ZvgACi7\u002f5v5Q\u002fAEcpvlSFhr7cmj\u002fAfhtDv3jLFz6sCxDAqfKKv+h5CL88UCDAYhOlP7QREb9fAN8\u002fcfXFvwCM1j4S\u002fQdAQZrMv8SGyT7A3zBA7hcKQGL3C0DABs8+MCFVP6DcBEAejns\u002fo6AUQGS9sL++PRe\u002fxsc5QEgDPUBkKglAG7u\u002fP+xpfb\u002fcFApAmXmSPwqkIj+afyNAfEIJwBBZur7UAD5AQAbLvRtJMMAwINw\u002fHGXDPiQZLb8Y7Ye\u002fYIUrQAa+47\u002fWXBLALrMxv7hYBEDsXoo+wkZDPzBVgz\u002fI5+6\u002fE1cbwG0v2z\u002fmUBK\u002fIPzEPjLWGT\u002fkGSdAPFmsP5v4J8D4ibM+6sryv1XnP8DMZRE\u002fqZTrP5wyKT9kCBY\u002f4owRwHwzJ7+meDDA3EEjQI56Xj\u002fIQfW+svEkwGzXej804gI\u002fwAdFvYr3gL8AfXc\u002fANSUugNBtb8jYsK\u002f110vQEWlsb+Y90y\u002f9gIoQBzvBUCFEALAn9jqv3qVYD9UqMa\u002fxBoov8jdbD+GxFU\u002fsU8DwCgmP8DY7RrANcG6P0zmmb66My9A2NyJvmicxL9FyKY\u002fKOq8Puj3KsAQo7U9whwjQP8do78D\u002f72\u002f0eWKv\u002fyMGcCZcKE\u002fOMb6vof3KsBw3vu+lI\u002fGvnXVHEDKYrS\u002fyLicPjxsJsCWmk4\u002ffEz9PpyLMUCEA8k+\u002fsA3QPPe6r+4c9y+hloZQKkO\u002f79+Eqi\u002fyBJfvygihT8++DVAFAbfPvjv8r8iUTdALAmdPlJwKMCo1fC\u002fwBAhvaLe4T8+B\u002fY\u002fqPA9v8b8ZD\u002fEaCrAkQUxwLJDDUDChANA6iefP2gzHMBhDNq\u002fj2Cyv56lrz9YRSo+XGY1vw4IVD\u002fSBny\u002fpDdqPwCCAkBv7BRAgNPzPdqcLcAzGiPA1CSFPniPVj8eDwVAtEKZvsB2FEA0N+6\u002f7FQ5QHtk+z9W7ti\u002fcOt3Png6\u002fr9gUtG9FevCP3VTIMDXmSDAkPKFvT58M8B1DDRAy+QjQLYPLz9ikR\u002fAjebZP6jtpT5okS6\u002f+12LP+lt8L+zc7E\u002fSxTNvxA2O0CADx2\u002fdgQFv4u16z+rTJ6\u002fYOC4PkwKDUBOAzvAAFF5vco7E8A250Y\u002fVULmv1otB7\u002fH3dI\u002fMW+wP3SZE8DgkpK+so1pv92rGkBeVS8\u002fQE45PR5qb78wFl0\u002fKwgWwGRMvr+5hZy\u002fC0DGv1BR4r+9E\u002f6\u002f3CNkvxgULL6I+SZAUDkmPgmjsz\u002fAatE88KTKv07i9b8uqBVA0rgLQJRRjz8cIoi\u002fzOfGPibQA0AEN98\u002f\u002fm+UPwyIoT862ifAaMZov1AzHsCSeiHA3qU6wACTST+5ysk\u002fVNu9P+h8+j84\u002ff8\u002f0rvIP5rOij+UqgTAc2UuQPET+j\u002fWN0G\u002fg0oVQK5QMUAMGi\u002fAUhMgQAYZHj954PC\u002f3oWJv0h6Vr8WvA0\u002fzjR2P0p8KsDgxDo\u002fAIBxvYAjG7\u002fUoC4\u002flrQTP1WOAkC6Ve+\u002fHSWZP862FcCfW6E\u002foFYqQGa8Iz9UPqY+c\u002fC8P4T8DT+Tmu+\u002fujKmP+wJJUBiUiBA08oywNocDMCqjD3A\u002fcynvyBec74PJQlADtb2PwTTvr+4zna\u002fraY6QBSG+L\u002fg4zNAQC+0vgjkGj6sENk\u002fvI0twFvmwL+A1AA80GGvPuqaPUAiaNU\u002flljUv48j0T8U55q\u002fhgseQMKi7r\u002fcKz5ASpMYwNpjAcDe2pe\u002fooY1v+pbGD\u002fQ1h0\u002fIG1Gvz4Nzz+X7oU\u002ftcguwBaCrL9kUD0\u002fJJtZv5BEiD3CWS9A8uI7wKcljb+WKc2\u002fBGYuwCo1Iz8IviI+HgcRwDKcd7+gObw\u002fUAnTvaiQ+T\u002fsDgJAGLvIPnoUDD+y7TdAXskqQLAGzT225T\u002fA8gZfP4rmNb+goCtA+w\u002flP8C1LUCW2ZU\u002fPJu+v\u002fVl4z\u002fENra\u002fj4vzv2ABPD4yZrs\u002fPIsfQIAVPrz1kqQ\u002fxMFTv0Kmdb+GGlo\u002fM00+wO3g3z8sj04\u002fAY3XvzNU6j+Bi78\u002f2fUowH2\u002f3T9dzMY\u002fpHWFP0hiiL5sHj7AIJUJP9E\u002fsr8C1CRAPADVv7XM178641W\u002fkPOfPqByhj\u002faL4k\u002frMIRQHrPBT+m6TFATKs1QGzFGECeSt0\u002fdAQMQLhAFcCcSCBATmBSv+7NBUDu4hc\u002faPFzPhjEJcDAUTS\u002f0OG2vpQ4JcBPGbu\u002fYicYwAxfJMD4WKg\u002fuhELwDR9aj8oFZu\u002fCNPGP2AfRT4a7itAQOezvwlCDcCdF94\u002fvXSmv9alpL\u002fSmHQ\u002f2rpTPyOUgb9gQHs+iCkKP5SMAb9ugAlAcpRsP956br\u002foUEk+8gGivwyBHkDcnxLAjCgxvwYrPcC8pSlArK0hwADgXz\u002fYB3K\u002fjOP1v5wp4r+uDbA\u002fJk4bQH55AkCBsrw\u002fGAdCvywTNz9j8+E\u002fUBmEPpvF2j+6m2K\u002ftPtcPzBmHMDIxgNA7FIWP2jgjL++PRlAWD\u002fIvwfMoT+2YDPAjNzAvuIAJUADtIe\u002fLIkzP9ARt734IX0\u002fjSe3v9Ocob8QpBnAajfHP6Ac3L5+EmS\u002fqXuMPyCYjL6EGG2\u002f0q1EP4gfDsCMTylAfbabvztWDED5wb8\u002f8Waev0j5f74w+ds9Vu+tP8Y+8b9gtso\u002ftOqQPjaLPz\u002fDK7C\u002fyXP1v8zUu7\u002fNNKA\u002fOk7Lv4Cznr81dbu\u002fVxopQMqlHcDIVUO+FlKLvxoS079oFlg\u002fxLYLwEAJvLyNHpw\u002fOHONvnD1DMDcEOI\u002f0D04PxDcHb5cUZe\u002fSVvTvxhQrD4zoOk\u002fzX6kv9jeK770DTZAzRibv6LCAkD2q3A\u002fXcCNPyC7tL7o0yY\u002fCKxzPsJ\u002frr8EzEI\u002fTkDaPxrRJL8AvgC\u002fTgQwv76sfT9u9RFAXhQWwNo6IkC0BA8\u002fAK9aP90Pr78QyEy\u002fF1X8P57kP0D+9em\u002fxn5nP9ASRT\u002fIRaa+OcLBv0ZOhj\u002fyfLo\u002fhEMxwPIRTj\u002fPQ5i\u002f3qG+P9gYar8eAxdAWL7Nvyur7D\u002fP7uC\u002fFUynPzCQvT6AbVi98OPxP4iuOT4iYPK\u002feEL2v\u002fZdPMBNMRlApr07wHBArL4gNO2+ZnorQKh\u002fe75m5gZAzTgcQGnXlL\u002f47G8+ZTXjP9VL1b889dO\u002fDyI5wMWFB0DpTMm\u002febggQECLtT0qzDBAZDJJv+qeFsAjg8U\u002fmYLyvxyhT790K70\u002fWGYIQDpOAcDCAyDAEwAGQPV24b+pO7e\u002figkRQEDI5DzHoxHA7MYLv27FEr+s8\u002f4+0u0xQNBDFsDSOGU\u002flp8ovzBgjb9gPzLAVtTIv0xjsL6ywye\u002fqh+BP751OsASSiy\u002f2hM0P5inCb9s6zM\u002fvpn1P4TjJ0AoTLg\u002fzrEbwOS2Lz\u002fbpBRA+Ivtv9TmCsDAGq+8UIYIQJB4EL7oXAdAVFskwPNt77\u002fEczRAqHanPvpUPL8EuiE\u002fhuAMQMTFfz+KbwZAZscswL7eJsBsZBDAL\u002f7gv6DKuL8iYVy\u002fIJS3vbhsZj5g1QZAIE\u002fzP6AIUr7DUbS\u002fXTL0PwDGgT2oMwHAzGkdwG3GJMBw9cY\u002fvCoawMEOwz+Y0ri\u002f+vlyv9i0vb+IhQJAuNbNP7Ap2j3cFDLA9NVOP\u002fRyFEBc+qi\u002fQHWVPmjk+r6sorC\u002fTOkSwGp+GcCgaRLAmb2uPzA2DMBW2Ua\u002fIFYPPYATpb5jHIm\u002fqGMBPoRI5758jYa+JVDAP6tFkL+mrBFA0UgvwCAo+b+MuA0\u002fGD4EwGTPOcBQEsS\u002frnEswGBnuT8c+SE\u002fcbaYv2oCZ78oqp8\u002fdCUxP6\u002fmqD9hoA7AvDI2wMC68D0yNTnAgMp\u002fvXB+aT8skR8\u002fSlUtQKS03L6YlMw+kJQIwNsT0b8qGia\u002f2FLLPl49Fz\u002fKdwFAPGO6vmHwv7\u002fJTSlA7NoCwCT1yj+eWao\u002f6EAsvnTeOsA2vi5AYziRP7j3L74k0zzA9j0CQCdpFkD4byY+LL9CP8w7kT+A0zS8IkL+P7vAkr+EB5I\u002fDCc\u002fwFIhiT+mRPY\u002fODq0PiSynr5WqMG\u002fKq97P3jqKsBClAFAlB8dwMR2iz8wYoK\u002fgH0qPxrxMcBgkCW9aMfhvkjILEC4IBjAoLdgPx5RnL9sjRy\u002fQ0Duv5RmN0BsXQlAYpf\u002fP37wF8AYOQq+E4Xxv086pj8A3iFAJC4zwPDHkr8t+bc\u002f2OQqwIbJaD+onxy\u002fwuz7Pw7kDr+d5DZADmuDvxS3mj9c91i\u002faua6P\u002frLJb8icxdA5cilP3wu5b4MTyE\u002fOKkswMaHC0AnTNo\u002f2kBbP3Q1mD9GUeY\u002fiKdGvhDZYj\u002f4Yuk\u002flL0VvyvTNUAegoO\u002fGCHkPvjGBb\u002fYQ2m\u002fKiYjv7B8Oj4YhiVAOMj4v5wcGL\u002fKhiHAdA0bwA=="},"y":{"dtype":"f4","bdata":"kMZ2PszUFUDgvMs\u002fuGAKQPTNtb4PKes\u002fwJY3vnHzvr+vM4a\u002fuN8yv\u002fD5oj4AvDI7ifg\u002fwLARJz5WXOw\u002fetI8QGAOIL1tUSrAEJm8P9nLnz8uIEm\u002fD3+kv+o2PECCk+M\u002fCr\u002fGv3QnFz9GcOI\u002fQWG3v8RIDsAifCJAgNMgwIDglbyH5C5A3kwbv6Btl7346wJAPYP8vyg8MED1hhVABA4pwPBBpr8qraO\u002fz+L4v9A+jb3WXxm\u002f0MDCPrU15D\u002f6n3U\u002fePWgv+zQHMCA6DjA4XHQvwRe5b8Qxvs+9ZuYP\u002fCcuj+raf8\u002fog83Pxdb7b+28BhApkf2v3Qa+D5bFYk\u002fAqJoP90v+L8wZJ49QEYRv1aKlD\u002fog7q\u002ffK+vPqAZ6L0OwBE\u002fT9QfwAR07b9kDz3ADDEQQDcFvT+AiEy8FH8lwBs9LUAiDs+\u002ftvfSPzDD570Usc0+aIbOP4kL1D+EmGI\u002fPxCGvyUYzr+tsAxAth4WwMdS1r+gxNk+gOVhv4vu8b\u002f1nQrAPjA0QK5Vjz+9BN0\u002fSLD0P+aaZL8+zeG\u002fgffCv4SckL7f\u002fKQ\u002f\u002fBulP8CTtL4ApV6+YAHFvjYwJT\u002fsveW\u002f\u002fd6tv6zXPb+oBei\u002f+Cq4v4UXgT\u002fayQRAug6Ovwy03j\u002fAajm+2G4swF4Fsb+g78y9ME1HvjbUL0BT2BrArE2Qv3O7tb8oHqS+GOmLv4AY\u002fT3tCOU\u002fqko4wBTLQj8YnoW+N4EhwDSwPb9AJyo9YB2dv7ajL8D6AMs\u002fwLB6v+SP+j5+5QRAuMCnvhATIUDyjh\u002fALHBkP7iBhj8I5+u\u002fTd3aP+x3mz\u002fQXNg9TgM9P5rudz9wyg9AoociP\u002f6gKMAAGu4\u002f2IXjP4BD2DxP3jDAsLCPPcAdTT4yvRRArInJv2z0g76EieK\u002fnBjJv4Szsj8Afpk7hOMLP5BXM0CiFfa\u002fsmIuwJvDHUBEpuQ+FFazPrKQD0AKacU\u002f3kaSP0oSAkCAatK8cIG5P7gtkr92AwPAwIjyv\u002faUeL+Am\u002fU8N8\u002fjv4RBrL7+yBbAYPgCwOjQ2b7KljC\u002f5gIawFXy3j+QIZY9F\u002fbZvwJRPMAycQ7A1X8YwMuwib8OYxlAolcfQDC5FD5pmBdA7MNTP5TOqL\u002fobBU\u002fhUv+v8Pf5r\u002fwDfI9u92ZP6O4rD\u002f+cHO\u002ftSaNv\u002fLUOcBwLO29gBnMv0K6hz80YAk\u002feBwXwDQFHUDg1qK\u002fmlEGQMf5G8CS\u002fk6\u002fMoMnv\u002fSQ0T4Ai4A\u002f8v0OQJ4+AL8NGydA7pQjQCSUIkBgDg3A+HQewMjyhr94f48+xCQ5QJtL4j+SaRLASLQUQJ4LGz+m6ifAmBjEvmAj\u002fT46qSY\u002fJVc8QAp1Nj+Gdww\u002fnporQK8QFECQeF6+eCkKwJ7JF8BwjUI+KOMoP77sK8AgJxRAAMAZvVJmrb9W0DRAXMEEQKJzQj+sBs6+PjYwQD4\u002fAj8oSEs\u002f8BzXPcIRDcDzF+g\u002f+mIBwOWMIsD0Nx1Av2DfvxQQtL\u002f+Vhu\u002fRAvIP5TAyL7fGcE\u002fBmewv2hlO0Dnt9u\u002fm0kZwPDEtr+1xidAambOv3gAPb7wSve\u002fADxPv8TEKcAp0SrA+oKgv\u002f4Bkz\u002fk1FC\u002f8Li8vp9JmL+aito\u002fbGvEvhBSLL+pkQjAvxA0QEyXvj\u002fKjNW\u002f0katPy6aOkAASJC87GwlwAoOOUA4GQnAkPN\u002fP4RwJL\u002fQBmO+uFAYwDS6pD5uDN+\u002fmPPBvhLv5b+scBRADyKAv0oXL0Ca0kI\u002fIMsPP10\u002fwD\u002fWqSm\u002fqJWIPyTuF0Au7m4\u002flASFvrY3Pb\u002f9hd+\u002foGB7PbzPTb\u002f+iaE\u002fNm8MwHiJ1r+sthO\u002f2H4Evrft2z\u002fOvw5AqCgzPxqEFUAOI54\u002fJDugv6551z+8T40+SLN3vsfVp79ylXo\u002fiuCpvyClEsAAVBy8\u002fiw0QNg7oz8iYQ3AB2E1wPWlJsANlKA\u002fQ2QvwHLNUT9aX4K\u002fAiCGv6dogL8XZzrAwtANQLw1LkD7eCBAits3wCzsGUC+yci\u002fzJ9zP4dS1L9UYTO\u002fqpHGvybmWr855BlAG17aP3CsaL4n962\u002f9NvOvjymjL50CYg+ko0tQAmYBUA2Diw\u002fJr1Nv6n1sb+6Kj3AXMfPP+T3AkBk9CVAhLPBvjQHr79Oe6u\u002far6Xv5HVgD9MOwo\u002fgkIWQBJ9FkBFz88\u002fohgjQK6rGb8CdjvAGovJv5qTMkDCejM\u002fz2MxwIXol79YKs6\u002f0+HpP94eBUAKEdU\u002f\u002fuoLP7KPFsDIQac+r6vdP5JACj+4byc\u002fAvB3v3DyRj883Zo\u002fLB2tP5xWyr9wV8I9nVDzP7p1HcAF2pI\u002f1hSNv+gmyT+ZATnAgKE9QLTZNsBXQuE\u002ftrYqvxhOQ78djbs\u002f7Ig\u002fwGZ+ZD\u002fHpTBAP64iQOz8MUDcGRTA1bLXP9Y+Ij+7CPY\u002frFwNQJyqGcDwXyC\u002fki0SQNOTjL\u002fiAIm\u002fbKFEv\u002fgOAsDe9TDAIjtJP3UdL8A0nQW\u002fpt54v9zm2L8i0G6\u002f4NwZPapMZD9GHgpA+EIwwJM13z+3SNg\u002fVpluPx24+b+ODihA8BDdPd79PcDc5GO\u002fJB2aP471hz8PTfe\u002fmwIkwMIPMMDE4Lq+aLtJv467uz96RijAs6T1P2g3H8BWvkY\u002fyHV3Pt+FJsDDOec\u002fsfz\u002fP0CX3L5bwitAKpWdv\u002f2R3L8WYAVATskBv0xB87+AJVI+mCwbvzSZmL7bd8Q\u002fXiJuv+iFIL6gZwvAXemCv8izIb722x3AqM7Qvs7jJL+bNfU\u002f5BW0vjWQ0L9kKRNA6n8wQCyjGb+7Y8W\u002fkXYRwIjnlb\u002faJAzA9slAv0yIHb+Zopw\u002ftesRwHA62T8w2AxAJ2Swv8YJGkBaSve\u002fD9DLv24fOsDb4cw\u002fFyMDwHEHsT9kCru\u002fzO+vvlbJG8CkqgvA48+OP5rvTD8ksXM\u002faDuqv0DlBEC9DK6\u002fGF8Fv4T8Mb\u002fA7s4+NrwQQNju9b7AC5q\u002f3owNwJcLsT\u002fDfQ7AcTgPQJRUWj\u002fILsC\u002fxq4oQD6Dg7\u002fMK6G\u002faVCyvwUwBUBjaqq\u002fKgsdP9zJaT+g2xu+WzDCv+x\u002fhD5sCNA+NKonwBTtKcAAiZq74lyov03HKEBUc5W\u002fQKeiPmhqCr\u002fvkom\u002fuy3gP+axNb+untO\u002fjYbBv14UP0C4xSVABNsYP0JHAj9UvTXAmT0SQAwkC8CQzgK+bBIKv3rjCsA0bzdAppwvQJN53b+wyL89KXEAQPJYEsCA\u002fry9QMJ\u002fvvC3BcD+lcW\u002fmOmnvr3HM8AANS880CC9Pwaltz9quRhABIo5vygRZD\u002fYugQ+9TKbv4AKE71+D3C\u002fIN8ovfraTD\u002f80MK+FZyQP9oXPECnR+M\u002fmikTv1bzE8CgAmS9AZC5P+CqWr5C4jTAUvYDwBdV2L+MHx\u002fA21PfP+a8GUA\u002f69S\u002fkJLcvjqBxT+KEARACrUZQMv\u002ftT8a0lm\u002fLiGJv0AmorxR14K\u002fpFV\u002fP\u002f7UAUBmXgtA0jyrP\u002fyP2b+kBb8+eL0KP11Plb84ea6+i6QWQHHz5b+XAI8\u002fgNE2v1xoJkDSTw5ASh50vzv2tT9imy3ABEgbv9Cykb6kAi2\u002fqGPGPqcZuj\u002fVga4\u002f2LO+Py\u002fFpD9ouR1AlNp\u002fv5j6Zz9iSY2\u002feS\u002fqv799vD+4FpQ+QBz9PdQ7rb4UGL6+tBsxwIn79T\u002fwAvc95iAGPxy\u002f2z5GYxZAnRw4wBhiuz\u002fOUQhAXN0owFhwlD9kJhbAogwawG+T2L9qZgZAJI4UwBbUBsAR+cQ\u002f+OtSP5QvmT6ei2E\u002fVOLFP05\u002fNUAZSc0\u002fxGqgP+j5AUAMhBO\u002fIz6\u002fP2DJir4ml4G\u002fnPmiv3yO6z4hlt6\u002f6KwWwPtGH0AT9+u\u002fYMaHv6JOWz8ISiHA65mkv8+bmr8qyIu\u002fhnG8PwLWk7\u002fAg5c8DCHJPsjdEkCNnPY\u002fXTHmvz05jz8IdYK+5u24v8AAYb8VcwzAPi6cvygT2T9uQSfA\u002f3Cbv5mku7+AHSTA2rWZP1A8I79Tl70\u002fcIQ8vqycVL8MSey+OMyFP3wr8b6YWPM\u002f05kwQCSJ3L4WGx\u002fATBHMPzgZHUAQG8K\u002fYAKpvjDWmD+s8wC\u002fPKpWv+hH5z+cWbU+c02WP+l0A8BQBiDAIHAHQBdS5D+FbwbAYI4WQJYAbb+oOck+PmjFP66b9D+wmzxAoPRTvdZsOsAVB4y\u002fgbOgP\u002ffL8z9u3i+\u002fAFclQC1\u002f5r8ERh7A3G+5vjFPLMATkD\u002fAzhYBQL+psT9AxIU8uP88v8jP+r84lyzAfthzv1rBJ0AwHoe+v3mlv5XEOkCoIFk\u002f7n0BwFooYz98BjXAw748QKLTOUC0Pp2\u002fEAOtv8S1EEAspK0+8Hy\u002fvqKz6z9Ex+Q+vixbvx6SnT9UB6q\u002fpDKePprtEMBtIpG\u002fKMUUQBbq3b8+GDFAEj0OQNSkrb559ZA\u002fejE2wM7\u002faD86WTTA5Lg7QNBMxz9oDVs\u002f2Oa4vsjgsL5YD9S+ac7cvwxrPj9Uey9AbEb7P7iDI8AigHk\u002fNvo5wIshv78nCeo\u002fYiWQv4aaAT\u002f2ZT1AFMcxQK8TJkBm7Qe\u002f72rkv3z2iT4Kgr4\u002fgHmfvtbJKkC2xSvA\u002fFsgwMofJkCZsTTAQAXJPj5nLMA1Mtc\u002f22Kmv2qxI0DCjGA\u002fh4kgwLIvJT+VmLk\u002fcAWrPZKROECoTCXAvI4qwMBMNMAAtBTARjilv2jsMz4fHJE\u002fVziFP0InGT9AeeI9F9WCPzyELsCq6ju\u002fQhbjv1yqOb+wAmM\u002fhNoTQPl6OMBMKIW\u002fmJsGP5eYFsAS1A1A4KaQvnjvlz9RCqq\u002fCAExvhXLMsCApd+\u002fb1LaP4TcVD+0pja\u002feMg\u002fwPr7JMCowdo+YlMYQEO6ub9ODyi\u002fdpSdP3h8MECt3qy\u002fMrUuv2WnMMArtzxAWUrRv3\u002fLzL9+4SzAVIQXQPjQqD4ucUO\u002f3OsbwLDBPUB6nxPAd3EeQPL+Kj8kxEI\u002fkSfvP5mrAcAMPvE\u002fjjIiP0AcEMB4zLo+dCFNP7Fa0j\u002f+qD3AoKQlvQaWKUDAfYg9+Kk+QKBwTb45FDtA8y0ZwGH63z\u002fEAM6+EALYveBhUj+qBBY\u002fHem5P8rA179El8C+IIGsv1c5t7\u002febAc\u002f2CK\u002fv9IyQb918hRAukMMPzyjxb5++0o\u002fom4FP2OAF8CAjcQ9FAKtvkezGEAgQR694a2vv\u002f6z9b\u002fK3ie\u002fdmUTwK6lHcB+yyO\u002f2FwkwPYDG8BYNAxAJG85wLI3E8BQ2whAR9\u002fhv8\u002fu+7\u002fAMX49eVAQQMwXC8ADDgvAFhAwQNpxAMAAiGk7ooB6PxaNjL9qMJ6\u002f63YywHggCMDinq4\u002fN1M9wKj6D7+Oooa\u002fpqc8wOCjO8AYID6\u002fxsMov3hgcz9NZrU\u002fvLmevm54aD+gJzm9LoS5P9ZAVr\u002fBiQdA4KIRP+fK479h848\u002fxjAlvw=="},"type":"scatter"}],                        {"template":{"layout":{"font":{"color":"#2b2b2b","family":"EB Garamond"},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","xaxis":{"gridcolor":"#e0dbd4"},"yaxis":{"gridcolor":"#e0dbd4"}}},"xaxis":{"range":[-3,3]},"yaxis":{"range":[-3,3],"scaleanchor":"x"},"showlegend":false},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('b129675e-1eae-45b9-9c27-fdef8931d919');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+<p>[3D Diagram of a learned model that shows the GELU hinge instead of the ReLU hinge]</p>
+</section>
+<section id="normalization-functions" class="level2">
+<h2 class="anchored" data-anchor-id="normalization-functions">Normalization functions</h2>
+<p>Normalization functions are the final major component of neural networks. As a value gets multiplied and added again and again through layers of a network, the values can get very big or very small. So much so that the computer hardware can no longer store the value correctly. Normalization functions apply an operation to a vector to keep those overflows from happening.</p>
+<p>These basic components are combined to make almost all neural network models from really simple multi-layer perceptrons, to large language models.</p>
+<p>A basic neural network architecture arranges these components in layers. A ‘layer’ consists of a linear transformation and an activation function together. Several of these layers together can learn very complex non-linear relationships.</p>
+<p>So far, and below we have talked about how a model calculates an output thorugh these operations. We haven’t yet covered how the models are ‘trained’ to ensure the model is generating ‘good’ outputs through these calculations. This explainer doesn’t go into detail about how the models are trained. I find that the easiest way to think about it is that model designers write the forward pass, write the loss function, and the automatic differentiation system takes care of <em>back propagation</em>, the process of updating all model parameters to lower the loss (EDIT: JARGON). The main task that the model learns during training is to predict the next token given the previous tokens in the sequence.</p>
+</section>
+<section id="vectors-are-arrows-in-space" class="level2">
+<h2 class="anchored" data-anchor-id="vectors-are-arrows-in-space">Vectors are arrows in space</h2>
+<section id="visualizing-linear-transformations-of-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-linear-transformations-of-vectors">Visualizing Linear transformations of vectors</h3>
+</section>
+<section id="activation-functions-make-linear-transformations-non-linear" class="level3">
+<h3 class="anchored" data-anchor-id="activation-functions-make-linear-transformations-non-linear">Activation functions make linear transformations non-linear</h3>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mikevatd3\.github\.io\/justhousingnotes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
