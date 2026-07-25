@@ -16,3 +16,6 @@ wheels/
 _site
 *.quarto_ipynb
 .quarto
+
+# No output data
+/data

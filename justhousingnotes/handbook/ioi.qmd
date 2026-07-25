@@ -1,6 +1,7 @@
 # IOI Paper notes
 
 "When Mary and John went to the store, John gave a drink to"
+
 Ġ - shows word boundaries ('The', 'ĠThe' are different tokens in the vocab)
 
 ### Tokenization

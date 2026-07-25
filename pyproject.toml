@@ -5,8 +5,12 @@ description = "Project including GPT2 experiemnts and compiling notes on interpr
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "gymnasium>=1.3.0",
     "jupyter>=1.1.1",
     "plotly>=6.8.0",
     "sae-lens>=6.44.4",
+    "tabulate>=0.10.0",
+    "tiktoken>=0.13.0",
     "transformer-lens>=3.5.1",
+    "transformers>=5.13.0",
 ]
