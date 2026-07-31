@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ioi</title>
+<title>entropy</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -86,149 +121,97 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ioi-paper-notes" id="toc-ioi-paper-notes" class="nav-link active" data-scroll-target="#ioi-paper-notes">IOI Paper notes</a>
+  <li><a href="#entropy-over-the-next-token-prediction" id="toc-entropy-over-the-next-token-prediction" class="nav-link active" data-scroll-target="#entropy-over-the-next-token-prediction">Entropy over the next token prediction</a></li>
+  <li><a href="#what-is-cross-entropy" id="toc-what-is-cross-entropy" class="nav-link" data-scroll-target="#what-is-cross-entropy">What is cross entropy</a></li>
+  <li><a href="#in-the-dialects-study-how-does-the-outer-prompt-affect-entropy" id="toc-in-the-dialects-study-how-does-the-outer-prompt-affect-entropy" class="nav-link" data-scroll-target="#in-the-dialects-study-how-does-the-outer-prompt-affect-entropy">In the dialects study, how does the outer prompt affect entropy?</a></li>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report">REPORT</a>
   <ul class="collapse">
-  <li><a href="#tokenization" id="toc-tokenization" class="nav-link" data-scroll-target="#tokenization">Tokenization</a></li>
-  <li><a href="#embedding" id="toc-embedding" class="nav-link" data-scroll-target="#embedding">Embedding</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
-  <li><a href="#ioi-paper" id="toc-ioi-paper" class="nav-link" data-scroll-target="#ioi-paper">IOI Paper</a>
-  <ul class="collapse">
-  <li><a href="#gpt2-small-architecture" id="toc-gpt2-small-architecture" class="nav-link" data-scroll-target="#gpt2-small-architecture">GPT2-small architecture</a></li>
-  <li><a href="#how-circuits-and-knockouts-work" id="toc-how-circuits-and-knockouts-work" class="nav-link" data-scroll-target="#how-circuits-and-knockouts-work">How circuits and knockouts work</a></li>
-  <li><a href="#discovering-the-circuit" id="toc-discovering-the-circuit" class="nav-link" data-scroll-target="#discovering-the-circuit">Discovering the circuit</a></li>
-  </ul></li>
-  <li><a href="#the-mlp-section-of-transformer-layers" id="toc-the-mlp-section-of-transformer-layers" class="nav-link" data-scroll-target="#the-mlp-section-of-transformer-layers">The MLP section of transformer layers</a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
+  <li><a href="#eating" id="toc-eating" class="nav-link" data-scroll-target="#eating">Eating</a></li>
+  <li><a href="#playing" id="toc-playing" class="nav-link" data-scroll-target="#playing">Playing</a></li>
+  <li><a href="#obsessing" id="toc-obsessing" class="nav-link" data-scroll-target="#obsessing">Obsessing</a></li>
+  <li><a href="#recommending" id="toc-recommending" class="nav-link" data-scroll-target="#recommending">Recommending</a></li>
+  <li><a href="#treating" id="toc-treating" class="nav-link" data-scroll-target="#treating">Treating</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 <div class="back-link"><a href="index.html">Interpretability notes</a></div>
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Entropy of output tokens</h1>
+</div>
 
 
 
-<section id="ioi-paper-notes" class="level1">
-<h1>IOI Paper notes</h1>
-<p>“When Mary and John went to the store, John gave a drink to”</p>
-<p>Ġ - shows word boundaries (‘The’, ‘ĠThe’ are different tokens in the vocab)</p>
-<section id="tokenization" class="level3">
-<h3 class="anchored" data-anchor-id="tokenization">Tokenization</h3>
-<section id="splitting-dataset-into-tokens" class="level4">
-<h4 class="anchored" data-anchor-id="splitting-dataset-into-tokens">Splitting dataset into tokens</h4>
-<ul>
-<li>This happens through some kind of algorithm that splits to ~4-char. It uses basically byte-pair encoding (BPE)
-<ul>
-<li><a href="http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM">BPE Paper</a></li>
-<li>Pseudo-code attempt
-<ul>
-<li><ol type="1">
-<li>Find the most common pair of characters and ‘group’ them, so at further steps they act like a single character</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Repeat, joining either the next most common pair of chars, groups or both.</li>
-</ol></li>
-</ul></li>
-</ul></li>
-<li>Doesn’t necessarily split on word boundaries, though word boundaries are used.</li>
-</ul>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="entropy-over-the-next-token-prediction" class="level2">
+<h2 class="anchored" data-anchor-id="entropy-over-the-next-token-prediction">Entropy over the next token prediction</h2>
+<div id="08a19794" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="vocabulary" class="level4">
-<h4 class="anchored" data-anchor-id="vocabulary">Vocabulary</h4>
-<ul>
-<li>From there, the vocab is built. It maps the set of tokens from the training dataset to integers.</li>
-</ul>
+<section id="what-is-cross-entropy" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-cross-entropy">What is cross entropy</h2>
 </section>
+<section id="in-the-dialects-study-how-does-the-outer-prompt-affect-entropy" class="level2">
+<h2 class="anchored" data-anchor-id="in-the-dialects-study-how-does-the-outer-prompt-affect-entropy">In <a href="./dialects.html">the dialects study</a>, how does the outer prompt affect entropy?</h2>
 </section>
-<section id="embedding" class="level3">
-<h3 class="anchored" data-anchor-id="embedding">Embedding</h3>
+<section id="report" class="level2">
+<h2 class="anchored" data-anchor-id="report">REPORT</h2>
+<section id="reading" class="level3">
+<h3 class="anchored" data-anchor-id="reading">Reading</h3>
 <ul>
-<li>The embedding step is basically a dictionary mapping the token integer to a vector of the model dimension length. These are initialized as a random vector, then updated through backprop.</li>
-<li>The ‘sequence’ is then the matrix bringing together these vectors.</li>
-</ul>
-<section id="positional-encoding" class="level4">
-<h4 class="anchored" data-anchor-id="positional-encoding">Positional encoding</h4>
-<p>As is, the model doesn’t have a way to track the relative position of each item in the sequence. The attention mechanism will allow any position to attend to any other, with no penalty for distance between positions.</p>
+<li>I took two plane trips this year, and I started ‘One Battle After Another’ on one and finished on the other. Which led me to read about the new left – which I guess I kind of got into last time with the hippy weirdos who did biosphere 2.
 <ul>
-<li>Sinusoidal (Attention is all you need) … need to read more about how this works</li>
-<li>Learned (GPT2) … another set of vectors like the embedding vectors, though these are mapped to the position index instead</li>
-<li>RoPE (More recent models): Applies a slow rotation to the vectors based on position within the sequence. This has the effect of lowering the dot product within the attention heads for positions that are further away from each other.
-<ul>
-<li>It uses pairs of dimensions to calculate the rotation, and it rotates at different frequencies depending on which pair of dimensions.</li>
-</ul></li>
-</ul>
-<p>This is 2x, 3x bigger than the input sequence.</p>
-</section>
-</section>
-<section id="output" class="level2">
-<h2 class="anchored" data-anchor-id="output">Output</h2>
-<p>All the work that happens within the model leads to a vector of model dimension that is ‘unembedded’ – It outputs with a</p>
-<p>This is called the ‘END token’ ? Right, wrong?</p>
-</section>
-<section id="ioi-paper" class="level2">
-<h2 class="anchored" data-anchor-id="ioi-paper">IOI Paper</h2>
-<section id="gpt2-small-architecture" class="level3">
-<h3 class="anchored" data-anchor-id="gpt2-small-architecture">GPT2-small architecture</h3>
-<ul>
-<li>768 dimension</li>
-<li>12 layers</li>
-<li>12 attention heads per layer</li>
-</ul>
-<p>i - layer j - attention head within layer N - number of tokens H - number of heads (12 in gpt2-small) d - model dimension (d_model) (size of activations and ‘residual stream’) d/H - the smaller space the WQ, WK, WO matrices project into (64 dimension)</p>
-<ul>
-<li><p>layer norm, applied before attention and before unembed within attention</p></li>
-<li><p>Attention head</p>
-<ul>
-<li>WQ, WK, WO all take the input vectors and map them to a smaller dimension: 64 = 768 / 12, model dimension / number of heads</li>
-<li>WQ - <em>query</em> linear transform taking the input vector at each position to ‘what to search for’</li>
-<li>WK - <em>key</em> linear transformation taking the input at each position to ‘how to be found in the search’</li>
-<li>WO - <em>output</em> linear transformation taking the input at each position to ’what this token offers</li>
-<li>WQ(WK)T * WO</li>
-<li>WV - <em>value?</em> takes the linear combination at that position back out to the model dimension (64 -&gt; 768)</li>
+<li>Dangerous, Dirty, Violent and Young</li>
+<li>Vineland from Thomas Pynchon</li>
 </ul></li>
 </ul>
 </section>
-<section id="how-circuits-and-knockouts-work" class="level3">
-<h3 class="anchored" data-anchor-id="how-circuits-and-knockouts-work">How circuits and knockouts work</h3>
-<p>M - model C - circuit M- set difference between M and C i.e.&nbsp;all the nodes in M not in C</p>
-<section id="knockout-approaches" class="level4">
-<h4 class="anchored" data-anchor-id="knockout-approaches">knockout approaches</h4>
+<section id="eating" class="level3">
+<h3 class="anchored" data-anchor-id="eating">Eating</h3>
 <ul>
-<li><ol type="1">
-<li><em>Zero knockout</em> – change all nodes ∈ Mto zero – this doesn’t work very well because zero is arbitrary, so the more effective approach is</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li><em>Mean ablation</em> – which finds the mean activation across ‘some reference distribution.’ And forces the node to that mean.</li>
-</ol></li>
+<li>Tacos – I made home made taco shells this weekend</li>
 </ul>
-<section id="the-reference-distribution" class="level5">
-<h5 class="anchored" data-anchor-id="the-reference-distribution">The reference distribution</h5>
-<p>Indirect object identification task:</p>
-<p>“When Mary and John went to the store, John gave a drink to” which should be completed with “Mary.” “Mary” is the IO, the indirect object, and “John” is S or the subject. This is the template where the particulars could change, specifically the names. Any sentence of this type is the ‘IOI distribution.’</p>
-<p>To find the means for mean ablation those are calculated with the ‘ABC’ distribution where each name is different, so “When Mary and John went to the store, Steve gave a drink to” the rest of the grammar is preserved and the names.</p>
 </section>
+<section id="playing" class="level3">
+<h3 class="anchored" data-anchor-id="playing">Playing</h3>
+<ul>
+<li></li>
+</ul>
 </section>
+<section id="obsessing" class="level3">
+<h3 class="anchored" data-anchor-id="obsessing">Obsessing</h3>
+<ul>
+<li>LLM Interpretability research</li>
+</ul>
 </section>
-<section id="discovering-the-circuit" class="level3">
-<h3 class="anchored" data-anchor-id="discovering-the-circuit">Discovering the circuit</h3>
-<pre><code>  O1       S1                      S2</code></pre>
-<p>“When Mary and John went to the store, John gave a drink to”</p>
-<p>They see major classes of heads, (they’re only looking at attention heads in this paper).</p>
-<ol type="1">
-<li><em>duplicate token heads</em> - active at token S2, attend primarily to the S1 token and ‘signal that token duplication has occurred.’ (occur at lower layers 0-3)</li>
-<li><em>S-inhibition heads</em> - remove the duplicate tokens from the name mover heads attention. They’re ‘active’ at the END token, attend to S2, and write the query of the name-mover heads inhibiting their attention to S1 and S2 tokens. (show up at middle layers 7, 8)</li>
-<li><em>name-mover heads</em> They output the remaining name, active at END, attend to previous names in the sentence, and copy names they attend to. The S-inhibition heads make it less likely that they’ll choose S. (show up at the last layers, 10, 11</li>
-</ol>
+<section id="recommending" class="level3">
+<h3 class="anchored" data-anchor-id="recommending">Recommending</h3>
+<ul>
+<li></li>
+</ul>
 </section>
-</section>
-<section id="the-mlp-section-of-transformer-layers" class="level2">
-<h2 class="anchored" data-anchor-id="the-mlp-section-of-transformer-layers">The MLP section of transformer layers</h2>
-<p>The first section of a transformer layer is the attention block, described above. The second is the ‘MLP layer’ which is ‘two linear transforms with a GeLU in between (CHECK THIS: architecture).’ In the IOI paper, this is set aside to focus instead on intention layers.</p>
-<p>Later work, most of the node and circuit tracing work, utilizes sparse transcoders to ‘decompress’ (CHECK THIS: word choice) the representations that the MLP layers seem to capture.</p>
-<p>Description of MLP layers from <a href="https://arxiv.org/html/2601.12868v1">this article</a> “…key-value memories that store and inject <em>factual</em> associations in the [residual] stream” (I added the italics)</p>
-<p>SwiGLU (What is this?)</p>
-<p>In the paper above they use LogitLens projects a vector onto the vocabulary space using a models unembedding matrix.</p>
+<section id="treating" class="level3">
+<h3 class="anchored" data-anchor-id="treating">Treating</h3>
+<ul>
+<li>Cold Truth, sweet cream ice cream, which I’ve had lately with toasted coconut and honeycomb</li>
+</ul>
 
 
 </section>

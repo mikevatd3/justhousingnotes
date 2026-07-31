@@ -161,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="preparing-the-input-sequence">Preparing the input sequence</h2>
 <p>How natural language is broken into tokens isn’t essential for this discussion, but basically an input string is broken into common combinations of letters, often words.</p>
 <p>For the input sequence to be processed by the model, it first must be turned into a sequence of vectors. In LLMs each token is mapped to an integer and that integer corresponds to the column of a large ‘vocabulary’ matrix. The model then can turn a sequence of tokens into a sequence of integers, and then (EDIT: CONFUSING) into a sequence of vectors. These vectors are called embeddings.</p>
-<div id="0a46efc6" class="cell" data-execution_count="1">
+<div id="5c83d83e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>

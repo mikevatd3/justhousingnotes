@@ -17,6 +17,43 @@ div.sourceCode {
   background-color: #f5ede1;
 }
 
+table.dataframe {
+  font-family: 'JuliaMono', monospace;
+  font-size: 0.75rem;
+  background-color: #faf6f0;
+  border-collapse: collapse;
+  border: 1px solid #e0d5c4;
+}
+
+table.dataframe thead th {
+  background-color: #ece0cd;
+  color: #2b2d2c;
+  font-weight: bold;
+  border-bottom: 2px solid #cbb894;
+  text-align: right;
+  padding: 0.4rem 0.75rem;
+}
+
+table.dataframe tbody th,
+table.dataframe tbody td {
+  border: 1px solid #e0d5c4;
+  padding: 0.4rem 0.75rem;
+  text-align: right;
+}
+
+table.dataframe tbody th {
+  background-color: #f5ede1;
+  font-weight: normal;
+}
+
+table.dataframe.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f5ede1;
+}
+
+table.dataframe tbody tr:hover {
+  background-color: #ecdfc9;
+}
+
 .back-link {padding-bottom: 2rem;}
 .is-index .back-link {display: none;}
 
